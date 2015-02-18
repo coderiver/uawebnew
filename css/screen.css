@@ -4,7 +4,7 @@ body, html { height: 100%; }
 
 img, fieldset, a img { border: none; }
 
-input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; border-radius: 0; }
+input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; }
 
 input[type="submit"], button { cursor: pointer; }
 input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner { padding: 0; border: 0; }
@@ -20,7 +20,14 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: FuturaBookC; src: url("fonts/FuturaBookC.eot"); src: url("fonts/FuturaBookC.eot?#iefix") format("embedded-opentype"), url("fonts/FuturaBookC.woff2") format("woff2"), url("fonts/FuturaBookC.woff") format("woff"), url("fonts/FuturaBookC.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: FuturaBookCItalic; src: url("fonts/FuturaBookCItalic.eot"); src: url("fonts/FuturaBookCItalic.eot?#iefix") format("embedded-opentype"), url("fonts/FuturaBookCItalic.woff2") format("woff2"), url("fonts/FuturaBookCItalic.woff") format("woff"), url("fonts/FuturaBookCItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: FuturaDemiC; src: url("fonts/FuturaDemiC.eot"); src: url("fonts/FuturaDemiC.eot?#iefix") format("embedded-opentype"), url("fonts/FuturaDemiC.woff2") format("woff2"), url("fonts/FuturaDemiC.woff") format("woff"), url("fonts/FuturaDemiC.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: FuturaDemiCItalic; src: url("fonts/FuturaDemiCItalic.eot"); src: url("fonts/FuturaDemiCItalic.eot?#iefix") format("embedded-opentype"), url("fonts/FuturaDemiCItalic.woff2") format("woff2"), url("fonts/FuturaDemiCItalic.woff") format("woff"), url("fonts/FuturaDemiCItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: KelsonSansBoldRU; src: url("fonts/KelsonSansBoldRU.eot"); src: url("fonts/KelsonSansBoldRU.eot?#iefix") format("embedded-opentype"), url("fonts/KelsonSansBoldRU.woff2") format("woff2"), url("fonts/KelsonSansBoldRU.woff") format("woff"), url("fonts/KelsonSansBoldRU.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: KelsonSansLightRU; src: url("fonts/KelsonSansLightRU.eot"); src: url("fonts/KelsonSansLightRU.eot?#iefix") format("embedded-opentype"), url("fonts/KelsonSansLightRU.woff2") format("woff2"), url("fonts/KelsonSansLightRU.woff") format("woff"), url("fonts/KelsonSansLightRU.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: KelsonSansRegularRU; src: url("fonts/KelsonSansRegularRU.eot"); src: url("fonts/KelsonSansRegularRU.eot?#iefix") format("embedded-opentype"), url("fonts/KelsonSansRegularRU.woff2") format("woff2"), url("fonts/KelsonSansRegularRU.woff") format("woff"), url("fonts/KelsonSansRegularRU.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { font-family: "FuturaBookC", sans-serif; font-size: 16px; color: #171717; line-height: 1.4; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
