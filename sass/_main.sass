@@ -1,6 +1,128 @@
 // Normally mainpage styles
+.header
+	position: relative
+.topper
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 135px
+	z-index: 2
+.logo
+	float: left
+	font-size: 0
+	padding-top: 23px 
+	a
+		display: inline-block
+		+s(logo)
+.top-menu
+	float: right
+	height: 85px
+	+vertical
+	+clr
+	li
+		display: inline-block
+		vertical-align: middle
+		margin-left: 22px
+		a
+			display: inline-block
+			padding: 5px 0 
+			text-decoration: none
+			+fd
+			color: #fff
+			+tr(color 300ms)
+			text-transform: uppercase
+			font-size: 11px
+			&:active
+				color: #fbdc09
+.top-line
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 1px
+		background: #fff 
+		opacity: 0
+		+transform(translateY(-10px))
+		+transition(transform 300ms, opacity 300ms)
+	&:hover
+		&:after
+			opacity: 1 	  
+			+transform(translateY(0))
+	&:active
+		&:after
+			display: none		
+.menu
+	ul
+		+clr
+		li
+			position: relative
+			float: left
+			width: 161px
+			height: 50px
+			margin-right: 1px
+			text-align: center
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				bottom: 0
+				right: -1px
+				width: 1px
+				background: #464344  
+			a
+				display: block
+				position: relative
+				height: 50px
+				line-height: 50px  
+				+fd
+				text-decoration: none
+				text-transform: uppercase
+				background: #fff 
+				font-size: 11px
+				color: #000
+				+tr(all 300ms)
+				&:after
+					content: ""
+					position: absolute
+					top: 0
+					bottom: 0
+					right: 0
+					left: 0
+					border: 1px solid #fff
+					opacity: 0 
+					+tr(opacity 300ms) 
+				&:hover
+					background: #000
+					color: #fff
+					&:after
+						opacity: 1
+				&:active
+					background: #202020
+					&:after
+						opacity: 0 		  
+			&.login
+				a
+					background: $yellow
+					&:after
+						border-color: $yellow
+					&:hover
+						background: #000 
+						color: $yellow
+					&:active
+						background: #202020
+						color: #fff	
 
-
+// slider
+.slider
+	position: relative
+	font-size: 0
+	img
+		width: 100% 			
+		height: auto 
 
 
 
