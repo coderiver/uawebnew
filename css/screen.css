@@ -179,5 +179,6 @@ div.m-news:hover:after { height: 0; }
 .m-about .h2 { margin-bottom: 30px; }
 
 .m-posts { float: left; width: 33.4%; padding: 13px 0 0; }
-.m-posts__item { display: inline-block; margin-bottom: 25px; text-decoration: none; color: #171717; }
+.m-posts__item { display: inline-block; margin-top: 25px; text-decoration: none; color: #171717; }
+.m-posts__item:first-child { margin-top: 0; }
 .m-posts__date { margin-bottom: 15px; font-family: "FuturaDemiCItalic", sans-serif; text-transform: uppercase; font-size: 11px; color: #09c5fb; }
