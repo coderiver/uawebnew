@@ -33,35 +33,15 @@
 			+tr(color 300ms)
 			text-transform: uppercase
 			font-size: 11px
-			&:active
-				color: #fbdc09
-.top-line
-	position: relative
-	&:after
-		content: ""
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		height: 1px
-		background: #fff 
-		opacity: 0
-		+transform(translateY(-10px))
-		+transition(transform 300ms, opacity 300ms)
-	&:hover
-		&:after
-			opacity: 1 	  
-			+transform(translateY(0))
-	&:active
-		&:after
-			display: none		
+			&.is-active
+				color: #fbdc09		
 .menu
 	ul
 		+clr
 		li
 			position: relative
 			float: left
-			width: 161px
+			width: 16.1%
 			height: 50px
 			margin-right: 1px
 			text-align: center
@@ -85,7 +65,18 @@
 				font-size: 11px
 				color: #000
 				+tr(all 300ms)
+				z-index: 1
 				&:after
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					width: 100% 
+					height: 0
+					background: #000
+					+tr(height 300ms)
+					z-index: -1  
+				&:before
 					content: ""
 					position: absolute
 					top: 0
@@ -96,41 +87,350 @@
 					opacity: 0 
 					+tr(opacity 300ms) 
 				&:hover
-					background: #000
 					color: #fff
 					&:after
+						height: 100% 
+					&:before
 						opacity: 1
-				&:active
+				&.is-active
 					background: #202020
-					&:after
-						opacity: 0 		  
+					color: #fff		  
 			&.login
+				width: 18.9% 
 				a
 					background: $yellow
-					&:after
+					&:before
 						border-color: $yellow
 					&:hover
-						background: #000 
 						color: $yellow
-					&:active
+					&.is-active
 						background: #202020
 						color: #fff	
 
 // slider
 .slider
 	position: relative
+	&__img
+		font-size: 0
+		img
+			width: 100% 			
+			height: auto
+	&__in
+		position: absolute
+		top: 135px
+		bottom: 0
+		right: 0
+		left: 0
+		+vertical
+		z-index: 2
+.m-news-list
+	display: inline-block
+	vertical-align: middle
+	text-align: center
+div.m-news
+	padding: 0
+	&:hover
+		color: #fff
+		&:after
+			height: 0  					 
+.m-news
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	width: 454px
+	height: 280px
+	margin: 0 22px 
+	padding: 50px 30px 30px 
+	font-size: 12px
+	text-decoration: none
+	color: #fff
+	+transition(color 300ms, background 300ms)
+	z-index: 1
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: -22px
+		width: 1px 
+		background: #7d7471
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 0
+		background: #FFF
+		z-index: -1
+		+tr(height 300ms)  	 
+	&:hover
+		color: #000
+		&:after
+			height: 100% 
+	&:first-child
+		&:before
+			display: none
+	& > .m-news
+		height: 140px
+		padding-top: 30px
+		margin: 0 
+		border-top: 1px solid #7d7471
+		&:before
+			display: none
+		&:first-child
+			border-top: none
+		.m-news__title
+			font-size: 22px  			 	 
+	&__progress
+		position: absolute
+		top: 5px
+		left: 50%
+		+transform(translateX(-50%))
+		font-size: 0
+		li
+			display: inline-block
+			vertical-align: middle
+			margin: 0 3px
+			width: 4px
+			height: 4px
+			border-radius: 50%
+			background: #7c787b
+			&.is-active
+				background: #fff  
+	&__title
+		margin-bottom: 10px
+		font-size: 30px
+		+ksb
+		text-transform: uppercase
+	&__hint
+		+fd
+		font-size: 11px
+		text-transform: uppercase	 	
+
+// events
+.events
+	position: relative
+	padding: 59px 0 46px
+	&__list
+		font-size: 0
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 33.3%
+		border-left: 1px solid #e6e6e7
+		&:first-child
+			border-left: none 			
+		& > a
+			position: relative
+			display: block
+			padding: 25px 30px 
+			text-decoration: none
+			text-align: center
+			text-transform: uppercase
+			+tr(background 300ms)
+			z-index: 1
+			&:after
+				content: ""
+				position: absolute
+				left: 50%
+				top: 50%
+				height: 100%
+				width: 0
+				opacity: 0
+				background: $blue
+				+transform(translateX(-50%) translateY(-50%))  
+				+transition(all 300ms)
+				will-change: transform
+				z-index: -1  
+			&:hover
+				&:after
+					opacity: 1 
+					width: 100% 
+				.events__title
+					color: #fff
+				.events__date
+					color: #fff	
+	&__title
+		margin-bottom: 15px
+		+ksb
+		font-size: 22px
+		color: #000
+		+tr(color 300ms)
+	&__date
+		+fdi
+		color: #09c5fb
+		font-size: 11px
+		+tr(color 300ms)
+.more
+	position: absolute
+	top: 50%
+	left: 0 
+	+fdi
+	color: #000
+	text-transform: uppercase
+	font-size: 11px
+	text-decoration: none
+	+transform(rotate(-90deg))
+	span
+		&:before
+			color: $blue
+	&.more_left
+		left: auto
+		right: 0				
+// dates
+.dates
+	position: relative
+	padding: 45px 0 65px 
+	background: url(../img/bg-pattern.jpg)
+	&:before
+		content: ""
+		position: absolute
+		top: 222px
+		left: 0
+		right: 0
+		height: 3px
+		background: url(../img/points.png) repeat-x  
+	&__in
+		margin-bottom: 15px
+	.h2
+		margin-bottom: 15px 		
+.categories
+	margin-bottom: 35px
 	font-size: 0
-	img
-		width: 100% 			
-		height: auto 
+	text-align: center
+	li
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		padding: 15px 0 
+		margin: 0 4.2%
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: -40px
+			width: 4px
+			height: 4px
+			margin-top: -2px
+			border-radius: 50%
+			background: #0e0e0e
+		&:first-child
+			&:before
+				display: none
+		&.is-active
+			border: 1px solid #0e0e0e
+			border-width: 1px 0
+			a
+				&:before
+					content: ""
+					position: absolute
+					top: -15px
+					left: 0
+					width: 100%
+					height: 1px
+					background: #000
+					z-index: 1
+				&:after
+					content: ""	 
+					position: absolute
+					bottom: -15px
+					left: 0
+					width: 100%
+					height: 1px
+					background: #000
+					z-index: 1			  
+		a
+			position: relative
+			display: inline-block 
+			+fdi
+			font-size: 11px
+			text-transform: uppercase
+			text-decoration: none
+			color: #0e0e0e
+			span
+				&:before
+					color: #fff    
+.schedule
+	font-size: 0
+	text-align: center
+	&__item
+		width: 25%
+		display: inline-block
+		vertical-align: top
+		text-align: center
+		&.is-current
+			.schedule__date-in
+				border-color: #000
+				background: #000
+				color: #fff
+		&.is-passed
+			.schedule__date-in
+				border-color: #fff
+			.schedule__title
+				span
+					&:before
+						content: ""
+						position: absolute
+						top: 50%
+						left: -16px
+						right: -16px
+						margin-top: -1px
+						height: 1px
+						background: #fff  		 
+	&__date
+		position: relative
+		display: inline-block
+		margin-bottom: 18px
+		padding: 0 25px
+		background: url(../img/bg-pattern.jpg)
+		z-index: 2 
+	&__date-in
+		width: 72px
+		height: 72px
+		line-height: 72px
+		border-radius: 50%
+		border: 1px solid #000
+		text-align: center
+		font-size: 11px
+		+fdi
+		color: #000		
+	&__title
+		+ksb
+		font-size: 16px
+		text-transform: uppercase
+		color: #212346
+		span
+			position: relative
+			display: inline-block
 
+// m-articles
+.m-articles
+	position: relative
+	padding: 65px 0
+	&__more
 
-
-
-
-
-
-
+.m-about
+	float: left
+	width: 66.6%
+	padding-right: 5%
+	.h2
+		margin-bottom: 30px
+.m-posts
+	float: left
+	width: 33.4%
+	padding: 13px 0 0 
+	&__item
+		display: inline-block
+		margin-bottom: 25px
+		text-decoration: none
+		color: #171717
+	&__date
+		margin-bottom: 15px
+		+fdi
+		text-transform: uppercase
+		font-size: 11px
+		color: $blue
 
 
 

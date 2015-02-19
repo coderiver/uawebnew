@@ -33,10 +33,11 @@ body
 	+fb 
 	font-size: 16px
 	color: #171717 
-	line-height: 1.4
+	line-height: 1.4	
 
 // vars
 $yellow: #fbdc09
+$blue: #09c5fb
 
 
 // common blocks      
@@ -48,6 +49,17 @@ $yellow: #fbdc09
 		padding: 0
 .clr
 	+clr
+
+.h2
+	font-size: 30px
+	+ksb
+	color: #000
+	text-transform: uppercase
+	text-align: center
+	&.h2_white
+		color: #fff
+	&.h2_left
+		text-align: left	
 
 // social icons
 [class*='-ico']
@@ -93,7 +105,45 @@ $yellow: #fbdc09
 		+tr(opacity 300ms)
 	&:hover
 		&:after
-			opacity: 1			
+			opacity: 1
+			
+// hover affect for links with top line
+.top-line
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 1px
+		background: #fff 
+		opacity: 0
+		+transform(translateY(-10px))
+		+transition(transform 300ms, opacity 300ms)
+	&:hover
+		&:after
+			opacity: 1 	  
+			+transform(translateY(0))
+	&.is-active
+		&:after
+			display: none
+			
+// hover effect for links with text replacement
+.replace
+	position: relative
+	overflow: hidden
+	padding: 2px 0 
+	span
+		display: inline-block
+		+tr(transform 300ms)
+		&:before
+			content: attr(data-hover)
+			position: absolute
+			top: 100%
+	&:hover
+		span
+			+transform(translateY(-100%))									
 
 
 
