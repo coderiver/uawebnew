@@ -1,6 +1,6 @@
 // Normally mainpage styles
 .header
-	position: relative
+	position: relative 
 .topper
 	position: absolute
 	top: 0
@@ -14,12 +14,11 @@
 	padding-top: 23px 
 	a
 		display: inline-block
-		+s(logo)
-.top-menu
+		+s(logo)		
+.top-menu, .lang
 	float: right
 	height: 85px
 	+vertical
-	+clr
 	li
 		display: inline-block
 		vertical-align: middle
@@ -34,7 +33,22 @@
 			text-transform: uppercase
 			font-size: 11px
 			&.is-active
-				color: #fbdc09		
+				color: #fbdc09
+.lang
+	position: relative
+	margin-left: 22px
+	&:after
+		content: ""
+		position: absolute
+		top: 31px
+		bottom: 31px
+		left: 0
+		width: 1px
+		background: #7e7d7e
+	li	
+		a
+			&.is-active
+				color: $blue	 						
 .menu
 	ul
 		+clr
@@ -96,7 +110,9 @@
 					background: #202020
 					color: #fff		  
 			&.login
-				width: 18.9% 
+				width: 18.7%
+				&:before
+					display: none  
 				a
 					background: $yellow
 					&:before
@@ -104,7 +120,7 @@
 					&:hover
 						color: $yellow
 					&.is-active
-						background: #202020
+						background: #000
 						color: #fff	
 
 // slider
@@ -266,15 +282,7 @@ div.m-news
 .dates
 	position: relative
 	padding: 45px 0 65px 
-	background: url(../img/bg-pattern.jpg)
-	&:before
-		content: ""
-		position: absolute
-		top: 222px
-		left: 0
-		right: 0
-		height: 3px
-		background: url(../img/points.png) repeat-x  
+	background: url(../img/bg-pattern.jpg)  
 	&__in
 		margin-bottom: 15px
 	.h2
@@ -336,8 +344,17 @@ div.m-news
 				&:before
 					color: #fff    
 .schedule
+	position: relative
 	font-size: 0
 	text-align: center
+	&:before
+		content: ""
+		position: absolute
+		top: 35px
+		left: 0
+		right: 0
+		height: 3px
+		background: url(../img/points.png) repeat-x
 	&__item
 		width: 25%
 		display: inline-block
@@ -421,8 +438,8 @@ div.m-news
 // directions
 .directions
 	padding: 50px 0 75px
-	background: url(../img/img1.jpg) 0 0 no-repeat
-	background-size: 100% auto
+	background: url(../img/img1.jpg)
+	+cover
 	.h2
 		margin-bottom: 10px   
 	&__subtitle
@@ -682,9 +699,75 @@ div.m-news
 		&:before
 			opacity: 0 
 		&:after
-			opacity: 1 	
-		
-
+			opacity: 1
+			
+// cabinet
+.cabinet
+	padding-top: 180px
+	+cover
+	.h1
+		margin-bottom: 5px
+	&__results
+		padding-bottom: 73px
+		font-size: 0
+		text-align: center
+		span, a
+			display: inline-block
+			vertical-align: middle
+			+fd
+			font-size: 11px 
+			text-transform: uppercase
+			color: #fff
+		a
+			text-decoration: none
+			color: $blue
+			margin: 0 15px
+			
+// test
+.test
+	padding: 45px 0
+	text-align: center
+	
+// judge
+.judge
+	padding: 70px 0 75px
+	border-top: 1px solid #e2e2e2
+	.h2
+		margin-bottom: 20px  	 			 	
+	&__about
+		margin-bottom: 45px 
+		text-align: center
+	&__list
+		font-size: 0
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 25%
+		text-align: center
+		+fdi
+	&__photo
+		position: relative
+		display: inline-block
+		width: 150px
+		height: 150px
+		margin-bottom: 32px
+		border-radius: 50%
+		overflow: hidden
+		font-size: 0
+		img
+			border-radius: 50%
+	&__name
+		margin-bottom: 3px
+		font-size: 11px
+		text-transform: uppercase
+	&__info
+		a, p
+			font-size: 11px
+			text-decoration: none
+			color: $blue
+			text-transform: uppercase 	
+	
+					
 
 
 
