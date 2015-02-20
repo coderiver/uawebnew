@@ -584,7 +584,107 @@ div.m-news
 	&:hover
 		i
 			&:after
-				opacity: 1	
+				opacity: 1
+				
+.subscribe
+	position: relative
+	margin-left: 37px
+	input[type="text"]
+		width: 380px
+		height: 42px
+		padding-right: 25px
+		background: transparent
+		+fd
+		font-size: 11px
+		text-transform: uppercase
+		color: #fff
+		+placeholder
+			+fd
+			font-size: 11px
+			text-transform: uppercase
+			color: #fff
+		&:focus
+			+placeholder
+				font-size: 0	
+.submit
+	position: absolute
+	top: 8px
+	right: 0
+	+s(pointer)
+	z-index: 2
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		+s(pointer-h)
+		z-index: 2
+		opacity: 0
+		+tr(opacity 300ms)
+	&:hover
+		&:after
+			opacity: 1 
+.progressbar
+	position: relative
+	height: 1px 
+	&__line
+		height: 1px
+		background: #fff
+	&__progress
+		position: absolute
+		top: 0
+		left: 0
+		width: 0 
+		height: 1px 
+		background: $yellow
+		z-index: 2
+		
+// footer
+.footer
+	+fd
+	font-size: 11px 
+	text-transform: uppercase
+.copyrights
+	float: left
+	padding: 22px 0
+.design
+	float: right
+	font-size: 0
+	padding: 22px 0
+	span, a
+		display: inline-block
+		vertical-align: middle
+		font-size: 11px
+.vintage
+	position: relative
+	margin-left: 18px
+	width: 70px
+	height: 15px 
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		+s(vintage)
+		opacity: 1
+		+tr(opacity 300ms)
+		z-index: 1
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		+s(vintage-h)
+		opacity: 0
+		+tr(opacity 300ms)
+		z-index: 1
+	&:hover
+		&:before
+			opacity: 0 
+		&:after
+			opacity: 1 	
+		
+
 
 
 

@@ -1,19 +1,12 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	// form submit animation
 
-	// function scrollFixedElements() {
-	//     var scroll_left = $(this).scrollLeft();
-	//     $(".fixed-element").css({
-	//         left: -scroll_left
-	//     });
-	// }
-	// scrollFixedElements();
-	// $(window).scroll(function(){
-	//     scrollFixedElements()
-	// });
+	$('.js-submit').on('click', function(){
+		$('.js-progress').animate({
+			width: '100%'
+		}, 2000);
+	});
 
-	console.log($('body').html());
+	
 });
