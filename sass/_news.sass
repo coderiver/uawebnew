@@ -1,0 +1,108 @@
+.text
+    padding: 10px 0 20px 
+    .h2
+        margin-bottom: 24px
+    + .info
+        margin-top: 0
+.info-box
+    padding: 30px 
+    text-align: center
+    color: #fff 
+    background: #4cd1fc
+    font-size: 16px
+    color: #fff
+    +fd
+    line-height: 1.5
+    text-transform: uppercase  
+.info
+    margin: 30px auto 
+    max-width: 370px
+    font-size: 11px
+    text-transform: uppercase
+    +fdi
+    text-align: center
+    letter-spacing: 1px 
+    span
+        display: inline-block
+        margin-right: 35px
+    a
+        color: $blue 
+        text-decoration: none
+    li
+        white-space: nowrap
+        margin-bottom: 5px
+        div
+            display: inline-block
+            vertical-align: top
+            white-space: normal
+            text-align: left
+        span
+            vertical-align: top
+.info_width
+    margin: 15px 0  
+    max-width: 100%
+    text-align: left
+.text-left
+    text-align: left
+.text-center
+    text-align: center
+.text-right
+    text-align: right
+.slick
+    position: relative    
+.soc
+    padding: 37px 0 
+    text-align: center
+    font-size: 0
+    span
+        margin-right: 15px
+        font-size: 11px
+        text-transform: uppercase
+        +fd
+        color: #171717 
+    a, span
+        display: inline-block
+        vertical-align: middle
+    a
+        margin-left: 20px
+        width: 56px
+        height: 56px
+        text-align: center
+        line-height: 56px
+        -webkit-border-radius: 50% 
+        border-radius: 50% 
+        border: 1px solid rgba(20, 20, 20, 0.4)
+        +tr(background .3s)
+        &:hover
+            background: #000
+            i
+                &:before
+                    opacity: 1
+    i
+        position: relative
+        display: inline-block
+        vertical-align: middle
+        &:before
+            content: ""
+            position: absolute
+            left: 0
+            top: 0
+            +tr(opacity .3s)
+            will-change: opacity
+        &:before
+            opacity: 0
+    &__vk
+        i
+            +s(vk-black)
+            &:before
+                +s(vk)
+    &__fb
+        i
+            +s(fb-black)
+            &:before
+                +s(fb)
+    &__tw
+        i
+            +s(tw-black) 
+            &:before
+                +s(tw)    
