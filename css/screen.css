@@ -123,6 +123,10 @@ body { font-family: "FuturaBookC", sans-serif; font-size: 16px; color: #171717; 
 .slick-dots li.slick-active button:before { color: #fff; }
 .slick-dots button { display: block; background: none; cursor: default; font: 0/0 a; text-shadow: none; color: transparent; }
 .slick-dots button:before { content: "."; display: inline-block; font-size: 20px; color: rgba(255, 255, 255, 0.2); -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.parthners .slick-dots { top: -45px; bottom: auto; }
+.parthners .slick-dots li.slick-active button { background: #000; }
+.parthners .slick-dots button { width: 4px; height: 4px; border-radius: 50%; background: #dfdfdf; }
+.parthners .slick-dots button:before { display: none; }
 
 .header { position: relative; }
 .header__in { padding: 180px 0 70px; background-repeat: no-repeat; background-size: cover; background-position: 50% 0%; }
@@ -261,8 +265,10 @@ div.m-news:hover:after { height: 0; }
 .parthners__item { display: table; width: 100%; border-collapse: collapse; }
 .parthners__row { display: table-row; width: 100%; }
 .parthners__logo { display: table-cell; width: 16.6%; height: 109px; vertical-align: middle; text-align: center; border: 1px solid #e2e2e2; }
+.parthners__logo img { display: inline-block !important; }
 .parthners__more { text-align: center; }
-.parthners__more a { font-family: "FuturaDemiC", sans-serif; text-transform: uppercase; text-decoration: none; color: #09c5fb; font-size: 11px; }
+.parthners__more a { display: inline-block; padding: 5px 0; font-family: "FuturaDemiC", sans-serif; text-transform: uppercase; text-decoration: none; color: #09c5fb; font-size: 11px; }
+.parthners__more a:after { background: #09c5fb; }
 
 .share { padding: 45px 0; background: #000; }
 .share .h2 { margin-bottom: 30px; }
