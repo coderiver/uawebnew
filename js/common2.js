@@ -11,8 +11,18 @@ head.ready(function() {
 	  adaptiveHeight: true,
 	  autoplaySpeed: 5000
 	});
-	$('.js-slick').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-		
+	$('.js-slick').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		var	dot = $(this).find(".slick-dots li"),
+			n = dot.length;
+		for(i=0;i<=n;i++) {
+			if (dot.eq(i).hasClass("slick-active")) {
+				break;
+			}
+			else {
+				dot.eq(i).addClass("is-active");
+			}
+		}
+
 	});
 
 });
