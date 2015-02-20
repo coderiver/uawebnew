@@ -50,6 +50,12 @@ $blue: #09c5fb
 .clr
 	+clr
 
+.h1
+	font-size: 48px
+	text-transform: uppercase
+	color: #fff
+	+ksb
+	text-align: center
 .h2
 	font-size: 30px
 	+ksb
@@ -60,6 +66,34 @@ $blue: #09c5fb
 		color: #fff
 	&.h2_left
 		text-align: left	
+
+.btn
+	position: relative
+	display: inline-block
+	width: 428px
+	height: 70px
+	line-height: 70px
+	background: $blue
+	text-align: center
+	+fd
+	font-size: 14px
+	text-transform: uppercase
+	text-decoration: none
+	color: #fff
+	z-index: 1
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100% 
+		height: 0
+		background: darken($blue, 5%)
+		+tr(height 300ms)
+		z-index: -1
+	&:hover
+		&:after
+			height: 100% 	   
 
 // social icons
 [class*='-ico']
