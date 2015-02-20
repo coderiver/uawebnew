@@ -261,23 +261,7 @@ div.m-news
 		+fdi
 		color: #09c5fb
 		font-size: 11px
-		+tr(color 300ms)
-.more
-	position: absolute
-	top: 50%
-	left: 0 
-	+fdi
-	color: #000
-	text-transform: uppercase
-	font-size: 11px
-	text-decoration: none
-	+transform(rotate(-90deg))
-	span
-		&:before
-			color: $blue
-	&.more_left
-		left: auto
-		right: 0				
+		+tr(color 300ms)				
 // dates
 .dates
 	position: relative
@@ -434,11 +418,173 @@ div.m-news
 		font-size: 11px
 		color: $blue
 
+// directions
+.directions
+	padding: 50px 0 75px
+	background: url(../img/img1.jpg) 0 0 no-repeat
+	background-size: 100% auto
+	.h2
+		margin-bottom: 10px   
+	&__subtitle
+		margin-bottom: 50px 
+		text-align: center
+		color: #a2a0a0
+	&__list
+		+clr
+		li
+			float: left
+			width: 25%
+			height: 125px
+			border-right: 1px solid #928e8c
+			text-align: center
+			&:first-child
+				border-left: 1px solid #928e8c
+			a
+				position: relative
+				display: block
+				height: 125px
+				+vertical
+				text-transform: uppercase
+				+ksb
+				color: #fff
+				+tr(color 300ms) 
+				z-index: 1
+				span
+					display: inline-block
+					vertical-align: middle
+					font-size: 16px
+				&:after
+					content: ""
+					position: absolute
+					left: 50%
+					top: 50%
+					height: 100%
+					width: 0
+					opacity: 0
+					background: #fff
+					+transform(translateX(-50%) translateY(-50%))  
+					+transition(all 300ms)
+					will-change: transform
+					z-index: -1  
+				&:hover
+					color: #000
+					&:after
+						opacity: 1 
+						width: 100% 	
+					
+// parthnres
+.parthners
+	position: relative
+	padding: 70px 0 25px						
+	.h2
+		margin-bottom: 55px
+	&__slider
+		position: relative
+		margin-bottom: 25px
+	&__pager
+		position: absolute
+		top: -40px
+		left: 50%
+		+transform(translateX(-50%))
+		font-size: 0
+		li
+			display: inline-block
+			vertical-align: middle
+			width: 4px
+			height: 4px
+			margin: 0 2px 
+			border-radius: 50%
+			background: #dfdfdf 
+			cursor: pointer
+			&.is-active
+				background: #000
+	&__list
+		position: relative
+	&__item
+		display: table
+		width: 100%
+		border-collapse: collapse
+	&__row
+		display: table-row
+	&__logo
+		display: table-cell
+		width: 16.6%
+		height: 109px
+		vertical-align: middle
+		text-align: center
+		border: 1px solid #e2e2e2
+	&__more
+		text-align: center
+		a
+			+fd
+			text-transform: uppercase
+			text-decoration: none
+			color: $blue
+			font-size: 11px	  			 
 
-
-
-
-
+// share
+.share
+	padding: 45px 0
+	background: #000
+	.h2
+		margin-bottom: 30px
+.socials
+	text-align: center
+	font-size: 0
+.vkcom, .facebook, .twitter, .subscribe
+	display: inline-block
+	vertical-align: middle
+.vkcom, .facebook, .twitter	
+	width: 56px
+	height: 56px
+	margin: 0 9px 
+	+vertical
+	border-radius: 50%
+	text-align: center
+	border: 1px solid #727272
+	+transition(background 300ms, border-color 300ms)
+	&:hover
+		background: #fff
+		border-color: #fff
+	i
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+			+tr(opacity 300ms)
+			z-index: 1
+.vkcom	
+	i
+		+s(vk)
+		&:after
+			+s(vk-black)
+	&:hover
+		i
+			&:after
+				opacity: 1	
+.facebook	
+	i
+		+s(fb)
+		&:after
+			+s(fb-black)
+	&:hover
+		i
+			&:after
+				opacity: 1			 	 
+.twitter
+	i
+		+s(tw)
+		&:after
+			+s(tw-black)
+	&:hover
+		i
+			&:after
+				opacity: 1	
 
 
 

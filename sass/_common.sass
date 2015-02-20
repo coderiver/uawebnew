@@ -145,8 +145,23 @@ $blue: #09c5fb
 		span
 			+transform(translateY(-100%))									
 
-
-
+// more side link
+.more
+	position: absolute
+	top: 50%
+	left: 0 
+	+fdi
+	color: #000
+	text-transform: uppercase
+	font-size: 11px
+	text-decoration: none
+	+transform(rotate(-90deg))
+	span
+		&:before
+			color: $blue
+	&.more_left
+		left: auto
+		right: 0
 
 
 
