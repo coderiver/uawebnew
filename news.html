@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Template</title>
+	<title>news</title>
 	<meta name="viewport" content="initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <meta name="viewport" content="width=1200"> -->
@@ -16,9 +16,14 @@
 	<header class="header">
 		<div class="topper">
 			<div class="l-center clr">
-				<h1 class="logo">
+				<div class="logo">
 					<a href="#">uawebchallange</a>
-				</h1>
+				</div>
+				<ul class="lang">
+					<li><a href="#" class="top-line is-active">укр</a></li>
+					<li><a href="#" class="top-line">рус</a></li>
+					<li><a href="#" class="top-line">eng</a></li>
+				</ul>
 				<ul class="top-menu">
 					<li><a href="#" class="top-line">статтi</a></li>
 					<li><a href="#" class="top-line">про організацію</a></li>
@@ -33,48 +38,17 @@
 					<ul>
 						<li><a href="#">Чемпіонат</a></li>
 						<li><a href="#">Події</a></li>
-						<li><a href="#">Новини</a></li>
+						<li><a href="#" class="is-active">Новини</a></li>
 						<li><a href="#">Партнери</a></li>
 						<li><a href="#">Експерти</a></li>
-						<li class="login"><a href="#">вхiд для учасникiв</a></li>
+						<li class="login"><a href="#">вийти</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>	
-		<div class="slider">
-			<div class="slider__in">
-				<div class="m-news-list">
-					<a href="#" class="m-news">
-						<ul class="m-news__progress">	
-							<li class="is-active"></li>
-							<li class="is-active"></li>
-							<li class="is-active"></li>
-							<li class="is-active"></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-						<div class="m-news__title">Майстер-клас по Workflow та Branch by abstraction</div>
-						<div class="m-news__hint">Встигни зарееструватися</div>
-					</a>
-					<div class="m-news">
-						<a href="#" class="m-news">
-							<div class="m-news__title">Майстер-клас по Workflow та Branch by abstraction</div>
-							<div class="m-news__hint">Встигни зарееструватися</div>
-						</a>
-						<a href="#" class="m-news">
-							<div class="m-news__title">Майстер-клас по Workflow та Branch by abstraction</div>
-							<div class="m-news__hint">Встигни зарееструватися</div>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="slider__img">
-				<img src="img/slide1.jpg" alt="">
-			</div>
+		<div class="header__in" style="background-image: url(img/img3.jpg);">
+			<div class="subtitle">8-9 листопада</div>	
+			<h1 class="h1">Хакатон #3</h1>
 		</div>
 	</header>
 	<div class="l-center">
@@ -212,14 +186,20 @@
 				<a href="#" class="facebook"><i></i></a>
 				<a href="#" class="twitter"><i></i></a>
 				<div class="subscribe">
-					
+					<input type="text" placeholder="Підпишись на цікаву інформацію - введи e-mail">
+					<button type="submit" class="submit js-submit"></button>
+					<div class="progressbar">
+						<div class="progressbar__line"></div>
+						<div class="progressbar__progress js-progress"></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<footer class="footer">
-		<div class="l-center">
-			
+		<div class="l-center clr">
+			<div class="copyrights">© UA Web Challenge. 2015</div>
+			<div class="design"><span>Design by</span> <a href="#" class="vintage"></a></div>
 		</div>
 	</footer>
 </div>

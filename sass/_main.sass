@@ -1,6 +1,17 @@
 // Normally mainpage styles
 .header
-	position: relative 
+	position: relative
+	&__in
+		padding: 180px 0 70px
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 0%
+.subtitle
+	text-align: center
+	font-size: 14px
+	text-transform: uppercase
+	color: #fff
+	+fd		
 .topper
 	position: absolute
 	top: 0
@@ -523,6 +534,7 @@ div.m-news
 		border-collapse: collapse
 	&__row
 		display: table-row
+		width: 100% 
 	&__logo
 		display: table-cell
 		width: 16.6%
@@ -703,12 +715,9 @@ div.m-news
 			
 // cabinet
 .cabinet
-	padding-top: 180px
-	+cover
 	.h1
 		margin-bottom: 5px
 	&__results
-		padding-bottom: 73px
 		font-size: 0
 		text-align: center
 		span, a
@@ -765,7 +774,8 @@ div.m-news
 			font-size: 11px
 			text-decoration: none
 			color: $blue
-			text-transform: uppercase 	
+			text-transform: uppercase
+
 	
 					
 
