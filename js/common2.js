@@ -14,6 +14,7 @@ head.ready(function() {
 	$('.js-slick').on('afterChange', function(event, slick, currentSlide, nextSlide){
 		var	dot = $(this).find(".slick-dots li"),
 			n = dot.length;
+		dot.removeClass("is-active");
 		for(i=0;i<=n;i++) {
 			if (dot.eq(i).hasClass("slick-active")) {
 				break;
