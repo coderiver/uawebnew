@@ -198,6 +198,9 @@ div.m-news
 	&:first-child
 		&:before
 			display: none
+	&.is-active
+		.m-news__progress
+			opacity: 1		
 	& > .m-news
 		height: 140px
 		padding-top: 30px
@@ -215,6 +218,7 @@ div.m-news
 		left: 50%
 		+transform(translateX(-50%))
 		font-size: 0
+		opacity: 0 
 		li
 			display: inline-block
 			vertical-align: middle
