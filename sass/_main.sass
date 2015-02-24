@@ -150,6 +150,36 @@
 		left: 0
 		+vertical
 		z-index: 2
+		+r(1024)
+			display: none
+	&__item
+		position: relative
+	&__bg
+		font-size: 0
+		img
+			width: 100%
+	&__content
+		position: absolute
+		top: 135px
+		bottom: 0
+		right: 0
+		left: 0
+		+vertical
+		display: none
+		+r(1024)
+			display: block
+		+r(768)
+			top: 0	
+		.m-news
+			&:hover
+				color: #fff
+				&:after
+					height: 0
+			+r(900)
+				padding: 30px 30px 0
+				height: auto 
+				.m-news__title
+					font-size: 22px							
 .m-news-list
 	display: inline-block
 	vertical-align: middle

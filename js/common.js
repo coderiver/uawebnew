@@ -10,9 +10,6 @@ head.ready(function() {
 
 // main page slider
 
-	
-	
-	
 	// slider init
 	$('.js-slider').slick({
 	  fade: true,
@@ -24,7 +21,15 @@ head.ready(function() {
 	  speed: 300,
 	  adaptiveHeight: true,
 	  autoplay: true,
-	  autoplaySpeed: 5000
+	  autoplaySpeed: 5000,
+	  responsive: [
+	      {
+	        breakpoint: 1024,
+	        settings: {
+	          dots: true
+	        }
+	      }
+	    ]
 	});
 
 	// counter	

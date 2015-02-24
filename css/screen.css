@@ -171,6 +171,18 @@ body { font-family: "FuturaBookC", sans-serif; font-size: 16px; color: #171717; 
 .slider__img img { width: 100%; height: auto; }
 .slider__in { position: absolute; top: 135px; bottom: 0; right: 0; left: 0; text-align: center; font-size: 0; z-index: 2; }
 .slider__in:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+@media only screen and (max-width: 1024px) { .slider__in { display: none; } }
+.slider__item { position: relative; }
+.slider__bg { font-size: 0; }
+.slider__bg img { width: 100%; }
+.slider__content { position: absolute; top: 135px; bottom: 0; right: 0; left: 0; text-align: center; font-size: 0; display: none; }
+.slider__content:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+@media only screen and (max-width: 1024px) { .slider__content { display: block; } }
+@media only screen and (max-width: 768px) { .slider__content { top: 0; } }
+.slider__content .m-news:hover { color: #fff; }
+.slider__content .m-news:hover:after { height: 0; }
+@media only screen and (max-width: 900px) { .slider__content .m-news { padding: 30px 30px 0; height: auto; }
+  .slider__content .m-news .m-news__title { font-size: 22px; } }
 
 .m-news-list { display: inline-block; vertical-align: middle; text-align: center; }
 
