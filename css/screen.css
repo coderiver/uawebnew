@@ -131,7 +131,7 @@ body { font-family: "FuturaBookC", sans-serif; font-size: 16px; color: #171717; 
 .partners .slick-dots button { width: 4px; height: 4px; border-radius: 50%; background: #dfdfdf; }
 .partners .slick-dots button:before { display: none; }
 
-.header { position: relative; }
+.header { position: relative; min-height: 330px; }
 .header__in { padding: 180px 0 70px; background-repeat: no-repeat; background-size: cover; background-position: 50% 0%; }
 
 .subtitle { text-align: center; font-size: 14px; text-transform: uppercase; color: #fff; font-family: "FuturaDemiC", sans-serif; }
@@ -369,6 +369,7 @@ div.m-news:hover:after { height: 0; }
 .text .h2 { margin-bottom: 24px; }
 .text + .info { margin-top: 0; }
 .text_center { text-align: center; }
+.text_padding { padding: 45px 0; }
 
 .info-box { padding: 30px; text-align: center; color: #fff; background: #4cd1fc; font-size: 16px; color: #fff; font-family: "FuturaDemiC", sans-serif; line-height: 1.5; text-transform: uppercase; }
 
@@ -409,3 +410,9 @@ div.m-news:hover:after { height: 0; }
 .yep { margin: 20px auto 65px; text-align: center; line-height: 2.4; font-family: "FuturaDemiC", sans-serif; color: #141414; font-size: 11px; text-transform: uppercase; }
 .yep__text { letter-spacing: 0.1px; max-width: 545px; margin: 0 auto; }
 .yep .btn { margin: 20px 0; }
+
+.map { position: relative; background: #000; }
+.map__in { height: 480px; opacity: 0.66; }
+.map__popup { padding: 12px 0; text-align: center; text-transform: uppercase; font-size: 11px; line-height: 1.7; font-family: "FuturaDemiC", sans-serif; }
+.map__popup .h2 { margin-bottom: 5px; }
+.map__tel { font-size: 22px; font-family: "KelsonSansBoldRU", sans-serif; }
