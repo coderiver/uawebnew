@@ -535,9 +535,11 @@ div.m-news
 						width: 100% 	
 					
 // parthnres
-.parthners
+.partners
 	position: relative
-	padding: 70px 0 25px						
+	padding: 70px 0 25px	
+	&_all
+		padding-top: 0			
 	.h2
 		margin-bottom: 55px
 	&__slider
@@ -569,15 +571,20 @@ div.m-news
 	&__row
 		display: table-row
 		width: 100% 
+	&__list-small
+		.partners__logo
+			width: 12.5%
 	&__logo
 		display: table-cell
+		padding: 0 5px 
 		width: 16.6%
 		height: 109px
 		vertical-align: middle
 		text-align: center
 		border: 1px solid #e2e2e2
 		img
-			display: inline-block!important
+			display: inline-block !important
+			max-width: 100%
 	&__more
 		text-align: center
 		a
@@ -589,8 +596,7 @@ div.m-news
 			color: $blue
 			font-size: 11px
 			&:after
-				background: $blue 	  			 
-
+				background: $blue
 // share
 .share
 	padding: 45px 0
