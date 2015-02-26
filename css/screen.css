@@ -46,6 +46,7 @@ body { font-family: "FuturaBookC", sans-serif; font-size: 16px; color: #171717; 
 .h2 { font-size: 30px; font-family: "KelsonSansBoldRU", sans-serif; color: #000; text-transform: uppercase; text-align: center; }
 .h2.h2_white { color: #fff; }
 .h2.h2_left { text-align: left; }
+.h2_single { margin: 40px 0; }
 
 .title { margin: 37px 0; font-family: "FuturaDemiC", sans-serif; font-size: 14px; text-transform: uppercase; text-align: center; color: #1e1e1e; }
 
@@ -271,7 +272,7 @@ div.m-news:hover:after { height: 0; }
 .directions__list li a:hover:after { opacity: 1; width: 100%; }
 
 .partners { position: relative; padding: 70px 0 25px; }
-.partners_all { padding-top: 0; }
+.partners_all { padding: 0; }
 .partners .h2 { margin-bottom: 55px; }
 .partners__slider { position: relative; margin-bottom: 25px; }
 .partners__pager { position: absolute; top: -40px; left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); font-size: 0; }
@@ -354,18 +355,20 @@ div.m-news:hover:after { height: 0; }
 .test { padding: 45px 0; text-align: center; }
 
 .judge { padding: 70px 0 75px; border-top: 1px solid #e2e2e2; }
+.judge_contacts { margin-bottom: 45px; border-bottom: 1px solid #e2e2e2; padding-bottom: 65px; }
 .judge .h2 { margin-bottom: 20px; }
 .judge__about { margin-bottom: 45px; text-align: center; }
 .judge__list { font-size: 0; }
 .judge__item { display: inline-block; vertical-align: top; width: 25%; text-align: center; font-family: "FuturaDemiCItalic", sans-serif; }
 .judge__photo { position: relative; display: inline-block; width: 150px; height: 150px; margin-bottom: 32px; border-radius: 50%; overflow: hidden; font-size: 0; }
 .judge__photo img { border-radius: 50%; }
-.judge__name { margin-bottom: 3px; font-size: 11px; text-transform: uppercase; }
+.judge__name { margin-bottom: 20px; font-size: 11px; text-transform: uppercase; }
 .judge__info a, .judge__info p { font-size: 11px; text-decoration: none; color: #09c5fb; text-transform: uppercase; }
 
 .text { padding: 10px 0 20px; }
 .text .h2 { margin-bottom: 24px; }
 .text + .info { margin-top: 0; }
+.text_center { text-align: center; }
 
 .info-box { padding: 30px; text-align: center; color: #fff; background: #4cd1fc; font-size: 16px; color: #fff; font-family: "FuturaDemiC", sans-serif; line-height: 1.5; text-transform: uppercase; }
 
@@ -385,6 +388,7 @@ div.m-news:hover:after { height: 0; }
 .text-right { text-align: right; }
 
 .slick { position: relative; }
+.slick img { width: 100%; height: auto; }
 
 .soc { padding: 37px 0; text-align: center; font-size: 0; }
 .soc span { margin-right: 15px; font-size: 11px; text-transform: uppercase; font-family: "FuturaDemiC", sans-serif; color: #171717; }
@@ -402,6 +406,6 @@ div.m-news:hover:after { height: 0; }
 .soc__tw i { background: url('../img/icons-s8be65cfbb9.png') 0 -242px no-repeat; width: 16px; height: 13px; }
 .soc__tw i:before { background: url('../img/icons-s8be65cfbb9.png') 0 -265px no-repeat; width: 16px; height: 13px; }
 
-.yep { margin: 20px auto 65px; max-width: 600px; text-align: center; line-height: 2.4; font-family: "FuturaDemiC", sans-serif; color: #141414; font-size: 11px; text-transform: uppercase; }
-.yep__text { letter-spacing: 0.1px; }
+.yep { margin: 20px auto 65px; text-align: center; line-height: 2.4; font-family: "FuturaDemiC", sans-serif; color: #141414; font-size: 11px; text-transform: uppercase; }
+.yep__text { letter-spacing: 0.1px; max-width: 545px; margin: 0 auto; }
 .yep .btn { margin: 20px 0; }
