@@ -1,11 +1,12 @@
 // Normally mainpage styles
 .header
 	position: relative
-	min-height: 330px
+	
 	&__in
-		padding: 180px 0 50px
+		padding: 190px 0 20px
 		background-repeat: no-repeat
 		background-size: cover
+		min-height: 340px
 		background-position: 50% 0%
 .subtitle
 	text-align: center
@@ -276,15 +277,17 @@ div.m-news
 	padding: 59px 0 46px
 	&__list
 		font-size: 0
+		display: table
 	&__item
-		display: inline-block
+		display: table-cell
+		position: relative 
 		vertical-align: top
 		width: 33.3%
 		border-left: 1px solid #e6e6e7
 		&:first-child
 			border-left: none 			
 		& > a
-			position: relative
+			//position: relative
 			display: block
 			padding: 25px 30px 
 			text-decoration: none
@@ -329,10 +332,30 @@ div.m-news
 	position: relative
 	padding: 45px 0 65px 
 	background: url(../img/bg-pattern.jpg)  
+	.task-example
+		text-align: center
+	&_dark
+		padding: 45px 0 27px
+		background: #171717
+		color: #fff  
+		.schedule
+			&:before	
+				opacity: 0.4
+			&__title
+				margin-bottom: 5px
+				color: #fff 
+			&__date
+				background: #171717
+			&__date-in
+				background: #fff 
 	&__in
 		margin-bottom: 15px
 	.h2
-		margin-bottom: 15px 		
+		margin-bottom: 15px 	
+	.text-center
+		margin: 48px 0 0
+		.btn
+			margin-bottom: 20px	
 .categories
 	margin-bottom: 35px
 	font-size: 0
@@ -393,6 +416,9 @@ div.m-news
 	position: relative
 	font-size: 0
 	text-align: center
+	&_width
+		.schedule__item
+			width: 33.3%
 	&:before
 		content: ""
 		position: absolute
@@ -450,7 +476,9 @@ div.m-news
 		span
 			position: relative
 			display: inline-block
-
+	&__text
+		font-size: 16px
+		color: #fff 
 // m-articles
 .m-articles
 	position: relative
@@ -541,6 +569,10 @@ div.m-news
 	padding: 70px 0 25px	
 	&_all
 		padding: 0		
+	&_mod
+		padding: 70px 0 55px  
+		.partners__slider
+			margin-bottom: 50px
 	.h2
 		margin-bottom: 55px
 	&__slider
@@ -817,7 +849,6 @@ div.m-news
 		img
 			border-radius: 50%
 	&__name
-		margin-bottom: 20px
 		font-size: 11px
 		text-transform: uppercase
 	&__info

@@ -189,3 +189,128 @@
 				float: left
 	.btn
 		margin: 0 0 30px 
+		
+.benefits
+	border-top: 1px solid $border
+	padding: 40px 0 35px 
+	.l-center
+		+clr
+	&__title
+		float: left
+		padding-right: 20px
+		width: 380px
+		.h1
+			text-align: left
+			font-size: 42px
+	&__list
+		overflow: hidden
+	.list
+		+column-count(2)
+	.h3
+		margin: 45px 0 25px
+
+.list
+	font-size: 11px
+	+fdi
+	text-transform: uppercase
+	color: #000 
+	line-height: 1.6
+	letter-spacing: .1px 
+	li
+		position: relative
+		margin-bottom: 17px
+		padding-left: 35px
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 5px
+			width: 4px
+			height: 4px
+			background: $yellow
+			border-radius: 50%   
+			
+.icon-play
+	display: inline-block
+	vertical-align: middle
+	+s(play)
+
+.link
+	a
+		color: $blue 
+		text-transform: uppercase
+		font-size: 11px
+		+fd
+		text-decoration: none
+		
+.task-example
+	margin: 20px 0 
+	.info-text
+		display: inline-block
+		margin-right: 15px
+	a
+		display: inline-block
+		padding: 0 15px 
+		color: $blue
+		text-decoration: none
+		font-size: 11px
+		+fd
+		text-transform: uppercase 
+.branches-wrap
+	position: relative
+	background: #000 url(../img/img7.jpg)
+	+cover
+	overflow: hidden
+.branch
+	float: left
+	position: relative
+	width: 33.3%
+	height: 220px
+	color: #fff
+	text-transform: uppercase
+	border-left: 1px solid rgba(#fff,.4) 
+	border-top: 1px solid rgba(#fff,.4) 
+	+vertical
+	&:nth-child(1),
+	&:nth-child(2),
+	&:nth-child(3),
+		border-top: 0
+	&:nth-child(3n+1)
+		border-left: 0
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: -1px
+		right: -1px
+		height: 0
+		z-index: 1
+		background: $yellow
+		+tr(height .3s)
+	&:hover
+		z-index: 2
+		&:after
+			height: 100%
+		.branch__in
+			color: #000 
+	&_title
+		background: $yellow
+		z-index: 2
+		&:after
+			height: 100%
+		.branch__in
+			padding: 0 24% 
+	&__in
+		display: inline-block
+		position: relative
+		z-index: 2 
+		padding: 0 15% 
+		vertical-align: middle
+		font-size: 11px 
+		+tr(color .3s)
+	&__title
+		margin-bottom: 25px
+		font-size: 16px
+		+ksb
+	.info-text
+		padding: 0 40px 
