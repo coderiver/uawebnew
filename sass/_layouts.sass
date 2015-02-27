@@ -1,9 +1,24 @@
 .l-cols-wrap
-    +clr
+	+clr
 .l-col
-    float: right
-    width: 50%
-    padding: 20px 0 20px 40px
-    &:first-child
-        float: left
-        padding: 20px 40px 20px 0
+	float: right
+	position: relative
+	width: 50%
+	padding: 20px 0 20px 40px
+	&:first-child
+		float: left
+		padding: 20px 40px 20px 0
+.l-cols-wrap_border
+	.l-col
+		&:before
+			content: ""
+			position: absolute
+			top: 36px
+			bottom: 36px
+			left: -1px
+			width: 1px
+			background: $border 
+		&:first-child
+			&:before
+				left: auto
+				right: 0

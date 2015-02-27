@@ -39,11 +39,14 @@ body
 	+fb 
 	font-size: 16px
 	color: #171717 
-	line-height: 1.4	
+	line-height: 1.4
+	+selection
+		background: rgba(#4cd1fc,.5) 	
 
 // vars
 $yellow: #fbdc09
 $blue: #09c5fb
+$border: #e6e6e7
 
 
 // common blocks      
@@ -70,6 +73,8 @@ $blue: #09c5fb
 	text-align: center
 	&.h2_white
 		color: #fff
+	&.h2_yellow
+		color: $yellow
 	&.h2_left
 		text-align: left	
 	&_single
@@ -95,6 +100,8 @@ $blue: #09c5fb
 	text-decoration: none
 	color: #fff
 	z-index: 1
+	+r(480)
+		width: 100%
 	&:after
 		content: ""
 		position: absolute
@@ -107,7 +114,13 @@ $blue: #09c5fb
 		z-index: -1
 	&:hover
 		&:after
-			height: 100% 	   
+			height: 100% 
+	&_action
+		background: $yellow
+		color: #151515 
+		&:after
+			background: darken($yellow, 5%)
+
 
 // social icons
 [class*='-ico']

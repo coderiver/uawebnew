@@ -34,6 +34,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 @font-face { font-family: KelsonSansLightRU; src: url("fonts/KelsonSansLightRU.eot"); src: url("fonts/KelsonSansLightRU.eot?#iefix") format("embedded-opentype"), url("fonts/KelsonSansLightRU.woff2") format("woff2"), url("fonts/KelsonSansLightRU.woff") format("woff"), url("fonts/KelsonSansLightRU.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: KelsonSansRegularRU; src: url("fonts/KelsonSansRegularRU.eot"); src: url("fonts/KelsonSansRegularRU.eot?#iefix") format("embedded-opentype"), url("fonts/KelsonSansRegularRU.woff2") format("woff2"), url("fonts/KelsonSansRegularRU.woff") format("woff"), url("fonts/KelsonSansRegularRU.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 body { font-family: "FuturaBookC", sans-serif; font-size: 16px; color: #171717; line-height: 1.4; }
+body ::selection { background: rgba(76, 209, 252, 0.5); }
+body ::-moz-selection { background: rgba(76, 209, 252, 0.5); }
 
 .l-center { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 .l-center.l-center_wide { padding: 0; }
@@ -45,14 +47,18 @@ body { font-family: "FuturaBookC", sans-serif; font-size: 16px; color: #171717; 
 
 .h2 { font-size: 30px; font-family: "KelsonSansBoldRU", sans-serif; color: #000; text-transform: uppercase; text-align: center; }
 .h2.h2_white { color: #fff; }
+.h2.h2_yellow { color: #fbdc09; }
 .h2.h2_left { text-align: left; }
 .h2_single { margin: 40px 0; }
 
 .title { margin: 37px 0; font-family: "FuturaDemiC", sans-serif; font-size: 14px; text-transform: uppercase; text-align: center; color: #1e1e1e; }
 
 .btn { position: relative; display: inline-block; width: 428px; height: 70px; line-height: 70px; background: #09c5fb; text-align: center; font-family: "FuturaDemiC", sans-serif; font-size: 14px; text-transform: uppercase; text-decoration: none; color: #fff; z-index: 1; }
+@media only screen and (max-width: 480px) { .btn { width: 100%; } }
 .btn:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 0; background: #04b4e7; -moz-transition: height 300ms; -o-transition: height 300ms; -webkit-transition: height 300ms; transition: height 300ms; z-index: -1; }
 .btn:hover:after { height: 100%; }
+.btn_action { background: #fbdc09; color: #151515; }
+.btn_action:after { background: #e7ca04; }
 
 [class*='-ico'] { position: relative; display: inline-block; vertical-align: middle; }
 
@@ -85,8 +91,11 @@ body { font-family: "FuturaBookC", sans-serif; font-size: 16px; color: #171717; 
 .l-cols-wrap { *zoom: 1; }
 .l-cols-wrap:after { content: " "; display: table; clear: both; }
 
-.l-col { float: right; width: 50%; padding: 20px 0 20px 40px; }
+.l-col { float: right; position: relative; width: 50%; padding: 20px 0 20px 40px; }
 .l-col:first-child { float: left; padding: 20px 40px 20px 0; }
+
+.l-cols-wrap_border .l-col:before { content: ""; position: absolute; top: 36px; bottom: 36px; left: -1px; width: 1px; background: #e6e6e7; }
+.l-cols-wrap_border .l-col:first-child:before { left: auto; right: 0; }
 
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
@@ -132,7 +141,7 @@ body { font-family: "FuturaBookC", sans-serif; font-size: 16px; color: #171717; 
 .partners .slick-dots button:before { display: none; }
 
 .header { position: relative; min-height: 330px; }
-.header__in { padding: 180px 0 70px; background-repeat: no-repeat; background-size: cover; background-position: 50% 0%; }
+.header__in { padding: 180px 0 50px; background-repeat: no-repeat; background-size: cover; background-position: 50% 0%; }
 
 .subtitle { text-align: center; font-size: 14px; text-transform: uppercase; color: #fff; font-family: "FuturaDemiC", sans-serif; }
 
@@ -365,10 +374,12 @@ div.m-news:hover:after { height: 0; }
 .judge__name { margin-bottom: 20px; font-size: 11px; text-transform: uppercase; }
 .judge__info a, .judge__info p { font-size: 11px; text-decoration: none; color: #09c5fb; text-transform: uppercase; }
 
+.text-wrap { border-bottom: 1px solid #e6e6e7; }
+
 .text { padding: 10px 0 20px; }
 .text .h2 { margin-bottom: 24px; }
 .text + .info { margin-top: 0; }
-.text_center { text-align: center; }
+.text_center { text-align: center; margin: 0 auto; padding: 0 25px; max-width: 745px; }
 .text_padding { padding: 45px 0; }
 
 .info-box { padding: 30px; text-align: center; color: #fff; background: #4cd1fc; font-size: 16px; color: #fff; font-family: "FuturaDemiC", sans-serif; line-height: 1.5; text-transform: uppercase; }
@@ -440,3 +451,28 @@ div.m-news:hover:after { height: 0; }
 .item__meta { margin: 7px 0 17px; text-transform: uppercase; color: #09c5fb; font-size: 11px; font-family: "FuturaDemiCItalic", sans-serif; }
 .item__meta a { color: #09c5fb; text-decoration: none; }
 .item__info { margin: 17px 0 0; font-family: "FuturaDemiC", sans-serif; font-size: 16px; color: #141414; line-height: 1.5; }
+
+.event-head { position: relative; margin: 15px 0; padding: 20px 0; text-transform: uppercase; color: #fff; text-align: center; }
+.event-head:before, .event-head:after { content: ""; position: absolute; left: 50%; margin-left: -43px; width: 86px; height: 1px; background: rgba(255, 255, 255, 0.4); }
+.event-head:before { top: 0; }
+.event-head:after { bottom: 0; }
+.event-head__title { margin-bottom: 3px; font-size: 22px; font-family: "KelsonSansBoldRU", sans-serif; }
+.event-head__meta { font-size: 11px; font-family: "FuturaDemiC", sans-serif; }
+
+.person { padding: 48px 0 53px; background: #000 url(../img/person-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; text-align: center; color: #fff; }
+.person__in { max-width: 500px; display: inline-block; }
+.person .h2 { margin: 0 0 20px; }
+.person__img { width: 150px; margin: 20px auto 17px; }
+.person__img img { border-radius: 50%; display: block; max-width: 100%; }
+.person .info-text { margin: 27px 0 17px; }
+.person__info { font-size: 16px; }
+
+.info-text { font-size: 11px; text-transform: uppercase; font-family: "FuturaDemiCItalic", sans-serif; }
+
+.reg { padding: 30px 10px 27px; background: #171717; text-align: center; color: #fff; }
+.reg__in { display: inline-block; max-width: 428px; }
+.reg__head { margin: 0 0 20px; *zoom: 1; }
+.reg__head:after { content: " "; display: table; clear: both; }
+.reg__head .h2 { float: right; }
+.reg__head .h2:first-child { float: left; }
+.reg .btn { margin: 0 0 30px; }
