@@ -12,7 +12,8 @@ head.ready(function() {
 
 	// slider init
 	$('.js-slider').slick({
-	  fade: true,
+	  fade: false,
+	  easing: 'easeInCubic',
 	  infinite: true,
 	  slidesToShow: 1,
 	  slidesToScroll: 1,

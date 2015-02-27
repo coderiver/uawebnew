@@ -19,7 +19,6 @@
     color: #fff 
     background: #4cd1fc
     font-size: 16px
-    color: #fff
     +fd
     line-height: 1.5
     text-transform: uppercase  
@@ -71,12 +70,13 @@
         font-size: 11px
         text-transform: uppercase
         +fd
-        color: #171717 
+        color: #000 
     a, span
         display: inline-block
         vertical-align: middle
     a
         margin-left: 20px
+        position: relative 
         width: 56px
         height: 56px
         text-align: center
@@ -84,14 +84,28 @@
         -webkit-border-radius: 50% 
         border-radius: 50% 
         border: 1px solid rgba(20, 20, 20, 0.4)
-        +tr(background .3s)
+        +tr(border .3s)
         &:hover
-            background: #000
+            border-color: transparent
+            &:after
+                left: 0
+                right: 0
             i
                 &:before
                     opacity: 1
+        &:after
+            content: ""
+            position: absolute
+            left: 50%
+            right: 50%
+            top: 0
+            bottom: 0   
+            background: #000
+            border-radius: 50% 
+            +transition(all .3s)
     i
         position: relative
+        z-index: 2
         display: inline-block
         vertical-align: middle
         &:before
