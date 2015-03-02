@@ -41,6 +41,7 @@
 		margin-left: 38px
 		vertical-align: middle
 		font-size: 11px
+		+fd
 		text-transform: uppercase
 		letter-spacing: .1px 
 		&:first-child
@@ -314,3 +315,113 @@
 		+ksb
 	.info-text
 		padding: 0 40px 
+	
+.events-wrap
+	margin: 27px 0 60px 
+.event
+	display: table
+	width: 100%
+	border-bottom: 1px solid $border 
+	border-top: 1px solid $border 
+	margin-bottom: -1px
+	text-transform: uppercase
+	+fd
+	font-size: 11px
+	text-decoration: none
+	color: #000 
+	+tr(border .3s)
+	&:hover
+		border-color: $blue 
+		position: relative
+		z-index: 2
+	&__meta,
+	&__text
+		display: table-cell
+		vertical-align: middle
+		padding: 28px 0 
+	&__meta
+		width: 140px
+		padding-right: 10px
+		color: $blue 
+
+.calendar-wrap
+	margin: 65px 0 95px
+.calendar
+	+fd
+	font-size: 11px
+	text-transform: uppercase
+	text-align: center
+	.slick-list
+		width: 100%
+	&__nav
+		padding: 13px 
+		border-top: 1px solid $border 
+		border-bottom: 1px solid $border 
+		text-align: center
+		font-size: 0
+	&__month,
+	&__btn
+		display: inline-block
+		vertical-align: middle
+	&__btn
+		position: relative
+		width: 26px
+		height: 26px
+		background: #000 
+		border-radius: 50%  
+		+tr(background .3s)
+		&:before
+			content: ""
+			position: absolute
+			left: 50%
+			top: 50%
+			margin: -7px 0 0 -5px
+		&:hover
+			background: $blue
+		 
+	&__prev
+		&:before
+			+s(arr-prev)
+	&__next
+		&:before
+			+s(arr-next)
+	&__month
+		width: 220px
+		font-size: 11px
+		
+	&__head,
+	&__body
+		li
+			float: left
+			width: percentage(137px/960px)
+	&__head
+		li
+			height: 70px
+			line-height: 70px
+	&__body
+		+clr
+		li
+			height: 100px
+			line-height: 100px
+			font-size: 18px
+			border-left: 1px solid $border
+			border-top: 1px solid $border
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4),
+			&:nth-child(5),
+			&:nth-child(6),
+			&:nth-child(7)
+				border-top: 0
+			&:nth-child(7n+1)
+				border-left: 0
+			&.is-inactive
+				color: #ccc 
+			&.is-active
+				color: #fff
+				background: $blue  
+				a
+					color: #fff
+					display: block
+					text-decoration: none 

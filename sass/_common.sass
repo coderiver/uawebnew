@@ -111,6 +111,7 @@ $border: #e6e6e7
 	text-decoration: none
 	color: #fff
 	z-index: 1
+	+tr(color .3s)
 	+r(480)
 		width: 100%
 	&:after
@@ -120,12 +121,16 @@ $border: #e6e6e7
 		left: 0
 		width: 100% 
 		height: 0
-		background: darken($blue, 5%)
+		background: $yellow
 		+tr(height 300ms)
 		z-index: -1
 	&:hover
+		color: #000 
 		&:after
 			height: 100% 
+	&:active
+		&:after
+			background: darken($yellow, 5%)
 	&_action
 		background: $yellow
 		color: #000 

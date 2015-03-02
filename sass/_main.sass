@@ -131,7 +131,7 @@
 					&:before
 						border-color: $yellow
 					&:hover
-						color: $yellow
+						color: #000
 					&.is-active
 						background: #000
 						color: #fff	
@@ -275,6 +275,75 @@ div.m-news
 .events
 	position: relative
 	padding: 59px 0 46px
+	+clr
+	&_border
+		border-bottom: 1px solid $border 
+	&__group
+		float: left
+		width: 66.6%
+		position: relative 
+		.events__item
+			float: left
+			display: block 
+			height: 135px
+			width: 50%
+			border-top: 1px solid $blue
+			border-left: 0
+			border-right: 1px solid $blue
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				width: 17px
+				height: 17px
+				background: #fff
+				z-index: 1 
+			&:nth-child(1),
+			&:nth-child(2)
+				border-top: 0
+			&:nth-child(1)
+				&:before
+					right: -1px
+					bottom: -1px
+			&:nth-child(2)
+				&:before
+					right: -1px
+					top: -1px
+				&:after	
+					right: 0
+					bottom: -1px
+			&:nth-child(3)
+				&:before
+					left: -1px
+					bottom: -1px
+			&:nth-child(4)
+				&:before
+					top: -1px
+					left: -1px
+	&__archive
+		float: left
+		width: 33.4% 
+		.events__item
+			width: 100%
+			height: 135px
+			border: 0
+			border-top: 1px solid $border
+			display: block
+			&:before
+				content: ""
+				position: absolute
+				width: 17px
+				height: 17px
+				background: #fff
+				z-index: 1
+			&:first-child
+				border: 0 
+				&:before
+					left: 0
+					bottom: -1px
+		.events__title,
+		.events__date
+			color: #ccc 
 	&__list
 		font-size: 0
 		display: table
@@ -283,7 +352,7 @@ div.m-news
 		position: relative 
 		vertical-align: top
 		width: 33.3%
-		border-left: 1px solid #e6e6e7
+		border-left: 1px solid $border
 		&:first-child
 			border-left: none 			
 		& > a
@@ -307,7 +376,7 @@ div.m-news
 				+transform(translateX(-50%) translateY(-50%))  
 				+transition(all 300ms)
 				will-change: transform
-				z-index: -1  
+				z-index: 2  
 			&:hover
 				&:after
 					opacity: 1 
@@ -317,12 +386,16 @@ div.m-news
 				.events__date
 					color: #fff	
 	&__title
+		position: relative
+		z-index: 3
 		margin-bottom: 15px
 		+ksb
 		font-size: 22px
 		color: #000
 		+tr(color 300ms)
 	&__date
+		position: relative
+		z-index: 3
 		+fdi
 		color: #09c5fb
 		font-size: 11px
@@ -857,9 +930,26 @@ div.m-news
 			color: #fff
 		a
 			text-decoration: none
+			position: relative
+			display: inline-block
 			color: $blue
 			margin: 0 15px
-			
+			&:before
+				content: "" 
+				position: absolute
+				left: 0
+				right: 0
+				height: 1px
+				background: $blue
+				will-change: transform, opacity
+				+transform(translateY(-5px))
+				opacity: 0
+				+transition(transform .3s, opacity .3s)
+			&:hover
+				&:before
+					+transform(translateY(0))
+					opacity: 1
+
 // test
 .test
 	padding: 45px 0

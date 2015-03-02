@@ -58,4 +58,54 @@ head.ready(function() {
 
 	});
 
+	//var slickTimer = 5000;
+	$('.js-slick').slick({
+	  infinite: true,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  dots: true,
+	  arrows:false,
+	  speed: 300,
+	  adaptiveHeight: true,
+	  autoplaySpeed: 5000
+	});
+	$('.js-slick').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		var	dot = $(this).find(".slick-dots li"),
+			n = dot.length;
+		dot.removeClass("is-active");
+		for(i=0;i<=n;i++) {
+			if (dot.eq(i).hasClass("slick-active")) {
+				break;
+			}
+			else {
+				dot.eq(i).addClass("is-active");
+			}
+		}
+
+	});
+
+
+	//var slickTimer = 5000;
+	var calendarSlider =  $('.js-calendar-slider');
+	calendarSlider.slick({
+	  infinite: true,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  dots: false,
+	  arrows:false,
+	  speed: 300,
+	  adaptiveHeight: true,
+	  autoplaySpeed: 0
+	});
+	$(".js-month-prev").on("click", function () {
+		$('.js-calendar-slider').slick('slickPrev');
+	});
+	$(".js-month-next").on("click", function () {
+		$('.js-calendar-slider').slick('slickNext');
+	});
+	calendarSlider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+		var activeMonth = $(this).find(".slick-active").attr("data-month");
+		$(".js-month").text(activeMonth);
+	});
+
 });
