@@ -47,7 +47,19 @@ body
 $yellow: #fbdc09
 $blue: #09c5fb
 $border: #e6e6e7
-
+html
+	&.has-open-nav
+		.out
+			position: relative
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				z-index: 9
+				background: rgba(#000,.7)
 
 // common blocks      
 .l-center
@@ -58,7 +70,6 @@ $border: #e6e6e7
 		padding: 0
 .clr
 	+clr
-
 .h1
 	font-size: 48px
 	text-transform: uppercase
@@ -76,12 +87,16 @@ $border: #e6e6e7
 	color: #000
 	text-transform: uppercase
 	text-align: center
+	+r(768)
+		font-size: 24px
 	&.h2_white
 		color: #fff
 	&.h2_yellow
 		color: $yellow
 	&.h2_left
-		text-align: left	
+		text-align: left
+		+r(768)
+			text-align: center
 	&_single
 		margin: 40px 0 
 .h3
@@ -97,10 +112,13 @@ $border: #e6e6e7
 	text-transform: uppercase
 	text-align: center
 	color: #000 
+.btn-wrap
+	text-align: center
 .btn
 	position: relative
 	display: inline-block
-	width: 428px
+	min-width: 428px
+	padding: 0 10px 
 	height: 70px
 	line-height: 70px
 	background: $blue
@@ -136,7 +154,11 @@ $border: #e6e6e7
 		color: #000 
 		&:after
 			background: darken($yellow, 5%)
-
+	&_small
+		height: 50px
+		line-height: 50px
+		min-width: 195px
+		font-size: 11px
 
 // social icons
 [class*='-ico']
@@ -220,7 +242,9 @@ $border: #e6e6e7
 			top: 100%
 	&:hover
 		span
-			+transform(translateY(-100%))									
+			+transform(translateY(-100%))	
+			+r(768)
+				+transform(translateY(0))									
 
 // more side link
 .more
@@ -233,9 +257,18 @@ $border: #e6e6e7
 	font-size: 11px
 	text-decoration: none
 	+transform(rotate(-90deg))
+	+r(768)
+		position: static
+		pointer-events: none
+		margin: 20px 0 
+		text-align: center
+		display: block
+		+transform(rotate(0))
 	span
 		&:before
 			color: $blue
+			+r(768)
+				display: none
 	&.more_left
 		left: auto
 		right: 0

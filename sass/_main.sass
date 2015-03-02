@@ -24,6 +24,7 @@
 .logo
 	float: left
 	font-size: 0
+	height: 85px
 	padding-top: 23px 
 	a
 		display: inline-block
@@ -32,6 +33,8 @@
 	float: right
 	height: 85px
 	+vertical
+	+r(768)
+		display: none
 	li
 		display: inline-block
 		vertical-align: middle
@@ -50,6 +53,8 @@
 .lang
 	position: relative
 	margin-left: 22px
+	+r(768)
+		display: none
 	&:after
 		content: ""
 		position: absolute
@@ -63,12 +68,16 @@
 			&.is-active
 				color: $blue	 						
 .menu
+	+r(768)
+		display: none
 	ul
-		+clr
+		display: table
+		width: 100%
+		table-layout: fixed
 		li
 			position: relative
-			float: left
-			width: 16.1%
+			display: table-cell
+			vertical-align: middle
 			height: 50px
 			margin-right: 1px
 			text-align: center
@@ -79,6 +88,7 @@
 				bottom: 0
 				right: -1px
 				width: 1px
+				z-index: 2
 				background: #464344  
 			a
 				display: block
@@ -136,6 +146,124 @@
 						background: #000
 						color: #fff	
 
+.nav-toggle
+	display: none
+	position: fixed
+	right: 20px
+	top: 20px
+	z-index: 11
+	width: 54px
+	height: 54px
+	border-radius: 50% 
+	border: 1px solid rgba(#fff,.4)
+	background: none
+	+transition(border .3s)
+	+r(768)
+		display: block
+	&:hover
+		border-color: #fff 
+	&.is-active
+		border-color: rgba(#000,.4)
+		i
+			background: none
+			&:before,
+			&:after
+				background: #000 
+				left: 0
+				right: 0
+			&:before
+				+rotate(45)
+				top: 0
+			&:after
+				+rotate(-45)
+				bottom: 0
+	i
+		display: inline-block
+		vertical-align: middle
+		position: relative 
+		width: 27px
+		height: 3px
+		background: #fff 
+		+tr(background .2s)
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			left: 5px
+			right: 5px
+			height: 3px
+			background: #fff  
+			will-change: transform
+			+tr(all .1s)
+			
+		&:before
+			top: -8px
+		&:after
+			bottom: -8px
+.nav
+	display: none
+	position: fixed
+	top: -100%
+	right: 0
+	left: 0
+	z-index: 10
+	max-height: 100%
+	overflow-y: auto
+	background: #fff 
+	+tr(top .3s)
+	+r(768)
+		display: block
+	&.is-visible
+		top: 0
+	.lang
+		float: none
+		margin: 0
+		text-align: left
+		+r(768)
+			display: block
+		li
+			margin: 0 22px 0 0
+		a
+			color: #000
+		&:after
+			display: none
+	&__list
+		margin-bottom: 15px
+	&__soc
+		text-align: center
+		margin: 20px 0 30px
+		.vk-ico
+			+s(vk-blue)
+		.tw-ico
+			+s(tw-blue)
+		.fb-ico
+			+s(fb-blue)
+		li
+			display: inline-block
+			vertical-align: middle
+		a
+			display: block
+			width: 40px
+			height: 40px
+			line-height: 40px
+			&:hover
+				i
+					&:after
+						opacity: 1 
+.nav__list
+	text-align: center
+	a
+		display: block
+		padding: 10px 0 
+		font-size: 11px
+		text-transform: uppercase
+		+fd
+		text-decoration: none
+		color: #000 
+		+transition(color .3s, background .3s)
+		&:hover
+			background: $blue
+			color: #fff  
 // slider
 .slider
 	position: relative
@@ -347,12 +475,18 @@ div.m-news
 	&__list
 		font-size: 0
 		display: table
+		+r(768)
+			display: block
 	&__item
 		display: table-cell
 		position: relative 
 		vertical-align: top
 		width: 33.3%
 		border-left: 1px solid $border
+		+r(768)
+			display: block
+			width: 100%
+			border-left: 0
 		&:first-child
 			border-left: none 			
 		& > a
@@ -562,12 +696,25 @@ div.m-news
 	float: left
 	width: 66.6%
 	padding-right: 5%
+	+r(960)
+		width: 50%
+	+r(768)
+		float: none
+		padding: 0
+		width: 100%
 	.h2
 		margin-bottom: 30px
 .m-posts
 	float: left
 	width: 33.4%
 	padding: 6px 0 0 
+	+r(960)
+		width: 50%
+		padding-right: 65px
+	+r(768)
+		float: none
+		padding: 0
+		width: 100%
 	&__item
 		display: inline-block
 		margin-top: 18px
@@ -575,6 +722,8 @@ div.m-news
 		color: #000
 		&:first-child
 			margin-top: 0
+		+r(768)
+			display: block
 	&__date
 		margin-bottom: 7px
 		padding: 7px 0 
@@ -606,6 +755,8 @@ div.m-news
 	padding: 50px 0 75px
 	background: url(../img/img1.jpg)
 	+cover
+	+r(768)
+		padding-bottom: 50px
 	.h2
 		margin-bottom: 10px   
 	&__subtitle
@@ -614,51 +765,73 @@ div.m-news
 		color: #a2a0a0
 	&__list
 		+clr
-		li
-			float: left
-			width: 25%
+		+r(768)
 			height: 125px
-			border-right: 1px solid #928e8c
-			text-align: center
-			&:first-child
-				border-left: 1px solid #928e8c
-			a
-				position: relative
-				display: block
+		.slick-list
+			width: 100%
+		.slick-track
+			height: 125px
+			div
+				float: left
+				width: 25%
 				height: 125px
-				+vertical
-				text-transform: uppercase
-				+ksb
-				color: #fff
-				+tr(color 300ms) 
-				z-index: 1
-				span
-					display: inline-block
-					vertical-align: middle
-					font-size: 16px
-				&:after
-					content: ""
-					position: absolute
-					left: 50%
-					top: 50%
-					height: 100%
-					width: 0
-					opacity: 0
-					background: #fff
-					+transform(translateX(-50%) translateY(-50%))  
-					+transition(all 300ms)
-					will-change: transform
-					z-index: -1  
-				&:hover
-					color: #000
+				border-right: 1px solid #928e8c
+				text-align: center
+				+r(768)
+					border: 0
+				&:first-child
+					border-left: 1px solid #928e8c
+				a
+					position: relative
+					display: block
+					height: 125px
+					+vertical
+					text-transform: uppercase
+					+ksb
+					color: #fff
+					+tr(color 300ms) 
+					z-index: 1
+					+r(768)
+						color: #000 
+					span
+						display: inline-block
+						vertical-align: middle
+						font-size: 16px
 					&:after
-						opacity: 1 
-						width: 100% 	
-					
+						content: ""
+						position: absolute
+						left: 50%
+						top: 50%
+						height: 100%
+						width: 0
+						opacity: 0
+						background: #fff
+						+transform(translateX(-50%) translateY(-50%))  
+						+transition(all 300ms)
+						will-change: transform
+						z-index: -1  
+						+r(768)
+							width: 100%
+							opacity: 1
+					&:hover
+						color: #000
+						&:after
+							opacity: 1 
+							width: 100% 	
+		.slick-dots
+			+r(768)
+				bottom: -32px		
 // parthnres
 .partners
 	position: relative
 	padding: 70px 0 25px	
+	.partners__big
+		+r(768)
+			display: none
+	.partners__small
+		display: none
+		+r(768)
+			display: block
 	&_all
 		padding: 0		
 	&_mod
@@ -742,11 +915,16 @@ div.m-news
 .share
 	padding: 45px 0
 	background: #000
+	+r(768)
+		padding-bottom: 30px
 	.h2
 		margin-bottom: 30px
 .socials
 	text-align: center
 	font-size: 0
+	+r(768)
+		position: relative
+		padding-top: 73px
 .vkcom, .facebook, .twitter, .subscribe
 	display: inline-block
 	vertical-align: middle
@@ -819,6 +997,12 @@ div.m-news
 .subscribe
 	position: relative
 	margin-left: 37px
+	+r(768)
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		margin-left: 0
 	input[type="text"]
 		width: 380px
 		height: 42px
@@ -828,6 +1012,9 @@ div.m-news
 		font-size: 11px
 		text-transform: uppercase
 		color: #fff
+		+r(768)
+			width: 100%
+			padding-right: 0
 		+placeholder
 			+fd
 			font-size: 11px
@@ -874,13 +1061,21 @@ div.m-news
 	+fd
 	font-size: 11px 
 	text-transform: uppercase
+	+r(768)
+		text-align: center
 .copyrights
 	float: left
 	padding: 22px 0
+	+r(768)
+		float: none
+		padding: 22px 0 10px
 .design
 	float: right
 	font-size: 0
 	padding: 22px 0
+	+r(768)
+		float: none
+		padding: 10px 0 20px
 	span, a
 		display: inline-block
 		vertical-align: middle

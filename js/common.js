@@ -1,5 +1,11 @@
 head.ready(function() {
 
+	$(document).on("click", function () {
+		$(".js-nav-toggle").removeClass("is-active");
+		$(".js-nav").removeClass("is-visible");
+		$("html").removeClass("has-open-nav");
+	});
+
 	// form submit animation
 
 	$('.js-submit').on('click', function(){
@@ -67,7 +73,16 @@ head.ready(function() {
 	  arrows:false,
 	  speed: 300,
 	  adaptiveHeight: true,
-	  autoplaySpeed: 5000
+	  autoplaySpeed: 5000,
+	  responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+	]
 	});
 	$('.js-slick').on('afterChange', function(event, slick, currentSlide, nextSlide){
 		var	dot = $(this).find(".slick-dots li"),
@@ -106,6 +121,39 @@ head.ready(function() {
 	calendarSlider.on('afterChange', function(event, slick, currentSlide, nextSlide){
 		var activeMonth = $(this).find(".slick-active").attr("data-month");
 		$(".js-month").text(activeMonth);
+	});
+
+	$(".js-nav-toggle").on("click", function (event) {
+		$(this).toggleClass("is-active");
+		$(".js-nav").toggleClass("is-visible");
+		$("html").toggleClass("has-open-nav");
+		event.stopPropagation();
+	});
+	$(".js-nav").on("click", function (event) {
+		event.stopPropagation();
+	});
+
+	//var slickTimer = 5000;
+	$('.js-direction-slider').slick({
+	  infinite: true,
+	  slidesToShow: 4,
+	  slidesToScroll: 4,
+	  dots: false,
+	  arrows:false,
+	  speed: 300,
+	  autoplaySpeed: 0,
+	  responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+	]
+
 	});
 
 });
