@@ -425,3 +425,137 @@
 					color: #fff
 					display: block
 					text-decoration: none 
+					
+.article
+	overflow: hidden
+	font-size: 16px
+	+fb
+	line-height: 1.5
+	.l-center
+		max-width: 733px
+	h2, h3, h4, h5, h6
+		font-weight: normal
+		+ksb
+		text-align: center
+		text-transform: uppercase
+	h2
+		margin: 32px 0 23px
+		font-size: 30px
+	h3
+		margin: 48px 0 32px 
+		font-size: 24px
+	h4
+		font-size: 20px
+	h5
+		font-size: 18px
+	h6
+		font-size: 16px
+	p
+		margin: 0 0 30px 
+	blockquote
+		position: relative
+		margin: 30px 0 
+		padding: 31px 35px
+		text-align: center
+		font-size: 16px
+		text-transform: uppercase
+		+fd
+		color: #fff 
+		background: $blue 
+		letter-spacing: 1px 
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 3000px
+			background: $blue  
+		&:before
+			left: -3000px
+		&:after
+			right: -3000px
+	ul
+		margin: 35px 0 
+		li
+			position: relative
+			margin-bottom: 11px
+			padding-left: 20px
+			&:before
+				content: "-"
+				position: absolute 
+				left: 0
+				top: 0
+	ol
+		margin: 35px 0
+		counter-reset: list1
+		li
+			position: relative
+			margin-bottom: 11px
+			padding-left: 20px
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				counter-increment: list1  
+				content: counter(list1) ". "
+		ol
+			counter-reset: list2
+			li
+				padding-left: 35px
+				&:before
+					content: "" 
+					position: absolute
+					left: 0
+					top: 0
+					counter-increment: list2
+					content: counter(list1) "." counter(list2) ". "
+	img
+		display: block
+		margin: 0 0 27px 
+		width: 100%
+	table
+		margin: 115px 0 90px -110px
+		table-layout: fixed
+		width: 960px
+		+fd
+		text-align: center
+		thead
+			th
+				padding: 25px 10px 
+				font-weight: normal
+				font-size: 11px
+				text-transform: uppercase
+		tbody
+			font-size: 18px
+			tr
+				&:first-child
+					td
+						border-top: 0
+			td
+				padding: 35px 10px
+				border-left: 1px solid $border
+				border-top: 1px solid $border
+				&:first-child
+					border-left: 0
+.accord
+	margin-bottom: -1px
+	border-top: 1px solid $border 
+	border-bottom: 1px solid $border
+	padding: 25px 0 22px  
+	&.is-open
+		.accord__title
+			color: #000 
+	&__title
+		+fd
+		text-transform: uppercase
+		font-size: 11px
+		color: $blue 
+		cursor: pointer
+		+nosel
+		+tr(color .2s)
+	&__body
+		padding-top: 11px
+		display: none
+		
