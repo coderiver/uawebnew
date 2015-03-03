@@ -21,6 +21,15 @@
 	right: 0
 	height: 135px
 	z-index: 2
+	+r(768)
+		position: fixed
+		height: 70px
+		z-index: 8
+		+tr(background .3s)
+	&.has-bg
+		+r(768)
+			background: #000 
+		
 .logo
 	float: left
 	font-size: 0
@@ -28,7 +37,10 @@
 	padding-top: 23px 
 	a
 		display: inline-block
-		+s(logo)		
+		+s(logo)	
+	+r(768)
+		padding-top: 12px
+		height: auto	
 .top-menu, .lang
 	float: right
 	height: 85px
@@ -150,7 +162,7 @@
 	display: none
 	position: fixed
 	right: 20px
-	top: 20px
+	top: 7px
 	z-index: 11
 	width: 54px
 	height: 54px
@@ -267,6 +279,7 @@
 // slider
 .slider
 	position: relative
+	min-height: 330px
 	&__img
 		font-size: 0
 		img
@@ -284,10 +297,16 @@
 			display: none
 	&__item
 		position: relative
+		+r(768)
+			min-height: 250px
 	&__bg
 		font-size: 0
 		img
 			width: 100%
+			+r(768)
+				height: 330px
+				width: auto
+				max-width: 1000%
 	&__content
 		position: absolute
 		top: 135px
@@ -299,7 +318,10 @@
 		+r(1024)
 			display: block
 		+r(768)
-			top: 0	
+			top: 100px
+		&:before
+			+r(768)
+				display: none
 		.m-news
 			&:hover
 				color: #fff
@@ -333,6 +355,9 @@ div.m-news
 	color: #fff
 	+transition(color 300ms, background 300ms)
 	z-index: 1
+	+r(768)
+		width: 100%
+		margin: 0
 	&:before
 		content: ""
 		position: absolute
@@ -402,8 +427,10 @@ div.m-news
 // events
 .events
 	position: relative
-	padding: 59px 0 46px
+	padding: 60px 0 45px
 	+clr
+	+r(768)
+		padding-top: 20px
 	&_border
 		border-bottom: 1px solid $border 
 	&__group
@@ -537,8 +564,10 @@ div.m-news
 // dates
 .dates
 	position: relative
-	padding: 45px 0 65px 
-	background: url(../img/bg-pattern.jpg)  
+	padding: 45px 20px 65px 
+	background: url(../img/bg-pattern.jpg) 
+	+r(768)
+		padding-bottom: 45px 
 	.task-example
 		text-align: center
 	&_dark
@@ -623,6 +652,15 @@ div.m-news
 	position: relative
 	font-size: 0
 	text-align: center
+	.slick-dots
+		bottom: -25px
+		button
+			&:before
+				color: rgba(#000, 0.2)
+		.slick-active
+			button
+				&:before
+					color: #000
 	&_width
 		.schedule__item
 			width: 33.3%
@@ -767,8 +805,11 @@ div.m-news
 			height: 125px
 		.slick-list
 			width: 100%
+			+r(768)
+				height: 125px
 		.slick-track
-			height: 125px
+			+r(768)
+				height: 125px
 			div
 				float: left
 				width: 25%
@@ -776,7 +817,7 @@ div.m-news
 				border-right: 1px solid #928e8c
 				text-align: center
 				+r(768)
-					border: 0
+					border-right: none
 				&:first-child
 					border-left: 1px solid #928e8c
 				a

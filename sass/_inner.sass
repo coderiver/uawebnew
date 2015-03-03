@@ -559,3 +559,59 @@
 		padding-top: 11px
 		display: none
 		
+.drop
+	position: relative
+	&_cat
+		+r(768)
+			margin-bottom: 30px
+		.drop__title
+			display: none
+			+r(768)
+				display: block
+	&__title
+		display: block
+		position: relative 
+		border-top: 1px solid #000 
+		border-bottom: 1px solid #000 
+		padding: 17px 0 
+		font-size: 11px
+		+fd
+		cursor: pointer
+		+nosel
+		text-transform: uppercase
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+		&:before
+			right: 0
+			margin-top: -7px
+			width: 15px
+			height: 15px
+			background: #000
+			border-radius: 50% 
+		&:after
+			right: 4px
+			margin-top: -2px
+			+s(arr-bottom)
+	&__list
+		display: none
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+	select
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		height: 50px
+		width: 100%
+		opacity: 0
+		cursor: pointer
+	.categories
+		+r(768)
+			display: none
+	
+			

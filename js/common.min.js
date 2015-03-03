@@ -27,8 +27,8 @@ head.ready(function() {
 	  arrows:false,
 	  speed: 300,
 	  adaptiveHeight: true,
-	  autoplay: true,
-	  autoplaySpeed: 5000,
+	  autoplay: false,
+	  autoplaySpeed: 0,
 	  responsive: [
 	      {
 	        breakpoint: 1024,
@@ -156,7 +156,52 @@ head.ready(function() {
 
 	});
 
+	$('.js-slick-4').slick({
+	  infinite: true,
+	  slidesToShow: 4,
+	  slidesToScroll: 4,
+	  dots: false,
+	  arrows:false,
+	  speed: 300,
+	  autoplaySpeed: 0,
+	  responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+	]
+
+	});
+
 	$(".js-accord-toggle").on("click", function() {
 		$(this).parents(".js-accord").toggleClass("is-open").find(".js-accord-body").slideToggle(200);
 	});
+	$(".js-drop-select").on("change", function() {
+		var val = $(this).val();
+		$(this).parents(".js-drop").find(".js-drop-text").text(val);
+	});
+
+	function scrollTopper() {
+		var height = $(".header").outerHeight()-
+		$(".topper").outerHeight();
+		if ($(document).scrollTop() >= height) {
+			$(".topper").addClass("has-bg");
+		}
+		else {
+			$(".topper").removeClass("has-bg");
+		}
+	}
+	scrollTopper();
+	$(window).scroll(function () {
+		scrollTopper();
+	});
+	$(window).resize(function () {
+		scrollTopper();
+	});
+	
 });
