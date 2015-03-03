@@ -187,8 +187,7 @@ head.ready(function() {
 	});
 
 	function scrollTopper() {
-		var height = $(".header").outerHeight()-
-		$(".topper").outerHeight();
+		var height = $(".header").outerHeight();
 		if ($(document).scrollTop() >= height) {
 			$(".topper").addClass("has-bg");
 		}
@@ -202,6 +201,19 @@ head.ready(function() {
 	});
 	$(window).resize(function () {
 		scrollTopper();
+		if ($(window).width() <=768) {
+			smallPlaceholder();
+		}
 	});
+
+	function smallPlaceholder() {
+		var input = $(".js-subscribe input"),
+			placeholder = input.attr("data-placeholder");
+		input.attr("placeholder", placeholder);
+	}
+	if ($(window).width() <=768) {
+		smallPlaceholder();
+	}
+	
 	
 });

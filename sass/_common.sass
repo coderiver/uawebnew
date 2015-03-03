@@ -77,6 +77,10 @@ html
 	color: #fff
 	+ksb
 	text-align: center
+	+r(960)
+		font-size: 24px
+	+r(768)
+		font-size: 14px
 	&.h1_dark
 		color: #000
 	strong
@@ -132,7 +136,11 @@ html
 	z-index: 1
 	+tr(color .3s)
 	+r(480)
+		min-width: 1px
 		width: 100%
+	.is-mobile-hidden
+		+r(768)	
+			display: none
 	&:after
 		content: ""
 		position: absolute
@@ -153,8 +161,11 @@ html
 	&_action
 		background: $yellow
 		color: #000 
+		&:active
+			&:after
+				background: darken($blue, 5%)
 		&:after
-			background: darken($yellow, 5%)
+			background: $blue
 	&_small
 		height: 50px
 		line-height: 50px

@@ -1,5 +1,6 @@
 .yep
 	margin: 20px auto 65px 
+	padding: 0 20px 
 	text-align: center
 	line-height: 2.4
 	+fd
@@ -142,12 +143,14 @@
 		margin-bottom: 3px
 		font-size: 22px
 		+ksb
+		+r(768)
+			font-size: 24px
 	&__meta
 		font-size: 11px
 		+fd 
 
 .person
-	padding: 48px 0 53px
+	padding: 48px 20px 53px
 	background: #000 url(../img/person-bg.jpg)
 	+cover 
 	text-align: center
@@ -168,7 +171,8 @@
 		margin: 27px 0 17px 
 	&__info
 		font-size: 16px
-
+		+r(768)
+			font-size: 14px
 .info-text
 	font-size: 11px
 	text-transform: uppercase
@@ -186,8 +190,13 @@
 		+clr
 		.h2
 			float: right
+			+r(768)
+				float: none
+				text-align: center
 			&:first-child
 				float: left
+				+r(768)
+					float: none
 	.btn
 		margin: 0 0 30px 
 		

@@ -1,13 +1,23 @@
 // Normally mainpage styles
 .header
 	position: relative
-	
+	+r(768)
+		display: table
+		width: 100%
 	&__in
 		padding: 190px 0 20px
 		background-repeat: no-repeat
 		background-size: cover
 		min-height: 340px
 		background-position: 50% 0%
+		+r(768)
+			padding: 75px 20px 30px 
+			display: table-cell
+			height: 260px
+			vertical-align: middle
+.header_index
+	+r(768)
+		display: block
 .subtitle
 	text-align: center
 	font-size: 14px
@@ -26,6 +36,7 @@
 		height: 70px
 		z-index: 8
 		+tr(background .3s)
+		background: rgba(#000,.5) 
 	&.has-bg
 		+r(768)
 			background: #000 
@@ -877,12 +888,15 @@ div.m-news
 		padding: 70px 0 55px  
 		.partners__slider
 			margin-bottom: 50px
+
 	&__prev,
 	&__next
 		position: absolute
 		top: 0
 		bottom: 0
 		width: 100px
+		+r(768)
+			display: none
 	&__prev
 		left: 0
 		+gh(rgba(#fff,1), rgba(#fff,.2))
@@ -923,6 +937,24 @@ div.m-news
 	&__list-small
 		.partners__logo
 			width: 12.5%
+	&__blocks
+		border-top: 1px solid $border 
+		font-size: 0
+		text-align: center
+		+r(768)
+			border-top: none
+		.partners__logo
+			display: inline-block
+			border-top: none
+			margin-right: -1px 
+			+r(960)
+				width: 25%
+			+r(768)
+				width: 33%
+				border-top: 1px solid $border 
+			+r(480)
+				margin-top: -1px
+				width: 50%
 	&__logo
 		display: table-cell
 		width: 16.6%
@@ -1210,16 +1242,28 @@ div.m-news
 		width: 25%
 		text-align: center
 		+fdi
+		+r(768)
+			width: 50%
+			padding: 0 20px 
+			margin-bottom: 30px
+		+r(480)
+			width: 100%
+			padding: 0
 	&__photo
 		position: relative
 		display: inline-block
-		width: 150px
-		height: 150px
+		max-width: 150px
+		max-height: 150px
 		margin-bottom: 32px
 		border-radius: 50%
 		overflow: hidden
 		font-size: 0
+		+r(768)
+			margin-bottom: 15px
 		img
+			display: block
+			width: 100%
+			height: auto
 			border-radius: 50%
 	&__name
 		font-size: 11px
