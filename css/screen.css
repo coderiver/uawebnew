@@ -172,6 +172,8 @@ html.has-open-nav .out:after { content: ""; position: absolute; top: 0; right: 0
 
 @media only screen and (max-width: 768px) { .header_index { display: block; } }
 
+.header_enter .header__in { min-height: 250px; height: 250px; }
+
 .subtitle { text-align: center; font-size: 14px; text-transform: uppercase; color: white; font-family: "FuturaDemiC", sans-serif; }
 
 .topper { position: absolute; top: 0; left: 0; right: 0; height: 135px; z-index: 2; }
@@ -509,7 +511,7 @@ div.m-news:hover:after { height: 0; }
 .progressbar__line { height: 1px; background: white; }
 .progressbar__progress { position: absolute; top: 0; left: 0; width: 0; height: 1px; background: #fbdc09; z-index: 2; }
 
-.footer { font-family: "FuturaDemiC", sans-serif; font-size: 11px; text-transform: uppercase; }
+.footer { border-top: 1px solid #e6e6e7; font-family: "FuturaDemiC", sans-serif; font-size: 11px; text-transform: uppercase; }
 @media only screen and (max-width: 768px) { .footer { text-align: center; } }
 
 .copyrights { float: left; padding: 22px 0; }
@@ -853,3 +855,41 @@ div.m-news:hover:after { height: 0; }
 .logo-img:after { right: 0; }
 .logo-img a { display: block; border-top: 1px solid #e6e6e7; border-bottom: 1px solid #e6e6e7; padding: 10px; height: 110px; line-height: 90px; overflow: hidden; text-align: center; }
 .logo-img a img { display: inline-block; vertical-align: middle; max-width: 100%; }
+
+.enter-box { margin-bottom: 120px; text-align: center; }
+@media only screen and (max-width: 768px) { .enter-box { margin-bottom: 40px; } }
+.enter-box .info-text { margin: 33px 0 22px; }
+
+.soc-enter { font-size: 0; }
+.soc-enter a { display: inline-block; vertical-align: middle; margin-left: 20px; width: 190px; height: 50px; line-height: 50px; font-family: "FuturaDemiC", sans-serif; font-size: 11px; text-transform: uppercase; color: white; will-change: opacity; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; text-decoration: none; }
+@media only screen and (max-width: 960px) { .soc-enter a { width: 22%; margin-left: 3%; } }
+@media only screen and (max-width: 768px) { .soc-enter a { width: 47%; margin-bottom: 3%; } }
+@media only screen and (max-width: 360px) { .soc-enter a { width: 100%; margin-left: 0; } }
+.soc-enter a:first-child { margin-left: 0; }
+.soc-enter a:nth-child(2n+1) { margin-left: 0; }
+.soc-enter a:hover { opacity: 0.9; }
+.soc-enter__fb { background: #3c5a96; }
+.soc-enter__vk { background: #5c80a4; }
+.soc-enter__ln { background: #1877a6; }
+.soc-enter__gp { background: #4688f1; }
+
+.enter { padding: 28px 20px; display: inline-block; width: 450px; background: #f3f3f3; }
+@media only screen and (max-width: 768px) { .enter { width: 100%; } }
+.enter a { text-transform: uppercase; font-size: 11px; font-family: "FuturaDemiC", sans-serif; color: #09c5fb; text-decoration: none; }
+.enter .btn { margin: 10px 0 15px; }
+
+.input-wrap { margin-bottom: 10px; }
+
+.input { display: block; padding: 0 20px; width: 100%; height: 70px; background: white; text-align: center; font-family: "FuturaDemiC", sans-serif; text-transform: uppercase; font-size: 11px; color: black; -moz-transition: box-shadow 0.3s; -o-transition: box-shadow 0.3s; -webkit-transition: box-shadow 0.3s; transition: box-shadow 0.3s; }
+@media only screen and (max-width: 768px) { .input { height: 50px; } }
+.input:-ms-input-placeholder { color: black; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.input:-moz-placeholder { color: black; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.input::-moz-placeholder { color: black; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.input::-webkit-input-placeholder { color: black; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.input::placeholder { color: black; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.input:focus { box-shadow: 0 0 2px #09c5fb; }
+.input:focus:-ms-input-placeholder { color: #cccccc; }
+.input:focus:-moz-placeholder { color: #cccccc; }
+.input:focus::-moz-placeholder { color: #cccccc; }
+.input:focus::-webkit-input-placeholder { color: #cccccc; }
+.input:focus::placeholder { color: #cccccc; }
