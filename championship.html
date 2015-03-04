@@ -85,25 +85,35 @@
 	<section class="dates">
 		<h2 class="h2">Основні дати чемпіонату</h2>
 		<div class="dates__in">
-			<ul class="categories">
-				<li class="is-active">
-					<a href="#" class="replace"><span data-hover="веб-дизайнер">веб-дизайнер</span></a>
-				</li>
-				<li>
-					<a href="#" class="replace"><span data-hover="Back-enddeveloper">Back-enddeveloper</span></a>
-				</li>
-				<li>
-					<a href="#" class="replace"><span data-hover="Front-end  developer">Front-end  developer</span></a>
-				</li>
-				<li>
-					<a href="#" class="replace"><span data-hover="Команда">Команда</span></a>
-				</li>
-				<li>
-					<a href="#" class="replace"><span data-hover="тестувальник">тестувальник</span></a>
-				</li>
-			</ul>
+			<div class="drop drop_cat js-drop">
+				<span class="drop__title js-drop-text">веб-дизайнер</span>
+				<ul class="categories">
+					<li class="is-active">
+						<a href="#" class="replace"><span data-hover="веб-дизайнер">веб-дизайнер</span></a>
+					</li>
+					<li>
+						<a href="#" class="replace"><span data-hover="Back-enddeveloper">Back-enddeveloper</span></a>
+					</li>
+					<li>
+						<a href="#" class="replace"><span data-hover="Front-end  developer">Front-end  developer</span></a>
+					</li>
+					<li>
+						<a href="#" class="replace"><span data-hover="Команда">Команда</span></a>
+					</li>
+					<li>
+						<a href="#" class="replace"><span data-hover="тестувальник">тестувальник</span></a>
+					</li>
+				</ul>
+				<select class="js-drop-select">
+					<option value="веб-дизайнер">веб-дизайнер</option>
+					<option value="Back-enddeveloper">Back-enddeveloper</option>
+					<option value="Front-end  developer">Front-end  developer</option>
+					<option value="Команда">Команда</option>
+					<option value="тестувальник">тестувальник</option>
+				</select>
+			</div>
 			<div class="schedule">
-				<div class="l-center">
+				<div class="l-center js-slick-4">
 					<div class="schedule__item is-passed">
 						<div class="schedule__date">
 							<div class="schedule__date-in">12.05</div>
@@ -222,15 +232,16 @@
 					<li>порівняти та підняти свій рівень</li>
 				</ul>
 			</div>
+			<div class="h3">Та, звичайно, як приємний бонус - призи переможцям</div>
 		</div>
-		<div class="h3">Та, звичайно, як приємний бонус - призи переможцям</div>
+		
 	</div>
 	<!-- reviews -->
 	<section class="dates dates_dark">
 		<h2 class="h2 h2_white">Що потрібно для участі у чемпіонаті</h2>
 		<div class="dates__in">
 			<div class="schedule schedule_width">
-				<div class="l-center">
+				<div class="l-center js-slick-3">
 					<div class="schedule__item">
 						<div class="schedule__date">
 							<div class="schedule__date-in">1</div>
@@ -279,7 +290,7 @@
 	<!-- review -->
 	<section class="partners partners_mod">
 		<h2 class="h2">партнери</h2>
-		<div class="partners__slider">
+		<div class="partners__slider partners__big">
 			<div class="partners__list js-slick">
 				<div>
 					<div class="partners__item">
@@ -414,6 +425,50 @@
 					</div>
 				</div>
 			</div>
+			<div class="partners__prev"></div>
+			<div class="partners__next"></div>
+		</div>
+		<div class="partners__slider partners__small">
+			<div class="partners__list js-slick">
+				<div class="partners__logo">
+					<a href="#"><img src="img/logo1.jpg" alt=""></a>
+				</div>
+				<div class="partners__logo">
+					<a href="#"><img src="img/logo2.jpg" alt=""></a>
+				</div>
+				<div class="partners__logo">
+					<a href="#"><img src="img/logo3.jpg" alt=""></a>
+				</div>
+				<div class="partners__logo">
+					<a href="#"><img src="img/logo4.jpg" alt=""></a>
+				</div>
+				<div class="partners__logo">
+					<a href="#"><img src="img/logo5.jpg" alt=""></a>
+				</div>
+				<div class="partners__logo">
+					<a href="#"><img src="img/logo6.jpg" alt=""></a>
+				</div>
+				<div class="partners__logo">
+					<a href="#"><img src="img/logo1.jpg" alt=""></a>
+				</div>
+				<div class="partners__logo">
+					<a href="#"><img src="img/logo2.jpg" alt=""></a>
+				</div>
+				<div class="partners__logo">
+					<a href="#"><img src="img/logo3.jpg" alt=""></a>
+				</div>
+				<div class="partners__logo">
+					<a href="#"><img src="img/logo4.jpg" alt=""></a>
+				</div>
+				<div class="partners__logo">
+					<a href="#"><img src="img/logo5.jpg" alt=""></a>
+				</div>
+				<div class="partners__logo">
+					<a href="#"><img src="img/logo6.jpg" alt=""></a>
+				</div>
+			</div>
+			<div class="partners__prev"></div>
+			<div class="partners__next"></div>
 		</div>
 		<div class="partners__more">
 			<a href="#" class="top-line">усi партнери</a>

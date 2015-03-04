@@ -1,141 +1,152 @@
 .text-wrap
-    border-bottom: 1px solid $border 
+	border-bottom: 1px solid $border 
 .text
-    padding: 10px 0 20px 
-    .h2
-        margin-bottom: 24px
-        +r(768)
-            text-align: left
-    + .info
-        margin-top: 0
-    &_center
-        text-align: center
-        margin: 0 auto 
-        padding: 0 25px 
-        max-width: 745px
-        +r(768)
-            text-align: left
-    &_padding
-        padding: 45px 20px 
+	padding: 10px 0 20px 
+	.h2
+		margin-bottom: 24px
+		+r(768)
+			text-align: left
+	+ .info
+		margin-top: 0
+	&_center
+		text-align: center
+		margin: 0 auto 
+		padding: 0 25px 
+		max-width: 745px
+		+r(768)
+			text-align: left
+	&_padding
+		padding: 45px 20px 
 .info-box
-    padding: 30px 20px 
-    text-align: center
-    color: #fff 
-    background: #4cd1fc
-    font-size: 16px
-    +fd
-    line-height: 1.5
-    text-transform: uppercase  
-    +r(768)
-        padding: 20px 
-        font-size: 14px
+	padding: 30px 20px 
+	text-align: center
+	color: #fff 
+	background: #4cd1fc
+	font-size: 16px
+	+fd
+	line-height: 1.5
+	text-transform: uppercase  
+	+r(768)
+		padding: 20px 
+		font-size: 14px
 .info
-    margin: 30px auto 
-    max-width: 370px
-    font-size: 11px
-    text-transform: uppercase
-    +fdi
-    text-align: center
-    letter-spacing: 1px 
-    span
-        display: inline-block
-        margin-right: 35px
-    a
-        color: $blue 
-        text-decoration: none
-    li
-        white-space: nowrap
-        margin-bottom: 5px
-        div
-            display: inline-block
-            vertical-align: top
-            white-space: normal
-            text-align: left
-        span
-            vertical-align: top
+	margin: 30px auto 
+	max-width: 370px
+	font-size: 11px
+	text-transform: uppercase
+	+fdi
+	text-align: center
+	letter-spacing: 1px 
+	span
+		display: inline-block
+		margin-right: 35px
+		+r(768)
+			margin-right: 10px
+	a
+		color: $blue 
+		text-decoration: none
+	li
+		white-space: nowrap
+		margin-bottom: 5px
+		div
+			display: inline-block
+			vertical-align: top
+			white-space: normal
+			text-align: left
+		span
+			vertical-align: top
 .info_width
-    margin: 15px 0  
-    max-width: 100%
-    text-align: left
+	margin: 15px 0  
+	max-width: 100%
+	text-align: left
 .text-left
-    text-align: left
+	text-align: left
 .text-center
-    text-align: center
+	text-align: center
 .text-right
-    text-align: right
+	text-align: right
 .slick
-    position: relative    
-    img
-        width: 100%
-        height: auto
+	position: relative    
+	img
+		width: 100%
+		height: auto
 .soc
-    padding: 37px 0 
-    text-align: center
-    font-size: 0
-    span
-        margin-right: 15px
-        font-size: 11px
-        text-transform: uppercase
-        +fd
-        color: #000 
-    a, span
-        display: inline-block
-        vertical-align: middle
-    a
-        margin-left: 20px
-        position: relative 
-        width: 56px
-        height: 56px
-        text-align: center
-        line-height: 56px
-        -webkit-border-radius: 50% 
-        border-radius: 50% 
-        border: 1px solid rgba(20, 20, 20, 0.4)
-        +tr(border .3s)
-        &:hover
-            border-color: transparent
-            &:after
-                left: 0
-                right: 0
-            i
-                &:before
-                    opacity: 1
-        &:after
-            content: ""
-            position: absolute
-            left: 50%
-            right: 50%
-            top: 0
-            bottom: 0   
-            background: #000
-            border-radius: 50% 
-            +transition(all .3s)
-    i
-        position: relative
-        z-index: 2
-        display: inline-block
-        vertical-align: middle
-        &:before
-            content: ""
-            position: absolute
-            left: 0
-            top: 0
-            +tr(opacity .3s)
-            will-change: opacity
-        &:before
-            opacity: 0
-    &__vk
-        i
-            +s(vk-black)
-            &:before
-                +s(vk)
-    &__fb
-        i
-            +s(fb-black)
-            &:before
-                +s(fb)
-    &__tw
-        i
-            +s(tw-black) 
-            &:before
-                +s(tw)    
+	padding: 37px 0 
+	text-align: center
+	font-size: 0
+
+	a, span
+		display: inline-block
+		vertical-align: middle
+	span
+		margin-right: 15px
+		font-size: 11px
+		text-transform: uppercase
+		+fd
+		color: #000 
+		+r(768)
+			display: block
+			margin: 0 0 10px
+	a
+		margin-left: 20px
+		position: relative 
+		width: 56px
+		height: 56px
+		text-align: center
+		line-height: 56px
+		-webkit-border-radius: 50% 
+		border-radius: 50% 
+		border: 1px solid rgba(20, 20, 20, 0.4)
+		+tr(border .3s)
+		+r(768)
+			margin: 0 20px 0 0
+		&:last-child
+			+r(768)
+				margin-right: 0
+		&:hover
+			border-color: transparent
+			&:after
+				left: 0
+				right: 0
+			i
+				&:before
+					opacity: 1
+		&:after
+			content: ""
+			position: absolute
+			left: 50%
+			right: 50%
+			top: 0
+			bottom: 0   
+			background: #000
+			border-radius: 50% 
+			+transition(all .3s)
+	i
+		position: relative
+		z-index: 2
+		display: inline-block
+		vertical-align: middle
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			+tr(opacity .3s)
+			will-change: opacity
+		&:before
+			opacity: 0
+	&__vk
+		i
+			+s(vk-black)
+			&:before
+				+s(vk)
+	&__fb
+		i
+			+s(fb-black)
+			&:before
+				+s(fb)
+	&__tw
+		i
+			+s(tw-black) 
+			&:before
+				+s(tw)    

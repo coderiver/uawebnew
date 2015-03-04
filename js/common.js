@@ -14,6 +14,8 @@ head.ready(function() {
 		}, 2000);
 	});
 
+	var viewportWidth = verge.viewportW();
+	var viewportHeight = verge.viewportH();
 // main page slider
 
 	// slider init
@@ -155,11 +157,64 @@ head.ready(function() {
 	]
 
 	});
-
+	$(window).resize(function(){
+		initSlickMobile();
+	});
+	function initSlickMobile () {
+		var viewportWidth = verge.viewportW();
+		if (viewportWidth <= 960) {
+			$('.js-slick-logo').slick({
+			  infinite: true,
+			  slidesToShow: 3,
+			  slidesToScroll: 3,
+			  dots: true,
+			  arrows:false,
+			  speed: 300,
+			  autoplaySpeed: 0,
+			  responsive: [
+		      {
+		        breakpoint: 768,
+		        settings: {
+		          slidesToShow: 1,
+		          slidesToScroll: 1,
+		          infinite: true,
+		          dots: true
+		        }
+		      }
+				]
+			});
+		}
+		else {
+			$('.js-slick-logo').slick('unslick');
+		}
+	}
+	initSlickMobile();
+	
 	$('.js-slick-4').slick({
 	  infinite: true,
 	  slidesToShow: 4,
 	  slidesToScroll: 4,
+	  dots: false,
+	  arrows:false,
+	  speed: 300,
+	  autoplaySpeed: 0,
+	  responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+	]
+
+	});
+	$('.js-slick-3').slick({
+	  infinite: true,
+	  slidesToShow: 3,
+	  slidesToScroll: 3,
 	  dots: false,
 	  arrows:false,
 	  speed: 300,
