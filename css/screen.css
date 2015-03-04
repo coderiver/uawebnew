@@ -866,7 +866,7 @@ div.m-news:hover:after { height: 0; }
 @media only screen and (max-width: 768px) { .soc-enter a { width: 47%; margin-bottom: 3%; } }
 @media only screen and (max-width: 360px) { .soc-enter a { width: 100%; margin-left: 0; } }
 .soc-enter a:first-child { margin-left: 0; }
-.soc-enter a:nth-child(2n+1) { margin-left: 0; }
+@media only screen and (max-width: 768px) { .soc-enter a:nth-child(2n+1) { margin-left: 0; } }
 .soc-enter a:hover { opacity: 0.9; }
 .soc-enter__fb { background: #3c5a96; }
 .soc-enter__vk { background: #5c80a4; }
