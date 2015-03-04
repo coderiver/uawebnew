@@ -233,8 +233,8 @@ head.ready(function() {
 
 	});
 
-	$(".js-accord-toggle").on("click", function() {
-		$(this).parents(".js-accord").toggleClass("is-open").find(".js-accord-body").slideToggle(200);
+	$(".article dt").on("click", function() {
+		$(this).parents("dl").toggleClass("is-open").find("dd").slideToggle(200);
 	});
 	$(".js-drop-select").on("change", function() {
 		var val = $(this).val();

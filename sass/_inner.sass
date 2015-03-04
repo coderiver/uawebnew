@@ -615,10 +615,17 @@
 		display: block
 		margin: 0 0 27px 
 		width: 100%
-	table
+	.table-wrap
 		margin: 115px 0 90px -110px
-		table-layout: fixed
+		overflow-x: auto
 		width: 960px
+		+r(1024)
+			width: 100%
+			margin: 40px 0 
+	table
+		table-layout: fixed
+		width: 100%
+		min-width: 640px
 		+fd
 		text-align: center
 		thead
@@ -627,8 +634,12 @@
 				font-weight: normal
 				font-size: 11px
 				text-transform: uppercase
+				+r(768)
+					font-size: 10px
 		tbody
 			font-size: 18px
+			+r(768)
+				font-size: 14px
 			tr
 				&:first-child
 					td
@@ -639,25 +650,28 @@
 				border-top: 1px solid $border
 				&:first-child
 					border-left: 0
-.accord
-	margin-bottom: -1px
-	border-top: 1px solid $border 
-	border-bottom: 1px solid $border
-	padding: 25px 0 22px  
-	&.is-open
-		.accord__title
-			color: #000 
-	&__title
-		+fd
-		text-transform: uppercase
-		font-size: 11px
-		color: $blue 
-		cursor: pointer
-		+nosel
-		+tr(color .2s)
-	&__body
-		padding-top: 11px
-		display: none
+				+r(960)
+					padding: 10px 
+				
+	dl
+		margin-bottom: -1px
+		border-top: 1px solid $border 
+		border-bottom: 1px solid $border
+		padding: 25px 0 22px  
+		&.is-open
+			dt
+				color: #000 
+		dt
+			+fd
+			text-transform: uppercase
+			font-size: 11px
+			color: $blue 
+			cursor: pointer
+			+nosel
+			+tr(color .2s)
+		dd
+			padding-top: 11px
+			display: none
 		
 .drop
 	position: relative
@@ -676,6 +690,9 @@
 				display: none
 		.drop__title
 			border-color: $blue
+			display: none
+			+r(768)
+				display: block
 			&:before
 				background: $blue 
 	&__title
