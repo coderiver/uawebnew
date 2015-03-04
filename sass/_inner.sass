@@ -425,6 +425,8 @@
 		display: table-cell
 		vertical-align: middle
 		padding: 28px 0 
+		+r(768)
+			padding: 20px 0 
 	&__meta
 		width: 140px
 		padding-right: 10px
@@ -432,6 +434,11 @@
 
 .calendar-wrap
 	margin: 65px 0 95px
+	+r(768)
+		margin: 30px 0 
+	.drop_sort
+		+r(768)
+			margin: 25px 0
 .calendar
 	+fd
 	font-size: 11px
@@ -439,6 +446,7 @@
 	text-align: center
 	.slick-list
 		width: 100%
+	
 	&__nav
 		padding: 13px 
 		border-top: 1px solid $border 
@@ -474,7 +482,8 @@
 	&__month
 		width: 220px
 		font-size: 11px
-		
+		+r(768)
+			width: 180px
 	&__head,
 	&__body
 		li
@@ -484,6 +493,18 @@
 		li
 			height: 70px
 			line-height: 70px
+			+r(768)
+				height: 30px
+				line-height: 30px
+			&:before
+				display: none
+				content: attr(data-day) 
+				+r(768)
+					display: block
+		span
+			+r(768)
+				display: none
+			
 	&__body
 		+clr
 		li
@@ -492,6 +513,13 @@
 			font-size: 18px
 			border-left: 1px solid $border
 			border-top: 1px solid $border
+			+r(768)
+				padding: 20px 5px
+				height: auto
+				line-height: 1 
+				font-size: 12px
+			+r(480)
+				padding: 10px 5px
 			&:nth-child(1),
 			&:nth-child(2),
 			&:nth-child(3),

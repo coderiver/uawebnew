@@ -129,13 +129,23 @@
 	<div class="l-center">
 		<div class="calendar-wrap">
 			<div class="h2">Календар подій</div>
-			<ul class="sort">
-				<li><span>Показувати</span></li>
-				<li class="is-active"><a href="#">Всі</a></li>
-				<li><a href>Хакатони</a></li>
-				<li><a href="#">Майстер класи</a></li>
-				<li><a href="#">Чемпіонат</a></li>
-			</ul>
+			
+			<div class="drop drop_sort js-drop">
+				<span class="drop__title js-drop-text">Всі</span>
+				<ul class="sort">
+					<li><span>Показувати</span></li>
+					<li class="is-active"><a href="#">Всі</a></li>
+					<li><a href>Хакатони</a></li>
+					<li><a href="#">Майстер класи</a></li>
+					<li><a href="#">Чемпіонат</a></li>
+				</ul>
+				<select class="js-drop-select">
+					<option value="Всі">Всі</option>
+					<option value="Хакатони">Хакатони</option>
+					<option value="Майстер класи">Майстер класи</option>
+					<option value="Чемпіонат">Чемпіонат</option>
+				</select>
+			</div>
 			<div class="calendar">
 				<div class="calendar__nav">
 					<button class="calendar__btn calendar__prev js-month-prev" type="button">
@@ -146,13 +156,13 @@
 				</div>
 
 				<ul class="calendar__head">
-					<li>понедiлок</li>
-					<li>вiвторок</li>
-					<li>середа</li>
-					<li>четвер</li>
-					<li>пятниця</li>
-					<li>субота</li>
-					<li>неділя</li>
+					<li data-day="пн"><span>понедiлок</span></li>
+					<li data-day="вт"><span>вiвторок</span></li>
+					<li data-day="ср"><span>середа</span></li>
+					<li data-day="чт"><span>четвер</span></li>
+					<li data-day="пт"><span>пятниця</span></li>
+					<li data-day="сб"><span>субота</span></li>
+					<li data-day="нд"><span>неділя</span></li>
 				</ul>
 				<div class="calendar__slider js-calendar-slider">
 					<div data-month="лютий">

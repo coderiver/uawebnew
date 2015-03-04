@@ -450,10 +450,20 @@ div.m-news
 		padding-top: 20px
 	&_border
 		border-bottom: 1px solid $border 
+		+r(768)
+			border: 0
+			padding-bottom: 0 
 	&__group
 		float: left
 		width: 66.6%
 		position: relative 
+		+clr
+		+r(1024)
+			width: 100%
+			float: none
+			margin-bottom: 30px
+		+r(768)
+			margin-bottom: 0
 		.events__item
 			float: left
 			display: block 
@@ -462,6 +472,11 @@ div.m-news
 			border-top: 1px solid $blue
 			border-left: 0
 			border-right: 1px solid $blue
+			+r(768)
+				width: 100%
+				border-right: 0
+				height: auto
+				border-color: $border 
 			&:before,
 			&:after
 				content: ""
@@ -470,6 +485,11 @@ div.m-news
 				height: 17px
 				background: #fff
 				z-index: 1 
+				+r(768)
+					display: none
+			&:nth-child(2n)
+				+r(1024)
+					border-right: 0
 			&:nth-child(1),
 			&:nth-child(2)
 				border-top: 0
@@ -478,6 +498,8 @@ div.m-news
 					right: -1px
 					bottom: -1px
 			&:nth-child(2)
+				+r(768)
+					border-top: 1px solid $border 
 				&:before
 					right: -1px
 					top: -1px
@@ -495,12 +517,26 @@ div.m-news
 	&__archive
 		float: left
 		width: 33.4% 
+		+clr
+		+r(1024)
+			width: 100%
+			float: none
 		.events__item
 			width: 100%
 			height: 135px
 			border: 0
 			border-top: 1px solid $border
 			display: block
+			+r(1024)
+				width: 50%
+				float: left
+				border-top: 0
+				border-left: 1px solid $border
+			+r(768)
+				float: none
+				width: 100%
+				border: 0
+				height: auto
 			&:before
 				content: ""
 				position: absolute
@@ -508,8 +544,15 @@ div.m-news
 				height: 17px
 				background: #fff
 				z-index: 1
+				+r(768)
+					display: none
 			&:first-child
 				border: 0 
+				+r(1024)
+					border-left: 0
+				+r(768)
+					border-bottom: 1px solid $border
+					border-top: 1px solid $border
 				&:before
 					left: 0
 					bottom: -1px

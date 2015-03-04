@@ -297,19 +297,34 @@ div.m-news:hover:after { height: 0; }
 .events:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 768px) { .events { padding-top: 20px; } }
 .events_border { border-bottom: 1px solid #e6e6e7; }
-.events__group { float: left; width: 66.6%; position: relative; }
+@media only screen and (max-width: 768px) { .events_border { border: 0; padding-bottom: 0; } }
+.events__group { float: left; width: 66.6%; position: relative; *zoom: 1; }
+.events__group:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 1024px) { .events__group { width: 100%; float: none; margin-bottom: 30px; } }
+@media only screen and (max-width: 768px) { .events__group { margin-bottom: 0; } }
 .events__group .events__item { float: left; display: block; height: 135px; width: 50%; border-top: 1px solid #09c5fb; border-left: 0; border-right: 1px solid #09c5fb; }
+@media only screen and (max-width: 768px) { .events__group .events__item { width: 100%; border-right: 0; height: auto; border-color: #e6e6e7; } }
 .events__group .events__item:before, .events__group .events__item:after { content: ""; position: absolute; width: 17px; height: 17px; background: white; z-index: 1; }
+@media only screen and (max-width: 768px) { .events__group .events__item:before, .events__group .events__item:after { display: none; } }
+@media only screen and (max-width: 1024px) { .events__group .events__item:nth-child(2n) { border-right: 0; } }
 .events__group .events__item:nth-child(1), .events__group .events__item:nth-child(2) { border-top: 0; }
 .events__group .events__item:nth-child(1):before { right: -1px; bottom: -1px; }
+@media only screen and (max-width: 768px) { .events__group .events__item:nth-child(2) { border-top: 1px solid #e6e6e7; } }
 .events__group .events__item:nth-child(2):before { right: -1px; top: -1px; }
 .events__group .events__item:nth-child(2):after { right: 0; bottom: -1px; }
 .events__group .events__item:nth-child(3):before { left: -1px; bottom: -1px; }
 .events__group .events__item:nth-child(4):before { top: -1px; left: -1px; }
-.events__archive { float: left; width: 33.4%; }
+.events__archive { float: left; width: 33.4%; *zoom: 1; }
+.events__archive:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 1024px) { .events__archive { width: 100%; float: none; } }
 .events__archive .events__item { width: 100%; height: 135px; border: 0; border-top: 1px solid #e6e6e7; display: block; }
+@media only screen and (max-width: 1024px) { .events__archive .events__item { width: 50%; float: left; border-top: 0; border-left: 1px solid #e6e6e7; } }
+@media only screen and (max-width: 768px) { .events__archive .events__item { float: none; width: 100%; border: 0; height: auto; } }
 .events__archive .events__item:before { content: ""; position: absolute; width: 17px; height: 17px; background: white; z-index: 1; }
+@media only screen and (max-width: 768px) { .events__archive .events__item:before { display: none; } }
 .events__archive .events__item:first-child { border: 0; }
+@media only screen and (max-width: 1024px) { .events__archive .events__item:first-child { border-left: 0; } }
+@media only screen and (max-width: 768px) { .events__archive .events__item:first-child { border-bottom: 1px solid #e6e6e7; border-top: 1px solid #e6e6e7; } }
 .events__archive .events__item:first-child:before { left: 0; bottom: -1px; }
 .events__archive .events__title, .events__archive .events__date { color: #cccccc; }
 .events__list { font-size: 0; display: table; }
@@ -724,9 +739,12 @@ div.m-news:hover:after { height: 0; }
 .event { display: table; width: 100%; border-bottom: 1px solid #e6e6e7; border-top: 1px solid #e6e6e7; margin-bottom: -1px; text-transform: uppercase; font-family: "FuturaDemiC", sans-serif; font-size: 11px; text-decoration: none; color: black; -moz-transition: border 0.3s; -o-transition: border 0.3s; -webkit-transition: border 0.3s; transition: border 0.3s; }
 .event:hover { border-color: #09c5fb; position: relative; z-index: 2; }
 .event__meta, .event__text { display: table-cell; vertical-align: middle; padding: 28px 0; }
+@media only screen and (max-width: 768px) { .event__meta, .event__text { padding: 20px 0; } }
 .event__meta { width: 140px; padding-right: 10px; color: #09c5fb; }
 
 .calendar-wrap { margin: 65px 0 95px; }
+@media only screen and (max-width: 768px) { .calendar-wrap { margin: 30px 0; } }
+@media only screen and (max-width: 768px) { .calendar-wrap .drop_sort { margin: 25px 0; } }
 
 .calendar { font-family: "FuturaDemiC", sans-serif; font-size: 11px; text-transform: uppercase; text-align: center; }
 .calendar .slick-list { width: 100%; }
@@ -738,11 +756,18 @@ div.m-news:hover:after { height: 0; }
 .calendar__prev:before { background: url('../img/icons-s4658ff671f.png') 0 -39px no-repeat; width: 9px; height: 14px; }
 .calendar__next:before { background: url('../img/icons-s4658ff671f.png') 0 -15px no-repeat; width: 9px; height: 14px; }
 .calendar__month { width: 220px; font-size: 11px; }
+@media only screen and (max-width: 768px) { .calendar__month { width: 180px; } }
 .calendar__head li, .calendar__body li { float: left; width: 14.27083%; }
 .calendar__head li { height: 70px; line-height: 70px; }
+@media only screen and (max-width: 768px) { .calendar__head li { height: 30px; line-height: 30px; } }
+.calendar__head li:before { display: none; content: attr(data-day); }
+@media only screen and (max-width: 768px) { .calendar__head li:before { display: block; } }
+@media only screen and (max-width: 768px) { .calendar__head span { display: none; } }
 .calendar__body { *zoom: 1; }
 .calendar__body:after { content: " "; display: table; clear: both; }
 .calendar__body li { height: 100px; line-height: 100px; font-size: 18px; border-left: 1px solid #e6e6e7; border-top: 1px solid #e6e6e7; }
+@media only screen and (max-width: 768px) { .calendar__body li { padding: 20px 5px; height: auto; line-height: 1; font-size: 12px; } }
+@media only screen and (max-width: 480px) { .calendar__body li { padding: 10px 5px; } }
 .calendar__body li:nth-child(1), .calendar__body li:nth-child(2), .calendar__body li:nth-child(3), .calendar__body li:nth-child(4), .calendar__body li:nth-child(5), .calendar__body li:nth-child(6), .calendar__body li:nth-child(7) { border-top: 0; }
 .calendar__body li:nth-child(7n+1) { border-left: 0; }
 .calendar__body li.is-inactive { color: #cccccc; }
