@@ -104,6 +104,14 @@
 			height: 50px
 			margin-right: 1px
 			text-align: center
+			&.is-active
+				a
+					background: #202020
+					color: #fff	
+					&:after
+						background: #202020
+					&:before
+						display: none
 			&:before
 				content: ""
 				position: absolute
@@ -152,9 +160,7 @@
 						height: 0
 					&:before
 						opacity: 1
-				&.is-active
-					background: #202020
-					color: #fff		  
+				  
 			&.login
 				width: 18.7%
 				&:before
