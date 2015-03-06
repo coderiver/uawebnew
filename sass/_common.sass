@@ -34,7 +34,11 @@
 +font(KelsonSansRegularRU, KelsonSansRegularRU)
 =ks
 	font-family: 'KelsonSansRegularRU', sans-serif
-
+=fa
+	font-family: FontAwesome
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
 body
 	+fb 
 	min-width: 320px
@@ -181,45 +185,6 @@ html
 	display: inline-block
 	vertical-align: middle
 	
-.vk-ico
-	+s(vk)
-	&:after
-		content: ""
-		position: absolute
-		top: 0
-		left: 0
-		+s(vk-act)
-		opacity: 0
-		+tr(opacity 300ms)
-	&:hover
-		&:after
-			opacity: 1 
-.fb-ico
-	+s(fb)
-	&:after
-		content: ""
-		position: absolute
-		top: 0
-		left: 0
-		+s(fb-act)
-		opacity: 0
-		+tr(opacity 300ms)
-	&:hover
-		&:after
-			opacity: 1	
-.tw-ico
-	+s(tw)
-	&:after
-		content: ""
-		position: absolute
-		top: 0
-		left: 0
-		+s(tw-act)
-		opacity: 0
-		+tr(opacity 300ms)
-	&:hover
-		&:after
-			opacity: 1
 			
 // hover affect for links with top line
 .top-line

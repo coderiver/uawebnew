@@ -109,8 +109,7 @@
 				left: 0
 				right: 0
 			i
-				&:before
-					opacity: 1
+				color: #fff 
 		&:after
 			content: ""
 			position: absolute
@@ -121,32 +120,10 @@
 			background: #000
 			border-radius: 50% 
 			+transition(all .3s)
-	i
+	.fa
 		position: relative
 		z-index: 2
-		display: inline-block
 		vertical-align: middle
-		&:before
-			content: ""
-			position: absolute
-			left: 0
-			top: 0
-			+tr(opacity .3s)
-			will-change: opacity
-		&:before
-			opacity: 0
-	&__vk
-		i
-			+s(vk-black)
-			&:before
-				+s(vk)
-	&__fb
-		i
-			+s(fb-black)
-			&:before
-				+s(fb)
-	&__tw
-		i
-			+s(tw-black) 
-			&:before
-				+s(tw)    
+		font-size: 20px
+		color: #000
+		+tr(color .3s)

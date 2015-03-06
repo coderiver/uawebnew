@@ -52,7 +52,7 @@
 	padding-top: 23px 
 	a
 		display: inline-block
-		+s(logo)	
+		+sr(logo)	
 	+r(768)
 		padding-top: 12px
 		height: auto	
@@ -77,6 +77,12 @@
 			font-size: 11px
 			&.is-active
 				color: #fbdc09
+	.fa
+		font-size: 15px
+		color: #fff 
+		+tr(color .3s)
+		&:hover
+			color: $yellow 
 .lang
 	position: relative
 	margin-left: 22px
@@ -138,6 +144,13 @@
 				color: #000
 				+tr(all 300ms)
 				z-index: 1
+				&.is-active
+					background: #000
+					color: #fff	
+					&:after
+						background: #000
+					&:before
+						display: none
 				&:after
 					content: ""
 					position: absolute
@@ -265,12 +278,12 @@
 	&__soc
 		text-align: center
 		margin: 20px 0 30px
-		.vk-ico
-			+s(vk-blue)
-		.tw-ico
-			+s(tw-blue)
-		.fb-ico
-			+s(fb-blue)
+		.fa
+			color: $blue
+			font-size: 20px
+			+tr(color .3s)
+			&:hover
+				color: $yellow 
 		li
 			display: inline-block
 			vertical-align: middle
@@ -1061,77 +1074,49 @@ div.m-news
 	+r(768)
 		position: relative
 		padding-top: 73px
-.vkcom, .facebook, .twitter, .subscribe
-	display: inline-block
-	vertical-align: middle
-.vkcom, .facebook, .twitter	
-	width: 56px
-	height: 56px
-	position: relative
-	margin: 0 9px 
-	+vertical
-	border-radius: 50%
-	text-align: center
-	border: 1px solid #727272
-	+transition(border .3s)
-	overflow: hidden
-	&:hover
-		border-color: transparent
-		&:after
-			left: 0
-			right: 0
-	&:after
-		content: ""
-		position: absolute
-		left: 50%
-		right: 50%
-		top: 0
-		bottom: 0	
-		background: #fff
-		border-radius: 50% 
-		+transition(all .3s)
-	i
-		position: relative
+	a
 		display: inline-block
 		vertical-align: middle
+		width: 56px
+		height: 56px
+		position: relative
+		margin: 0 9px 
+		+vertical
+		border-radius: 50%
+		text-align: center
+		border: 1px solid #727272
+		+transition(border .3s)
+		overflow: hidden
+		&:hover
+			border-color: transparent
+			&:after
+				left: 0
+				right: 0
+			i	
+				color: #000 
 		&:after
 			content: ""
 			position: absolute
+			left: 50%
+			right: 50%
 			top: 0
-			left: 0
-			opacity: 0
-			+tr(opacity 300ms)
-			z-index: 1
-.vkcom	
-	i
-		+s(vk)
-		&:after
-			+s(vk-black)
-	&:hover
+			bottom: 0	
+			background: #fff
+			border-radius: 50% 
+			+transition(all .3s)
 		i
-			&:after
-				opacity: 1	
-.facebook	
-	i
-		+s(fb)
-		&:after
-			+s(fb-black)
-	&:hover
-		i
-			&:after
-				opacity: 1			 	 
-.twitter
-	i
-		+s(tw)
-		&:after
-			+s(tw-black)
-	&:hover
-		i
-			&:after
-				opacity: 1
+			position: relative
+			z-index: 2
+			color: #fff 
+			font-size: 20px
+			+tr(color .3s)
+			vertical-align: middle
+
 				
 .subscribe
 	position: relative
+	display: inline-block
+	vertical-align: middle
 	margin-left: 37px
 	+r(768)
 		position: absolute
@@ -1159,24 +1144,17 @@ div.m-news
 		&:focus
 			+placeholder
 				font-size: 0	
-.submit
-	position: absolute
-	top: 8px
-	right: 0
-	+s(pointer)
-	z-index: 2
-	&:after
-		content: ""
+	.fa
 		position: absolute
-		top: 0
-		left: 0
-		+s(pointer-h)
+		top: 8px
+		right: 0
+		color: #fff 
 		z-index: 2
-		opacity: 0
-		+tr(opacity 300ms)
-	&:hover
-		&:after
-			opacity: 1 
+		font-size: 20px
+		background: none
+		+tr(color .3s)
+		&:hover
+			color: $yellow 
 .progressbar
 	position: relative
 	height: 1px 
