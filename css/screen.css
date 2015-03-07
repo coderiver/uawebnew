@@ -497,8 +497,9 @@ div.m-news:hover:after { height: 0; }
 .design span, .design a { display: inline-block; vertical-align: middle; font-size: 11px; }
 
 .vintage { position: relative; margin-left: 18px; width: 70px; height: 15px; }
-.vintage:before { content: ""; position: absolute; top: 0; left: 0; background: url('../img/icons-sb3d21ac942.png') 0 -241px no-repeat; width: 70px; height: 15px; opacity: 1; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; z-index: 1; }
-.vintage:after { content: ""; position: absolute; top: 0; left: 0; background: url('../img/icons-sb3d21ac942.png') 0 -216px no-repeat; width: 70px; height: 15px; opacity: 0; -moz-transition: opacity 300ms; -o-transition: opacity 300ms; -webkit-transition: opacity 300ms; transition: opacity 300ms; z-index: 1; }
+.vintage:before, .vintage:after { content: ""; position: absolute; top: -10px; left: -35px; will-change: opacity; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; z-index: 1; }
+.vintage:before { background: url("../img/svg/vintage.svg") no-repeat 0 0; -moz-background-size: 140px 30px; -o-background-size: 140px 30px; -webkit-background-size: 140px 30px; background-size: 140px 30px; width: 140px; height: 30px; display: inline-block; opacity: 1; }
+.vintage:after { background: url("../img/svg/vintage-blue.svg") no-repeat 0 0; -moz-background-size: 140px 30px; -o-background-size: 140px 30px; -webkit-background-size: 140px 30px; background-size: 140px 30px; width: 140px; height: 30px; display: inline-block; opacity: 0; }
 .vintage:hover:before { opacity: 0; }
 .vintage:hover:after { opacity: 1; }
 

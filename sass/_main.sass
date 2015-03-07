@@ -1200,24 +1200,21 @@ div.m-news
 	margin-left: 18px
 	width: 70px
 	height: 15px 
-	&:before
-		content: ""
-		position: absolute
-		top: 0
-		left: 0
-		+s(vintage)
-		opacity: 1
-		+tr(opacity 300ms)
-		z-index: 1
+	&:before,
 	&:after
 		content: ""
 		position: absolute
-		top: 0
-		left: 0
-		+s(vintage-h)
-		opacity: 0
-		+tr(opacity 300ms)
+		top: -10px
+		left: -35px
+		will-change: opacity
+		+tr(opacity .3s)
 		z-index: 1
+	&:before
+		+svg(vintage,140,30)
+		opacity: 1
+	&:after
+		+svg(vintage-blue,140,30)
+		opacity: 0
 	&:hover
 		&:before
 			opacity: 0 
