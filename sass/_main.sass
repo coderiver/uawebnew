@@ -20,14 +20,15 @@
 		display: block
 .header_enter
 	.header__in
-		min-height: 250px
-		height: 250px
+		min-height: 280px
+		height: 280px
 .subtitle
 	text-align: center
 	font-size: 14px
 	text-transform: uppercase
 	color: #fff
-	+fd		
+	+fd	
+	letter-spacing: 1px
 .topper
 	position: absolute
 	top: 0
@@ -75,6 +76,7 @@
 			+tr(color 300ms)
 			text-transform: uppercase
 			font-size: 11px
+			letter-spacing: 1px 
 			&.is-active
 				color: #fbdc09
 	.fa
@@ -144,6 +146,7 @@
 				color: #000
 				+tr(all 300ms)
 				z-index: 1
+				letter-spacing: 1px 
 				&.is-active
 					background: #000
 					color: #fff	
@@ -180,17 +183,27 @@
 				  
 			&.login
 				width: 18.7%
+				&.is-logined
+					a
+						background: #000 
+						color: #fff
+						&:hover
+							background: #000 
+							color: #fff
+						&:after
+							background: #000 
+						&:before
+							display: none
+						 
 				&:before
 					display: none  
 				a
-					background: $yellow
+					background: $blue
+					color: #fff 
+					&:after
+						background: $blue 
 					&:before
 						border-color: $yellow
-					&:hover
-						color: #000
-					&.is-active
-						background: #000
-						color: #fff	
 
 .nav-toggle
 	display: none
@@ -780,7 +793,17 @@ div.m-news
 						right: -16px
 						margin-top: -1px
 						height: 1px
-						background: #fff  		 
+						background: #fff  	
+		&.is-mod
+			.schedule__date-in
+				display: inline-block
+				&:hover
+					background: #fff
+					.icon-pay
+						+sp(play-black)
+			&.is-current
+				.schedule__date-in
+					border-color: #fff
 	&__date
 		position: relative
 		display: inline-block
@@ -797,7 +820,12 @@ div.m-news
 		text-align: center
 		font-size: 11px
 		+fdi
-		color: #000		
+		color: #000	
+		+tr(background .3s)
+		&:hover
+			background: #fff 
+			.icon-play
+				+sp(play-black)	
 	&__title
 		+ksb
 		font-size: 16px
@@ -1133,6 +1161,7 @@ div.m-news
 		font-size: 11px
 		text-transform: uppercase
 		color: #fff
+		letter-spacing: 1px 
 		+r(768)
 			width: 100%
 			padding-right: 0
@@ -1231,6 +1260,7 @@ div.m-news
 		span, a
 			display: inline-block
 			vertical-align: middle
+			padding: 5px 0 
 			+fd
 			font-size: 11px 
 			text-transform: uppercase
@@ -1250,6 +1280,7 @@ div.m-news
 				position: absolute
 				left: 0
 				right: 0
+				top: 0
 				height: 1px
 				background: $blue
 				will-change: transform, opacity

@@ -64,6 +64,7 @@
 		display: block
 		height: 40px
 		line-height: 40px
+		letter-spacing: 1px 
 	a
 		color: $blue 
 		position: relative
@@ -95,6 +96,7 @@
 	padding: 32px 0 0
 .item
 	margin: 25px 0 55px
+	letter-spacing: .2px 
 	+clr
 	&__media
 		float: left
@@ -114,6 +116,7 @@
 	&__title
 		margin: 0 0 7px 
 		font-size: 22px
+		letter-spacing: .1px 
 		+ksb
 		text-transform: uppercase
 		+r(768)
@@ -129,7 +132,7 @@
 			text-decoration: none
 	&__info
 		margin: 17px 0 0 
-		+fd
+		+fb
 		font-size: 16px
 		color: #000
 		line-height: 1.5 
@@ -294,7 +297,7 @@
 	a
 		display: inline-block
 		position: relative
-		padding: 0 15px 
+		padding: 5px 15px 
 		color: $blue
 		text-decoration: none
 		font-size: 11px
@@ -305,6 +308,7 @@
 			position: absolute
 			left: 15px
 			right: 15px
+			top: 0
 			height: 1px
 			background: $blue
 			will-change: transform, opacity
@@ -833,6 +837,7 @@
 	a
 		display: inline-block
 		vertical-align: middle
+		position: relative
 		margin-left: 20px
 		width: 190px
 		height: 50px
@@ -859,15 +864,34 @@
 			+r(768)
 				margin-left: 0
 		&:hover
-			opacity: .9
+			&:after
+				height: 100%
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			height: 0
+			z-index: -1
+			+tr(height .3s) 
+
 	&__fb
-		background: #3c5a96 
+		background: #3c5a96
+		&:after
+			background: darken(#3c5a96, 10% )
 	&__vk
 		background: #5c80a4 
+		&:after
+			background: darken(#5c80a4, 10% )
 	&__ln
 		background: #1877a6 
+		&:after
+			background: darken(#1877a6, 10% )
 	&__gp
 		background: #4688f1 
+		&:after
+			background: darken(#4688f1, 10% )
 .enter
 	padding: 28px 20px
 	display: inline-block
@@ -906,3 +930,75 @@
 		box-shadow: 0 0 2px $blue
 		+placeholder
 			color: #ccc 
+			
+
+.reviews-wrap
+	position: relative
+	min-height: 530px
+	padding-top: 36px
+	background: #000 url(../img/person-bg.jpg) 
+	+cover
+	+r(768)
+		min-height: 480px
+	&:after
+		content: ""
+		position: absolute
+		top: 204px
+		right: 0
+		left: 0
+		height: 1px
+		background: rgba(#fff,.4)  
+	.slick-slider
+		margin-top: 24px
+		position: relative
+		z-index: 2
+	.slick-dots
+		bottom: -35px
+	.person
+		background: none
+		padding: 0 10px
+		&__img
+			position: relative
+		// .info-text,
+		// .person__info
+		// 	display: none
+		.btn-play
+			right: -18px
+			bottom: 0
+.btn-play
+	position: absolute
+	width: 56px
+	height: 56px
+	line-height: 56px
+	text-align: center
+	border-radius: 50%
+	background: #fff
+	+tr(background .3s)
+	&.is-dark
+		background: #000
+		&:hover
+			background: #fff
+		i
+			+s(play)
+			&:after
+				+s(play-black)
+	&:hover
+		background: #000 
+		
+		i
+			&:before
+				opacity: 1
+	i
+		display: inline-block
+		position: relative
+		vertical-align: middle
+		+s(play-black)
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			+s(play)
+			opacity: 0
+			will-change: opacity
+			+tr(opacity .3s) 

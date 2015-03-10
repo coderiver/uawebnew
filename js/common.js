@@ -20,8 +20,7 @@ head.ready(function() {
 
 	// slider init
 	$('.js-slider').slick({
-	  fade: false,
-	  easing: 'easeInCubic',
+	  fade: true,
 	  infinite: true,
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
@@ -29,8 +28,8 @@ head.ready(function() {
 	  arrows:false,
 	  speed: 300,
 	  adaptiveHeight: true,
-	  autoplay: false,
-	  autoplaySpeed: 0,
+	  autoplay: true,
+	  autoplaySpeed: 5000,
 	  responsive: [
 	      {
 	        breakpoint: 1024,
@@ -212,27 +211,64 @@ head.ready(function() {
 
 	});
 	$('.js-slick-3').slick({
-	  infinite: true,
-	  slidesToShow: 3,
-	  slidesToScroll: 3,
-	  dots: false,
-	  arrows:false,
-	  speed: 300,
-	  autoplaySpeed: 0,
-	  responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      }
-	]
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		dots: false,
+		arrows:false,
+		speed: 300,
+		autoplaySpeed: 0,
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true
+	        	}
+			}
+		]
+
+	});
+	$('.js-slick-review').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		dots: true,
+		arrows:false,
+		speed: 300,
+		autoplaySpeed: 0,
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true
+	        	}
+			}
+		]
 
 	});
 
+	$('.js-slick-review').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		var	dot = $(this).find(".slick-dots li"),
+			n = dot.length;
+		dot.removeClass("is-active");
+		for(i=0;i<=n;i++) {
+			if (dot.eq(i).hasClass("slick-active")) {
+				break;
+			}
+			else {
+				dot.eq(i).addClass("is-active");
+			}
+		}
+
+	});
 	$(".article dt").on("click", function() {
 		$(this).parents("dl").toggleClass("is-open").find("dd").slideToggle(200);
 	});
@@ -269,6 +305,7 @@ head.ready(function() {
 	if ($(window).width() <=768) {
 		smallPlaceholder();
 	}
+
 	
 	
 });
