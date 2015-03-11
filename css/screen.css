@@ -215,7 +215,7 @@ html.has-open-nav .out:after { content: ""; position: absolute; top: 0; right: 0
 .menu ul li.login.is-logined a:after { background: #000; }
 .menu ul li.login.is-logined a:before { display: none; }
 
-.nav-toggle { display: none; position: fixed; right: 20px; top: 7px; z-index: 11; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.4); background: none; -moz-transition: border 0.3s; -o-transition: border 0.3s; -webkit-transition: border 0.3s; transition: border 0.3s; }
+.nav-toggle { display: none; position: fixed; right: 20px; top: 7px; z-index: 11; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.4); background: none; -moz-transition: border 0.3s; -o-transition: border 0.3s; -webkit-transition: border 0.3s; transition: border 0.3s; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 @media only screen and (max-width: 768px) { .nav-toggle { display: block; } }
 .nav-toggle:hover { border-color: #fff; }
 .nav-toggle.is-active { border-color: rgba(0, 0, 0, 0.4); }
@@ -887,13 +887,21 @@ div.m-news:hover:after { height: 0; }
 .input:focus::placeholder { color: #ccc; }
 
 .reviews-wrap { position: relative; min-height: 530px; padding-top: 36px; background: #000 url(../img/person-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
-@media only screen and (max-width: 768px) { .reviews-wrap { min-height: 480px; } }
+@media only screen and (max-width: 768px) { .reviews-wrap { min-height: 420px; } }
 .reviews-wrap:after { content: ""; position: absolute; top: 204px; right: 0; left: 0; height: 1px; background: rgba(255, 255, 255, 0.4); }
+@media only screen and (max-width: 768px) { .reviews-wrap:after { top: 165px; } }
 .reviews-wrap .slick-slider { margin-top: 24px; position: relative; z-index: 2; }
+@media only screen and (max-width: 768px) { .reviews-wrap .slick-slider { margin-top: 0; } }
 .reviews-wrap .slick-dots { bottom: -35px; }
 .reviews-wrap .person { background: none; padding: 0 10px; }
 .reviews-wrap .person__img { position: relative; }
+@media only screen and (min-width: 768px) { .reviews-wrap .person .info-text, .reviews-wrap .person .person__info { opacity: 0; will-change: opacity; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; } }
+@media only screen and (min-width: 768px) { .reviews-wrap .person .person__img { -ms-transform: scale(0.55); -webkit-transform: scale(0.55); transform: scale(0.55); will-change: transform; -moz-transition: -moz-transform 0.3s; -o-transition: -o-transform 0.3s; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; } }
 .reviews-wrap .person .btn-play { right: -18px; bottom: 0; }
+@media only screen and (min-width: 768px) { .reviews-wrap .slick-active + .slick-active .info-text, .reviews-wrap .slick-active + .slick-active .person__info { opacity: 1; }
+  .reviews-wrap .slick-active + .slick-active .person__img { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); } }
+@media only screen and (min-width: 768px) { .reviews-wrap .slick-active + .slick-active + .slick-active .info-text, .reviews-wrap .slick-active + .slick-active + .slick-active .person__info { opacity: 0; }
+  .reviews-wrap .slick-active + .slick-active + .slick-active .person__img { -ms-transform: scale(0.55); -webkit-transform: scale(0.55); transform: scale(0.55); } }
 
 .btn-play { position: absolute; width: 56px; height: 56px; line-height: 56px; text-align: center; border-radius: 50%; background: #fff; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; }
 .btn-play.is-dark { background: #000; }

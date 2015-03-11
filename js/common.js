@@ -235,7 +235,7 @@ head.ready(function() {
 	$('.js-slick-review').slick({
 		infinite: true,
 		slidesToShow: 3,
-		slidesToScroll: 3,
+		slidesToScroll: 1,
 		dots: true,
 		arrows:false,
 		speed: 300,
@@ -254,7 +254,6 @@ head.ready(function() {
 		]
 
 	});
-
 	$('.js-slick-review').on('afterChange', function(event, slick, currentSlide, nextSlide){
 		var	dot = $(this).find(".slick-dots li"),
 			n = dot.length;

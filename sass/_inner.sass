@@ -939,7 +939,7 @@
 	background: #000 url(../img/person-bg.jpg) 
 	+cover
 	+r(768)
-		min-height: 480px
+		min-height: 420px
 	&:after
 		content: ""
 		position: absolute
@@ -947,11 +947,15 @@
 		right: 0
 		left: 0
 		height: 1px
-		background: rgba(#fff,.4)  
+		background: rgba(#fff,.4) 
+		+r(768)
+			top: 165px 
 	.slick-slider
 		margin-top: 24px
 		position: relative
 		z-index: 2
+		+r(768)
+			margin-top: 0
 	.slick-dots
 		bottom: -35px
 	.person
@@ -959,12 +963,34 @@
 		padding: 0 10px
 		&__img
 			position: relative
-		// .info-text,
-		// .person__info
-		// 	display: none
+		.info-text,
+		.person__info
+			+rmin(768)
+				opacity: 0
+				will-change: opacity
+				+tr(opacity .3s)
+		.person__img
+			+rmin(768)
+				+scale(.55)
+				will-change: transform
+				+tr(transform .3s)
 		.btn-play
 			right: -18px
 			bottom: 0
+	.slick-active + .slick-active
+		+rmin(768)
+			.info-text,
+			.person__info
+				opacity: 1
+			.person__img
+				+scale(1)
+	.slick-active + .slick-active + .slick-active
+		+rmin(768)
+			.info-text,
+			.person__info
+				opacity: 0
+			.person__img
+				+scale(.55)
 .btn-play
 	position: absolute
 	width: 56px
