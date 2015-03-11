@@ -237,7 +237,7 @@ head.ready(function() {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		dots: true,
-		arrows:false,
+		arrows: true,
 		speed: 300,
 		autoplaySpeed: 0,
 		adaptiveHeight: true,
