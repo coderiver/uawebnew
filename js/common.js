@@ -248,7 +248,8 @@ head.ready(function() {
 					slidesToShow: 1,
 					slidesToScroll: 1,
 					infinite: true,
-					dots: true
+					dots: true,
+					arrows: false
 	        	}
 			}
 		]
@@ -305,6 +306,21 @@ head.ready(function() {
 		smallPlaceholder();
 	}
 
+	//Disable overlay helper
+	$(".js-fancybox-video").fancybox({
+		padding: 0,
+		fitToView: true,
+		autoSize: true,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		autoResize: true,
+		aspectRatio: true,
+	    helpers: {
+		    overlay: {
+		      locked: false
+		    }
+		}
+	});
 	
 	
 });
