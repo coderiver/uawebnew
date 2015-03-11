@@ -53,7 +53,7 @@
 	padding-top: 23px 
 	a
 		display: inline-block
-		+sr(logo)	
+		+svg(logo,111,44)	
 	+r(768)
 		padding-top: 12px
 		height: auto	
@@ -183,6 +183,21 @@
 				  
 			&.login
 				width: 18.7%
+				&:before
+					display: none  
+				a
+					//background: $blue
+					color: #fff 
+					&:after
+						background: $blue 
+					&:before
+						border-color: $blue
+					&:hover
+						color: $blue 
+						&:after
+							height: 0
+						&:before
+							border-color: $blue 
 				&.is-logined
 					a
 						background: #000 
@@ -194,16 +209,6 @@
 							background: #000 
 						&:before
 							display: none
-						 
-				&:before
-					display: none  
-				a
-					background: $blue
-					color: #fff 
-					&:after
-						background: $blue 
-					&:before
-						border-color: $yellow
 
 .nav-toggle
 	display: none
@@ -994,21 +999,47 @@ div.m-news
 			padding: 30px 0 
 		.partners__slider
 			margin-bottom: 50px
-
-	&__prev,
-	&__next
+	.slick-prev,
+	.slick-next
 		position: absolute
 		top: 0
-		bottom: 0
+		margin: 0
+		height: 100%
 		width: 100px
+		display: block !important
 		+r(768)
-			display: none
-	&__prev
+			display: none !important
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -17px 
+			opacity: .5
+			will-change: opacity
+			+tr(opacity .3s)
+		&:hover
+			&:before
+				opacity: 1
+	.slick-prev
 		left: 0
 		+gh(rgba(#fff,1), rgba(#fff,.2))
-	&__next
+		&:hover
+			+gh(rgba(#fff,1), rgba(#fff,.5))
+		&:before
+			left: 20px
+			+s(arr-prev-big)
+	.slick-next
 		right: 0
 		+gh(rgba(#fff,.2), rgba(#fff,1))
+		&:hover
+			+gh(rgba(#fff,.5), rgba(#fff,1))
+		&:before
+			right: 20px
+			+s(arr-next-big)
+	&__prev,
+	&__next
+		display: none
+		
 	.h2
 		margin-bottom: 55px
 	&__slider

@@ -20,7 +20,7 @@ head.ready(function() {
 
 	// slider init
 	$('.js-slider').slick({
-	  fade: true,
+	  fade: false,
 	  infinite: true,
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
@@ -71,7 +71,7 @@ head.ready(function() {
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
 	  dots: true,
-	  arrows:false,
+	  arrows:true,
 	  speed: 300,
 	  adaptiveHeight: true,
 	  autoplaySpeed: 5000,
