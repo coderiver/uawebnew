@@ -70,6 +70,25 @@
 	img
 		width: 100%
 		height: auto
+	.slick-next,
+	.slick-prev
+		position: absolute
+		top: 0
+		height: 100%
+		width: 60px
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -17px
+	.slick-prev
+		&:before
+			left: 20px
+			+s(arr-prev-white)
+	.slick-next
+		&:before
+			right: 20px
+			+s(arr-next-white)
 .soc
 	padding: 37px 0 
 	text-align: center

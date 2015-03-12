@@ -207,10 +207,12 @@ html.has-open-nav .out:after { content: ""; position: absolute; top: 0; right: 0
 .menu ul li.login a:hover { color: #09c5fb; }
 .menu ul li.login a:hover:after { height: 0; }
 .menu ul li.login a:hover:before { border-color: #09c5fb; }
-.menu ul li.login.is-logined a { background: #000; color: #fff; }
-.menu ul li.login.is-logined a:hover { background: #000; color: #fff; }
-.menu ul li.login.is-logined a:after { background: #000; }
-.menu ul li.login.is-logined a:before { display: none; }
+.menu ul li.login.is-logined a { color: #fff; }
+.menu ul li.login.is-logined a:after { background: #000; height: 100%; }
+.menu ul li.login.is-logined a:before { border-color: #000; }
+.menu ul li.login.is-logined a:hover { color: #fff; }
+.menu ul li.login.is-logined a:hover:after { height: 0; }
+.menu ul li.login.is-logined a:hover:before { border-color: #000; }
 
 .nav-toggle { display: none; position: fixed; right: 20px; top: 7px; z-index: 11; width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.4); background: none; -moz-transition: border 0.3s; -o-transition: border 0.3s; -webkit-transition: border 0.3s; transition: border 0.3s; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 @media only screen and (max-width: 768px) { .nav-toggle { display: block; } }
@@ -575,6 +577,10 @@ div.m-news:hover:after { height: 0; }
 
 .slick { position: relative; }
 .slick img { width: 100%; height: auto; }
+.slick .slick-next, .slick .slick-prev { position: absolute; top: 0; height: 100%; width: 60px; }
+.slick .slick-next:before, .slick .slick-prev:before { content: ""; position: absolute; top: 50%; margin-top: -17px; }
+.slick .slick-prev:before { left: 20px; background: url('../img/icons-s8cc9b96664.png') 0 -171px no-repeat; width: 18px; height: 34px; }
+.slick .slick-next:before { right: 20px; background: url('../img/icons-s8cc9b96664.png') 0 -59px no-repeat; width: 18px; height: 34px; }
 
 .soc { padding: 37px 0; text-align: center; font-size: 0; }
 .soc a, .soc span { display: inline-block; vertical-align: middle; }
@@ -662,7 +668,7 @@ div.m-news:hover:after { height: 0; }
 @media only screen and (max-width: 768px) { .yep .h2 { margin-bottom: 20px; } }
 
 .map { position: relative; background: #000; }
-.map__in { height: 480px; opacity: 0.66; }
+.map__in { height: 480px; }
 .map__popup { padding: 12px 0; text-align: center; text-transform: uppercase; font-size: 11px; line-height: 1.7; font-family: "FuturaDemiC", sans-serif; }
 .map__popup .h2 { margin-bottom: 5px; }
 .map__tel { font-size: 22px; font-family: "KelsonSansBoldRU", sans-serif; }

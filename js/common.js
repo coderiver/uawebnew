@@ -322,5 +322,44 @@ head.ready(function() {
 		}
 	});
 	
+
+	//var slickTimer = 5000;
+	$('.js-simple-slick').slick({
+	  infinite: true,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  dots: true,
+	  arrows: true,
+	  speed: 300,
+	  adaptiveHeight: true,
+	  autoplaySpeed: 5000,
+	  autoplay: true,
+	  responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true,
+					arrows: false
+	        	}
+			}
+		]
+	});
+	$('.js-simple-slick').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		var	dot = $(this).find(".slick-dots li"),
+			n = dot.length;
+		dot.removeClass("is-active");
+		for(i=0;i<=n;i++) {
+			if (dot.eq(i).hasClass("slick-active")) {
+				break;
+			}
+			else {
+				dot.eq(i).addClass("is-active");
+			}
+		}
+
+	});
 	
 });

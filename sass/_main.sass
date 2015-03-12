@@ -200,16 +200,18 @@
 							border-color: $blue 
 				&.is-logined
 					a
-						background: #000 
 						color: #fff
-						&:hover
-							background: #000 
-							color: #fff
 						&:after
 							background: #000 
+							height: 100%
 						&:before
-							display: none
-
+							border-color: #000
+						&:hover
+							color: #fff
+							&:after
+								height: 0
+							&:before
+								border-color: #000
 .nav-toggle
 	display: none
 	position: fixed
