@@ -54,14 +54,16 @@
 	a
 		display: inline-block
 		+svg(logo,111,44)	
-	+r(768)
+	+r(960)
 		padding-top: 12px
 		height: auto	
+.top-menu_user
+	margin-left: 5.1%
 .top-menu, .lang
 	float: right
 	height: 85px
 	+vertical
-	+r(768)
+	+r(960)
 		display: none
 	li
 		display: inline-block
@@ -79,6 +81,8 @@
 			letter-spacing: 1px 
 			&.is-active
 				color: #fbdc09
+			span
+				color: $blue 
 	.fa
 		font-size: 15px
 		color: #fff 
@@ -88,8 +92,6 @@
 .lang
 	position: relative
 	margin-left: 22px
-	+r(768)
-		display: none
 	&:after
 		content: ""
 		position: absolute
@@ -103,7 +105,7 @@
 			&.is-active
 				color: $blue	 						
 .menu
-	+r(768)
+	+r(960)
 		display: none
 	ul
 		display: table
@@ -225,7 +227,7 @@
 	background: none
 	+transition(border .3s)
 	+nosel
-	+r(768)
+	+r(960)
 		display: block
 	&:hover
 		border-color: #fff 
@@ -278,7 +280,7 @@
 	overflow-y: auto
 	background: #fff 
 	+tr(top .3s)
-	+r(768)
+	+r(960)
 		display: block
 	&.is-visible
 		top: 0
@@ -286,7 +288,7 @@
 		float: none
 		margin: 0
 		text-align: left
-		+r(768)
+		+r(960)
 			display: block
 		li
 			margin: 0 22px 0 0
@@ -331,6 +333,11 @@
 		&:hover
 			background: $blue
 			color: #fff  
+			span
+				color: #fff 
+		span
+			color: $blue 
+			+transition(color .3s)
 // slider
 .slider
 	position: relative
