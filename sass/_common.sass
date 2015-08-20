@@ -65,6 +65,16 @@ html
 				left: 0
 				z-index: 9
 				background: rgba(#000,.7)
+.mobile
+	.btn
+		&:after
+			display: none
+		&:hover
+			background: $yellow 
+	.soc-enter
+		a
+			&:after
+				display: none
 
 // common blocks      
 .l-center
@@ -128,6 +138,7 @@ html
 	text-align: center
 	color: #000 
 	letter-spacing: .4px 
+
 .btn-wrap
 	text-align: center
 .btn
@@ -148,7 +159,7 @@ html
 	letter-spacing: .5px 
 	+tr(color .3s)
 	+r(480)
-		min-width: 1px
+		min-width: auto
 		width: 100%
 	.is-mobile-hidden
 		+r(768)	
@@ -183,7 +194,6 @@ html
 		line-height: 50px
 		min-width: 195px
 		font-size: 11px
-
 // social icons
 [class*='-ico']
 	position: relative
@@ -212,7 +222,6 @@ html
 	&.is-active
 		&:after
 			display: none
-			
 // hover effect for links with text replacement
 .replace
 	position: relative

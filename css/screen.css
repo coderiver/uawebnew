@@ -39,6 +39,10 @@ body ::-moz-selection { background: rgba(76, 209, 252, 0.5); }
 html.has-open-nav .out { position: relative; }
 html.has-open-nav .out:after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 9; background: rgba(0, 0, 0, 0.7); }
 
+.mobile .btn:after { display: none; }
+.mobile .btn:hover { background: #fbdc09; }
+.mobile .soc-enter a:after { display: none; }
+
 .l-center { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 .l-center.l-center_wide { padding: 0; }
 
@@ -67,7 +71,7 @@ html.has-open-nav .out:after { content: ""; position: absolute; top: 0; right: 0
 .btn-wrap { text-align: center; }
 
 .btn { position: relative; display: inline-block; min-width: 428px; padding: 0 10px; height: 70px; line-height: 70px; background: #09c5fb; text-align: center; font-family: "FuturaDemiC", sans-serif; font-size: 14px; text-transform: uppercase; text-decoration: none; color: #fff; z-index: 1; letter-spacing: 0.5px; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
-@media only screen and (max-width: 480px) { .btn { min-width: 1px; width: 100%; } }
+@media only screen and (max-width: 480px) { .btn { min-width: auto; width: 100%; } }
 @media only screen and (max-width: 768px) { .btn .is-mobile-hidden { display: none; } }
 .btn:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 0; background: #fbdc09; -moz-transition: height 300ms; -o-transition: height 300ms; -webkit-transition: height 300ms; transition: height 300ms; z-index: -1; }
 .btn:hover { color: #000; }
