@@ -255,7 +255,7 @@ html.has-open-nav .out:after { content: ""; position: absolute; top: 0; right: 0
 .nav__list a:hover span { color: #fff; }
 .nav__list a span { color: #09c5fb; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
 
-.slider { position: relative; min-height: 330px; }
+.slider { position: relative; min-height: 350px; }
 .slider__img { font-size: 0; }
 .slider__img img { width: 100%; height: auto; }
 .slider__in { position: absolute; top: 135px; bottom: 0; right: 0; left: 0; text-align: center; font-size: 0; z-index: 2; }
@@ -265,7 +265,7 @@ html.has-open-nav .out:after { content: ""; position: absolute; top: 0; right: 0
 @media only screen and (max-width: 768px) { .slider__item { min-height: 250px; } }
 .slider__bg { font-size: 0; }
 .slider__bg img { width: 100%; }
-@media only screen and (max-width: 768px) { .slider__bg img { height: 330px; width: auto; max-width: 1000%; } }
+@media only screen and (max-width: 768px) { .slider__bg img { height: 350px; width: auto; max-width: none; } }
 .slider__content { position: absolute; top: 135px; bottom: 0; right: 0; left: 0; text-align: center; font-size: 0; display: none; }
 .slider__content:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 @media only screen and (max-width: 1024px) { .slider__content { display: block; } }
