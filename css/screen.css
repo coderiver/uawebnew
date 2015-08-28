@@ -101,6 +101,12 @@ html.has-open-nav .out:after { content: ""; position: absolute; top: 0; right: 0
 @media only screen and (max-width: 768px) { .more span:before { display: none; } }
 .more.more_left { left: auto; right: 0; }
 
+.btn-feedback { position: fixed; top: 50%; right: -100px; z-index: 7; margin-top: -25px; -moz-transform: translate3d(0, 0, 0) rotate(-90deg); -ms-transform: translate3d(0, 0, 0) rotate(-90deg); -webkit-transform: translate3d(0, 0, 0) rotate(-90deg); transform: translate3d(0, 0, 0) rotate(-90deg); -moz-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; padding: 0 25px; height: 50px; line-height: 50px; background: #151515; font-family: "FuturaBookC", sans-serif; text-decoration: none; color: #fff; -webkit-font-smoothing: antialiased; text-transform: uppercase; -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; letter-spacing: 1px; }
+@media only screen and (max-width: 767px) { .btn-feedback { right: -91px; margin-top: -15px; height: 30px; line-height: 30px; padding: 0 15px; } }
+.btn-feedback span { display: inline-block; vertical-align: middle; font-size: 11px; }
+@media only screen and (max-width: 767px) { .btn-feedback span { font-size: 10px; } }
+.btn-feedback:hover { background: #09c5fb; }
+
 .l-cols-wrap { *zoom: 1; }
 .l-cols-wrap:after { content: " "; display: table; clear: both; }
 

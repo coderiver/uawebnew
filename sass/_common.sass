@@ -268,8 +268,39 @@ html
 		right: 0
 
 
-
-
+.btn-feedback
+	position: fixed
+	top: 50%
+	right: -100px
+	z-index: 7
+	margin-top: -25px
+	+transform(translate3d(0,0,0) rotate(-90deg))
+	+transform-origin(50%, 50%)
+	padding: 0 25px 
+	height: 50px
+	line-height: 50px
+	background: #151515
+	+fb
+	text-decoration: none
+	color: #fff
+	-webkit-font-smoothing: antialiased
+	text-transform: uppercase
+	+tr(background .2s)
+	letter-spacing: 1px
+	+r(767)
+		right: -91px
+		margin-top: -15px
+		height: 30px
+		line-height: 30px
+		padding: 0 15px 
+	span
+		display: inline-block
+		vertical-align: middle
+		font-size: 11px
+		+r(767)
+			font-size: 10px
+	&:hover
+		background: $blue
 
 
 
