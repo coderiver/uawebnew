@@ -11,7 +11,7 @@
 		min-height: 340px
 		background-position: 50% 0%
 		+r(768)
-			padding: 75px 20px 30px 
+			padding: 75px 20px 30px
 			display: table-cell
 			height: 260px
 			vertical-align: middle
@@ -27,7 +27,7 @@
 	font-size: 14px
 	text-transform: uppercase
 	color: #fff
-	+fd	
+	+fd
 	letter-spacing: 1px
 .topper
 	position: absolute
@@ -41,22 +41,22 @@
 		height: 70px
 		z-index: 8
 		+tr(background .3s)
-		background: rgba(#000,.5) 
+		background: rgba(#000,.5)
 	&.has-bg
 		+r(768)
-			background: #000 
-		
+			background: #000
+
 .logo
 	float: left
 	font-size: 0
 	height: 85px
-	padding-top: 23px 
+	padding-top: 23px
 	a
 		display: inline-block
-		+svg(logo,111,44)	
+		+svg(logo,111,44)
 	+r(960)
 		padding-top: 12px
-		height: auto	
+		height: auto
 .top-menu_user
 	margin-left: 5.1%
 .top-menu, .lang
@@ -71,24 +71,24 @@
 		margin-left: 22px
 		a
 			display: inline-block
-			padding: 5px 0 
+			padding: 5px 0
 			text-decoration: none
 			+fd
 			color: #fff
 			+tr(color 300ms)
 			text-transform: uppercase
 			font-size: 11px
-			letter-spacing: 1px 
+			letter-spacing: 1px
 			&.is-active
 				color: #fbdc09
 			span
-				color: $blue 
+				color: $blue
 	.fa
 		font-size: 15px
-		color: #fff 
+		color: #fff
 		+tr(color .3s)
 		&:hover
-			color: $yellow 
+			color: $yellow
 .lang
 	position: relative
 	margin-left: 22px
@@ -100,10 +100,10 @@
 		left: 0
 		width: 1px
 		background: #7e7d7e
-	li	
+	li
 		a
 			&.is-active
-				color: $blue	 						
+				color: $blue
 .menu
 	+r(960)
 		display: none
@@ -121,7 +121,7 @@
 			&.is-active
 				a
 					background: #202020
-					color: #fff	
+					color: #fff
 					&:after
 						background: #202020
 					&:before
@@ -134,24 +134,24 @@
 				right: -1px
 				width: 1px
 				z-index: 2
-				background: #464344  
+				background: #464344
 			a
 				display: block
 				position: relative
 				height: 50px
-				line-height: 50px  
+				line-height: 50px
 				+fd
 				text-decoration: none
 				text-transform: uppercase
-				//background: #fff 
+				//background: #fff
 				font-size: 11px
 				color: #000
 				+tr(all 300ms)
 				z-index: 1
-				letter-spacing: 1px 
+				letter-spacing: 1px
 				&.is-active
 					background: #000
-					color: #fff	
+					color: #fff
 					&:after
 						background: #000
 					&:before
@@ -161,11 +161,11 @@
 					position: absolute
 					bottom: 0
 					left: 0
-					width: 100% 
+					width: 100%
 					height: 100%
 					background: #fff
 					+tr(height 300ms)
-					z-index: -1  
+					z-index: -1
 				&:before
 					content: ""
 					position: absolute
@@ -174,37 +174,37 @@
 					right: 0
 					left: 0
 					border: 1px solid #fff
-					opacity: 0 
-					+tr(opacity 300ms) 
+					opacity: 0
+					+tr(opacity 300ms)
 				&:hover
 					color: #fff
 					&:after
 						height: 0
 					&:before
 						opacity: 1
-				  
+
 			&.login
 				width: 18.7%
 				&:before
-					display: none  
+					display: none
 				a
 					//background: $blue
-					color: #fff 
+					color: #fff
 					&:after
-						background: $blue 
+						background: $blue
 					&:before
 						border-color: $blue
 					&:hover
-						color: $blue 
+						color: $blue
 						&:after
 							height: 0
 						&:before
-							border-color: $blue 
+							border-color: $blue
 				&.is-logined
 					a
 						color: #fff
 						&:after
-							background: #000 
+							background: #000
 							height: 100%
 						&:before
 							border-color: #000
@@ -222,7 +222,7 @@
 	z-index: 11
 	width: 54px
 	height: 54px
-	border-radius: 50% 
+	border-radius: 50%
 	border: 1px solid rgba(#fff,.4)
 	background: none
 	+transition(border .3s)
@@ -230,14 +230,14 @@
 	+r(960)
 		display: block
 	&:hover
-		border-color: #fff 
+		border-color: #fff
 	&.is-active
 		border-color: rgba(#000,.4)
 		i
 			background: none
 			&:before,
 			&:after
-				background: #000 
+				background: #000
 				left: 0
 				right: 0
 			&:before
@@ -249,10 +249,10 @@
 	i
 		display: inline-block
 		vertical-align: middle
-		position: relative 
+		position: relative
 		width: 27px
 		height: 3px
-		background: #fff 
+		background: #fff
 		+tr(background .2s)
 		&:before,
 		&:after
@@ -261,10 +261,10 @@
 			left: 5px
 			right: 5px
 			height: 3px
-			background: #fff  
+			background: #fff
 			will-change: transform
 			+tr(all .1s)
-			
+
 		&:before
 			top: -8px
 		&:after
@@ -278,7 +278,7 @@
 	z-index: 10
 	max-height: 100%
 	overflow-y: auto
-	background: #fff 
+	background: #fff
 	+tr(top .3s)
 	+r(960)
 		display: block
@@ -306,7 +306,7 @@
 			font-size: 20px
 			+tr(color .3s)
 			&:hover
-				color: $yellow 
+				color: $yellow
 		li
 			display: inline-block
 			vertical-align: middle
@@ -318,25 +318,25 @@
 			&:hover
 				i
 					&:after
-						opacity: 1 
+						opacity: 1
 .nav__list
 	text-align: center
 	a
 		display: block
-		padding: 10px 0 
+		padding: 10px 0
 		font-size: 11px
 		text-transform: uppercase
 		+fd
 		text-decoration: none
-		color: #000 
+		color: #000
 		+transition(color .3s, background .3s)
 		&:hover
 			background: $blue
-			color: #fff  
+			color: #fff
 			span
-				color: #fff 
+				color: #fff
 		span
-			color: $blue 
+			color: $blue
 			+transition(color .3s)
 // slider
 .slider
@@ -345,7 +345,7 @@
 	&__img
 		font-size: 0
 		img
-			width: 100% 			
+			width: 100%
 			height: auto
 	&__in
 		position: absolute
@@ -391,9 +391,9 @@
 					height: 0
 			+r(900)
 				padding: 30px 30px 0
-				height: auto 
+				height: auto
 				.m-news__title
-					font-size: 22px							
+					font-size: 22px
 .m-news-list
 	display: inline-block
 	vertical-align: middle
@@ -403,15 +403,15 @@ div.m-news
 	&:hover
 		color: #fff
 		&:after
-			height: 0  					 
+			height: 0
 .m-news
 	position: relative
 	display: inline-block
 	vertical-align: middle
 	width: 454px
 	height: 280px
-	margin: 0 22px 
-	padding: 50px 30px 30px 
+	margin: 0 22px
+	padding: 50px 30px 30px
 	font-size: 12px
 	text-decoration: none
 	color: #fff
@@ -426,7 +426,7 @@ div.m-news
 		top: 0
 		bottom: 0
 		left: -22px
-		width: 1px 
+		width: 1px
 		background: #7d7471
 	&:after
 		content: ""
@@ -437,35 +437,35 @@ div.m-news
 		height: 0
 		background: #FFF
 		z-index: -1
-		+tr(height 300ms)  	 
+		+tr(height 300ms)
 	&:hover
 		color: #000
 		&:after
-			height: 100% 
+			height: 100%
 	&:first-child
 		&:before
 			display: none
 	&.is-active
 		.m-news__progress
-			opacity: 1		
+			opacity: 1
 	& > .m-news
 		height: 140px
 		padding-top: 30px
-		margin: 0 
+		margin: 0
 		border-top: 1px solid #7d7471
 		&:before
 			display: none
 		&:first-child
 			border-top: none
 		.m-news__title
-			font-size: 22px  			 	 
+			font-size: 22px
 	&__progress
 		position: absolute
 		top: 5px
 		left: 50%
 		+transform(translateX(-50%))
 		font-size: 0
-		opacity: 0 
+		opacity: 0
 		li
 			display: inline-block
 			vertical-align: middle
@@ -475,7 +475,7 @@ div.m-news
 			border-radius: 50%
 			background: #7c787b
 			&.is-active
-				background: #fff  
+				background: #fff
 	&__title
 		margin-bottom: 10px
 		font-size: 30px
@@ -484,9 +484,10 @@ div.m-news
 	&__hint
 		+fd
 		font-size: 11px
-		text-transform: uppercase	 	
+		text-transform: uppercase
 
 // events
+
 .events
 	position: relative
 	padding: 60px 0 45px
@@ -494,14 +495,14 @@ div.m-news
 	+r(768)
 		padding-top: 20px
 	&_border
-		border-bottom: 1px solid $border 
+		border-bottom: 1px solid $border
 		+r(768)
 			border: 0
-			padding-bottom: 0 
+			padding-bottom: 0
 	&__group
 		float: left
 		width: 66.6%
-		position: relative 
+		position: relative
 		+clr
 		+r(1024)
 			width: 100%
@@ -511,7 +512,7 @@ div.m-news
 			margin-bottom: 0
 		.events__item
 			float: left
-			display: block 
+			display: block
 			height: 135px
 			width: 50%
 			border-top: 1px solid $blue
@@ -521,7 +522,7 @@ div.m-news
 				width: 100%
 				border-right: 0
 				height: auto
-				border-color: $border 
+				border-color: $border
 			&:before,
 			&:after
 				content: ""
@@ -529,7 +530,7 @@ div.m-news
 				width: 17px
 				height: 17px
 				background: #fff
-				z-index: 1 
+				z-index: 1
 				+r(768)
 					display: none
 			&:nth-child(2n)
@@ -544,11 +545,11 @@ div.m-news
 					bottom: -1px
 			&:nth-child(2)
 				+r(768)
-					border-top: 1px solid $border 
+					border-top: 1px solid $border
 				&:before
 					right: -1px
 					top: -1px
-				&:after	
+				&:after
 					right: 0
 					bottom: -1px
 			&:nth-child(3)
@@ -561,7 +562,7 @@ div.m-news
 					left: -1px
 	&__archive
 		float: left
-		width: 33.4% 
+		width: 33.4%
 		+clr
 		+r(1024)
 			width: 100%
@@ -592,7 +593,7 @@ div.m-news
 				+r(768)
 					display: none
 			&:first-child
-				border: 0 
+				border: 0
 				+r(1024)
 					border-left: 0
 				+r(768)
@@ -603,7 +604,7 @@ div.m-news
 					bottom: -1px
 		.events__title,
 		.events__date
-			color: #ccc 
+			color: #ccc
 	&__list
 		font-size: 0
 		display: table
@@ -611,7 +612,7 @@ div.m-news
 			display: block
 	&__item
 		display: table-cell
-		position: relative 
+		position: relative
 		vertical-align: top
 		width: 33.3%
 		border-left: 1px solid $border
@@ -620,11 +621,11 @@ div.m-news
 			width: 100%
 			border-left: 0
 		&:first-child
-			border-left: none 			
+			border-left: none
 		& > a
 			//position: relative
 			display: block
-			padding: 25px 30px 
+			padding: 25px 30px
 			text-decoration: none
 			text-align: center
 			text-transform: uppercase
@@ -639,18 +640,18 @@ div.m-news
 				width: 0
 				opacity: 0
 				background: $blue
-				+transform(translateX(-50%) translateY(-50%))  
+				+transform(translateX(-50%) translateY(-50%))
 				+transition(all 300ms)
 				will-change: transform
-				z-index: 2  
+				z-index: 2
 			&:hover
 				&:after
-					opacity: 1 
-					width: 100% 
+					opacity: 1
+					width: 100%
 				.events__title
 					color: #fff
 				.events__date
-					color: #fff	
+					color: #fff
 	&__title
 		position: relative
 		z-index: 3
@@ -665,34 +666,34 @@ div.m-news
 		+fdi
 		color: #09c5fb
 		font-size: 11px
-		+tr(color 300ms)				
+		+tr(color 300ms)
 // dates
 .dates
 	position: relative
-	padding: 45px 20px 65px 
-	background: url(../img/bg-pattern.jpg) 
+	padding: 45px 20px 65px
+	background: url(../img/bg-pattern.jpg)
 	+r(768)
-		padding-bottom: 45px 
+		padding-bottom: 45px
 	.task-example
 		text-align: center
 	&_dark
 		padding: 45px 0 27px
 		background: #171717
-		color: #fff  
+		color: #fff
 		.schedule
-			&:before	
+			&:before
 				opacity: 0.4
 			&__title
 				margin-bottom: 5px
-				color: #fff 
+				color: #fff
 			&__date
 				background: #171717
 			&__date-in
-				background: #fff 
+				background: #fff
 			.slick-dots
 				button
 					&:before
-						color: rgba(#fff, .4) 
+						color: rgba(#fff, .4)
 				.slick-active
 					button
 						&:before
@@ -700,11 +701,11 @@ div.m-news
 	&__in
 		margin-bottom: 15px
 	.h2
-		margin-bottom: 15px 	
+		margin-bottom: 15px
 	.text-center
 		margin: 48px 0 0
 		.btn
-			margin-bottom: 20px	
+			margin-bottom: 20px
 .categories
 	margin-bottom: 35px
 	font-size: 0
@@ -713,7 +714,7 @@ div.m-news
 		position: relative
 		display: inline-block
 		vertical-align: middle
-		padding: 15px 0 
+		padding: 15px 0
 		margin: 0 4.2%
 		&:before
 			content: ""
@@ -742,17 +743,17 @@ div.m-news
 					background: #000
 					z-index: 1
 				&:after
-					content: ""	 
+					content: ""
 					position: absolute
 					bottom: -15px
 					left: 0
 					width: 100%
 					height: 1px
 					background: #000
-					z-index: 1			  
+					z-index: 1
 		a
 			position: relative
-			display: inline-block 
+			display: inline-block
 			+fdi
 			font-size: 11px
 			text-transform: uppercase
@@ -760,7 +761,7 @@ div.m-news
 			color: #0e0e0e
 			span
 				&:before
-					color: #fff    
+					color: #fff
 .schedule
 	position: relative
 	font-size: 0
@@ -808,7 +809,7 @@ div.m-news
 						right: -16px
 						margin-top: -1px
 						height: 1px
-						background: #fff  	
+						background: #fff
 		&.is-mod
 			.schedule__date-in
 				display: inline-block
@@ -825,7 +826,7 @@ div.m-news
 		margin-bottom: 18px
 		padding: 0 25px
 		background: url(../img/bg-pattern.jpg)
-		z-index: 2 
+		z-index: 2
 	&__date-in
 		width: 72px
 		height: 72px
@@ -835,12 +836,12 @@ div.m-news
 		text-align: center
 		font-size: 11px
 		+fdi
-		color: #000	
+		color: #000
 		+tr(background .3s)
 		&:hover
-			background: #fff 
+			background: #fff
 			.icon-play
-				+sp(play-black)	
+				+sp(play-black)
 	&__title
 		+ksb
 		font-size: 16px
@@ -851,7 +852,7 @@ div.m-news
 			display: inline-block
 	&__text
 		font-size: 16px
-		color: #fff 
+		color: #fff
 // m-articles
 .m-articles
 	position: relative
@@ -871,7 +872,7 @@ div.m-news
 .m-posts
 	float: left
 	width: 33.4%
-	padding: 6px 0 0 
+	padding: 6px 0 0
 	+r(960)
 		width: 50%
 		padding-right: 65px
@@ -890,7 +891,7 @@ div.m-news
 			display: block
 	&__date
 		margin-bottom: 7px
-		padding: 7px 0 
+		padding: 7px 0
 		position: relative
 		display: inline-block
 		+fdi
@@ -898,7 +899,7 @@ div.m-news
 		font-size: 11px
 		color: $blue
 		&:before
-			content: "" 
+			content: ""
 			position: absolute
 			left: 0
 			right: 0
@@ -906,7 +907,7 @@ div.m-news
 			height: 1px
 			+transform(translateY(-5px))
 			background: $blue
-			opacity: 0 
+			opacity: 0
 			will-change: opacity transform
 			+transition(opacity .3s, transform .3s)
 		&:hover
@@ -922,9 +923,9 @@ div.m-news
 	+r(768)
 		padding-bottom: 50px
 	.h2
-		margin-bottom: 10px   
+		margin-bottom: 10px
 	&__subtitle
-		margin-bottom: 50px 
+		margin-bottom: 50px
 		text-align: center
 		color: #a2a0a0
 	&__list
@@ -956,10 +957,10 @@ div.m-news
 					text-transform: uppercase
 					+ksb
 					color: #fff
-					+tr(color 300ms) 
+					+tr(color 300ms)
 					z-index: 1
 					+r(768)
-						color: #000 
+						color: #000
 					span
 						display: inline-block
 						vertical-align: middle
@@ -973,27 +974,27 @@ div.m-news
 						width: 0
 						opacity: 0
 						background: #fff
-						+transform(translateX(-50%) translateY(-50%))  
+						+transform(translateX(-50%) translateY(-50%))
 						+transition(all 300ms)
 						will-change: transform
-						z-index: -1  
+						z-index: -1
 						+r(768)
 							width: 100%
 							opacity: 1
 					&:hover
 						color: #000
 						&:after
-							opacity: 1 
-							width: 100% 	
+							opacity: 1
+							width: 100%
 		.slick-dots
 			+r(768)
-				bottom: -32px		
+				bottom: -32px
 // parthnres
 .partners
 	position: relative
 	padding: 70px 0 25px
 	+r(768)
-		padding: 30px 0 	
+		padding: 30px 0
 	.partners__big
 		+r(768)
 			display: none
@@ -1002,11 +1003,11 @@ div.m-news
 		+r(768)
 			display: block
 	&_all
-		padding: 0		
+		padding: 0
 	&_mod
-		padding: 70px 0 55px  
+		padding: 70px 0 55px
 		+r(768)
-			padding: 30px 0 
+			padding: 30px 0
 		.partners__slider
 			margin-bottom: 50px
 	.slick-prev,
@@ -1023,7 +1024,7 @@ div.m-news
 			content: ""
 			position: absolute
 			top: 50%
-			margin-top: -17px 
+			margin-top: -17px
 			opacity: .5
 			will-change: opacity
 			+tr(opacity .3s)
@@ -1049,7 +1050,7 @@ div.m-news
 	&__prev,
 	&__next
 		display: none
-		
+
 	.h2
 		margin-bottom: 55px
 	&__slider
@@ -1066,9 +1067,9 @@ div.m-news
 			vertical-align: middle
 			width: 4px
 			height: 4px
-			margin: 0 2px 
+			margin: 0 2px
 			border-radius: 50%
-			background: #dfdfdf 
+			background: #dfdfdf
 			cursor: pointer
 			&.is-active
 				background: #000
@@ -1080,12 +1081,12 @@ div.m-news
 		border-collapse: collapse
 	&__row
 		display: table-row
-		width: 100% 
+		width: 100%
 	&__list-small
 		.partners__logo
 			width: 12.5%
 	&__blocks
-		border-top: 1px solid $border 
+		border-top: 1px solid $border
 		font-size: 0
 		text-align: center
 		+r(768)
@@ -1093,12 +1094,12 @@ div.m-news
 		.partners__logo
 			display: inline-block
 			border-top: none
-			margin-right: -1px 
+			margin-right: -1px
 			+r(960)
 				width: 25%
 			+r(768)
 				width: 33%
-				border-top: 1px solid $border 
+				border-top: 1px solid $border
 			+r(480)
 				margin-top: -1px
 				width: 50%
@@ -1110,7 +1111,7 @@ div.m-news
 		border: 1px solid #e2e2e2
 		a
 			display: block
-			padding: 0 5px 
+			padding: 0 5px
 			height: 109px
 			+vertical
 		img
@@ -1121,7 +1122,7 @@ div.m-news
 		text-align: center
 		a
 			display: inline-block
-			padding: 5px 0 
+			padding: 5px 0
 			+fd
 			text-transform: uppercase
 			text-decoration: none
@@ -1149,7 +1150,7 @@ div.m-news
 		width: 56px
 		height: 56px
 		position: relative
-		margin: 0 9px 
+		margin: 0 9px
 		+vertical
 		border-radius: 50%
 		text-align: center
@@ -1161,27 +1162,27 @@ div.m-news
 			&:after
 				left: 0
 				right: 0
-			i	
-				color: #000 
+			i
+				color: #000
 		&:after
 			content: ""
 			position: absolute
 			left: 50%
 			right: 50%
 			top: 0
-			bottom: 0	
+			bottom: 0
 			background: #fff
-			border-radius: 50% 
+			border-radius: 50%
 			+transition(all .3s)
 		i
 			position: relative
 			z-index: 2
-			color: #fff 
+			color: #fff
 			font-size: 20px
 			+tr(color .3s)
 			vertical-align: middle
 
-				
+
 .subscribe
 	position: relative
 	display: inline-block
@@ -1202,7 +1203,7 @@ div.m-news
 		font-size: 11px
 		text-transform: uppercase
 		color: #fff
-		letter-spacing: 1px 
+		letter-spacing: 1px
 		+r(768)
 			width: 100%
 			padding-right: 0
@@ -1213,21 +1214,21 @@ div.m-news
 			color: #fff
 		&:focus
 			+placeholder
-				font-size: 0	
+				font-size: 0
 	.fa
 		position: absolute
 		top: 8px
 		right: 0
-		color: #fff 
+		color: #fff
 		z-index: 2
 		font-size: 20px
 		background: none
 		+tr(color .3s)
 		&:hover
-			color: $yellow 
+			color: $yellow
 .progressbar
 	position: relative
-	height: 1px 
+	height: 1px
 	&__line
 		height: 1px
 		background: #fff
@@ -1235,16 +1236,16 @@ div.m-news
 		position: absolute
 		top: 0
 		left: 0
-		width: 0 
-		height: 1px 
+		width: 0
+		height: 1px
 		background: $yellow
 		z-index: 2
-		
+
 // footer
 .footer
-	border-top: 1px solid $border 
+	border-top: 1px solid $border
 	+fd
-	font-size: 11px 
+	font-size: 11px
 	text-transform: uppercase
 	+r(768)
 		text-align: center
@@ -1269,7 +1270,7 @@ div.m-news
 	position: relative
 	margin-left: 18px
 	width: 70px
-	height: 15px 
+	height: 15px
 	&:before,
 	&:after
 		content: ""
@@ -1287,10 +1288,10 @@ div.m-news
 		opacity: 0
 	&:hover
 		&:before
-			opacity: 0 
+			opacity: 0
 		&:after
 			opacity: 1
-			
+
 // cabinet
 .cabinet
 	.h1
@@ -1301,9 +1302,9 @@ div.m-news
 		span, a
 			display: inline-block
 			vertical-align: middle
-			padding: 5px 0 
+			padding: 5px 0
 			+fd
-			font-size: 11px 
+			font-size: 11px
 			text-transform: uppercase
 			color: #fff
 		span
@@ -1317,7 +1318,7 @@ div.m-news
 			color: $blue
 			margin: 0 15px
 			&:before
-				content: "" 
+				content: ""
 				position: absolute
 				left: 0
 				right: 0
@@ -1337,21 +1338,21 @@ div.m-news
 .test
 	padding: 45px 0
 	text-align: center
-	
+
 // judge
 .judge
 	padding: 70px 0 75px
 	border-top: 1px solid #e2e2e2
 	+r(768)
-		padding: 30px 0 
+		padding: 30px 0
 	&_contacts
 		margin-bottom: 45px
 		border-bottom: 1px solid #e2e2e2
 		padding-bottom: 65px
 	.h2
-		margin-bottom: 20px  	 			 	
+		margin-bottom: 20px
 	&__about
-		margin-bottom: 45px 
+		margin-bottom: 45px
 		text-align: center
 	&__list
 		font-size: 0
@@ -1363,7 +1364,7 @@ div.m-news
 		+fdi
 		+r(768)
 			width: 50%
-			padding: 0 20px 
+			padding: 0 20px
 			margin-bottom: 30px
 		+r(480)
 			width: 100%
@@ -1394,8 +1395,8 @@ div.m-news
 			color: $blue
 			text-transform: uppercase
 
-	
-					
+
+
 
 
 

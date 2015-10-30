@@ -10,27 +10,27 @@
 +font(FuturaBookC, FuturaBookC)
 =fb
 	font-family: 'FuturaBookC', sans-serif
-	
+
 +font(FuturaBookCItalic, FuturaBookCItalic)
 =fbi
 	font-family: 'FuturaBookCItalic', sans-serif
-	
+
 +font(FuturaDemiC, FuturaDemiC)
 =fd
 	font-family: 'FuturaDemiC', sans-serif
-	
+
 +font(FuturaDemiCItalic, FuturaDemiCItalic)
 =fdi
-	font-family: 'FuturaDemiCItalic', sans-serif	
-	
+	font-family: 'FuturaDemiCItalic', sans-serif
+
 +font(KelsonSansBoldRU, KelsonSansBoldRU)
 =ksb
 	font-family: 'KelsonSansBoldRU', sans-serif
-	
+
 +font(KelsonSansLightRU, KelsonSansLightRU)
 =ksl
 	font-family: 'KelsonSansLightRU', sans-serif
-		
+
 +font(KelsonSansRegularRU, KelsonSansRegularRU)
 =ks
 	font-family: 'KelsonSansRegularRU', sans-serif
@@ -40,13 +40,13 @@
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 body
-	+fb 
+	+fb
 	min-width: 320px
 	font-size: 16px
-	color: #000 
+	color: #000
 	line-height: 1.4
 	+selection
-		background: rgba(#4cd1fc,.5) 	
+		background: rgba(#4cd1fc,.5)
 
 // vars
 $yellow: #fbdc09
@@ -70,13 +70,13 @@ html
 		&:after
 			display: none
 		&:hover
-			background: $yellow 
+			background: $yellow
 	.soc-enter
 		a
 			&:after
 				display: none
 
-// common blocks      
+// common blocks
 .l-center
 	max-width: 1000px
 	margin: 0 auto
@@ -90,7 +90,7 @@ html
 	text-transform: uppercase
 	color: #fff
 	+ksb
-	letter-spacing: .4px 
+	letter-spacing: .4px
 	text-align: center
 	+r(960)
 		font-size: 24px
@@ -100,13 +100,13 @@ html
 		color: #000
 	strong
 		color: $yellow
-		font-weight: normal 
+		font-weight: normal
 		+r(768)
 			display: block
 .h2
 	font-size: 30px
 	+ksb
-	letter-spacing: .4px 
+	letter-spacing: .4px
 	color: #000
 	text-transform: uppercase
 	text-align: center
@@ -122,22 +122,22 @@ html
 		+r(768)
 			text-align: center
 	&_single
-		margin: 40px 0 
+		margin: 40px 0
 .h3
 	font-size: 22px
 	+ksb
 	color: #000
 	text-transform: uppercase
 	text-align: center
-	letter-spacing: .4px 
+	letter-spacing: .4px
 .title
-	margin: 37px 0 
+	margin: 37px 0
 	+fd
 	font-size: 14px
 	text-transform: uppercase
 	text-align: center
-	color: #000 
-	letter-spacing: .4px 
+	color: #000
+	letter-spacing: .4px
 
 .btn-wrap
 	text-align: center
@@ -145,7 +145,7 @@ html
 	position: relative
 	display: inline-block
 	min-width: 428px
-	padding: 0 10px 
+	padding: 0 10px
 	height: 70px
 	line-height: 70px
 	background: $blue
@@ -156,34 +156,34 @@ html
 	text-decoration: none
 	color: #fff
 	z-index: 1
-	letter-spacing: .5px 
+	letter-spacing: .5px
 	+tr(color .3s)
 	+r(480)
 		min-width: auto
 		width: 100%
 	.is-mobile-hidden
-		+r(768)	
+		+r(768)
 			display: none
 	&:after
 		content: ""
 		position: absolute
 		top: 0
 		left: 0
-		width: 100% 
+		width: 100%
 		height: 0
 		background: $yellow
 		+tr(height 300ms)
 		z-index: -1
 	&:hover
-		color: #000 
+		color: #000
 		&:after
-			height: 100% 
+			height: 100%
 	&:active
 		&:after
 			background: darken($yellow, 5%)
 	&_action
 		background: $yellow
-		color: #000 
+		color: #000
 		&:active
 			&:after
 				background: darken($blue, 5%)
@@ -199,8 +199,8 @@ html
 	position: relative
 	display: inline-block
 	vertical-align: middle
-	
-			
+
+
 // hover affect for links with top line
 .top-line
 	position: relative
@@ -211,13 +211,13 @@ html
 		left: 0
 		right: 0
 		height: 1px
-		background: #fff 
+		background: #fff
 		opacity: 0
 		+transform(translateY(-10px))
 		+transition(transform 300ms, opacity 300ms)
 	&:hover
 		&:after
-			opacity: 1 	  
+			opacity: 1
 			+transform(translateY(0))
 	&.is-active
 		&:after
@@ -226,7 +226,7 @@ html
 .replace
 	position: relative
 	overflow: hidden
-	padding: 2px 0 
+	padding: 2px 0
 	span
 		display: inline-block
 		+tr(transform 300ms)
@@ -236,15 +236,15 @@ html
 			top: 100%
 	&:hover
 		span
-			+transform(translateY(-100%))	
+			+transform(translateY(-100%))
 			+r(768)
-				+transform(translateY(0))									
+				+transform(translateY(0))
 
 // more side link
 .more
 	position: absolute
 	top: 50%
-	left: 0 
+	left: 0
 	+fdi
 	color: #000
 	text-transform: uppercase
@@ -254,7 +254,7 @@ html
 	+r(768)
 		position: static
 		pointer-events: none
-		margin: 20px 0 
+		margin: 20px 0
 		text-align: center
 		display: block
 		+transform(rotate(0))
@@ -276,7 +276,7 @@ html
 	margin-top: -25px
 	+transform(translate3d(0,0,0) rotate(-90deg))
 	+transform-origin(50%, 50%)
-	padding: 0 25px 
+	padding: 0 25px
 	height: 50px
 	line-height: 50px
 	background: #151515
@@ -292,7 +292,7 @@ html
 		margin-top: -15px
 		height: 30px
 		line-height: 30px
-		padding: 0 15px 
+		padding: 0 15px
 	span
 		display: inline-block
 		vertical-align: middle

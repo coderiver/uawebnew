@@ -40,7 +40,7 @@ head.ready(function() {
 	    ]
 	});
 
-	// counter	
+	// counter
 	var timer = null;
 
 	function counter(){
@@ -118,6 +118,7 @@ head.ready(function() {
 	});
 	$(".js-month-next").on("click", function () {
 		$('.js-calendar-slider').slick('slickNext');
+
 	});
 	calendarSlider.on('afterChange', function(event, slick, currentSlide, nextSlide){
 		var activeMonth = $(this).find(".slick-active").attr("data-month");
@@ -188,7 +189,7 @@ head.ready(function() {
 		}
 	}
 	initSlickMobile();
-	
+
 	$('.js-slick-4').slick({
 	  infinite: true,
 	  slidesToShow: 4,
@@ -255,6 +256,25 @@ head.ready(function() {
 		]
 
 	});
+
+// event slider
+	$('.js-event-slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		slide: '.event__item',
+		arrows: true,
+		speed: 300,
+		fade: true,
+		cssEase: 'linear'
+	});
+	$(".js-month-prev").on("click", function () {
+		$('.js-event-slider').slick('slickPrev');
+	});
+	$(".js-month-next").on("click", function () {
+		$('.js-event-slider').slick('slickNext');
+	});
+
 	$('.js-slick-review').on('afterChange', function(event, slick, currentSlide, nextSlide){
 		var	dot = $(this).find(".slick-dots li"),
 			n = dot.length;
@@ -321,7 +341,7 @@ head.ready(function() {
 		    }
 		}
 	});
-	
+
 
 	//var slickTimer = 5000;
 	$('.js-simple-slick').slick({
@@ -361,5 +381,5 @@ head.ready(function() {
 		}
 
 	});
-	
+
 });
