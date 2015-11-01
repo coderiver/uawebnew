@@ -49,9 +49,9 @@
 					</ul>
 				</nav>
 			</div>
-		</div>	
+		</div>
 		<div class="header__in" style="background-image: url(img/img6.jpg);">
-			<div class="subtitle">Кращі у своiй справi</div>	
+			<div class="subtitle">Кращі у своiй справi</div>
 			<h1 class="h1">Експерти</h1>
 		</div>
 	</header>
@@ -88,27 +88,79 @@
 		</div>
 	</div>
 	<!-- END touch navigation -->
-	<div class="drop drop_sort js-drop">
-		<span class="drop__title js-drop-text">веб-дизайнер</span>
-		<ul class="sort">
+	<div class="drop drop_sort js-drop tabs">
+		<span class="drop__title js-drop-text">Front-End</span>
+		<ul class="sort tabs__caption">
 			<li><span>Показувати</span></li>
-			<li><a href="#">Всі експерти</a>   </li>
-			<li><a href="#">Web design</a></li>
-			<li class="is-active"><a href="#">Front-end</a></li>
-			<li><a href="#">Back-end</a></li>
-			<li><a href="#">тестувальник</a></li>
-			<li><a href="#">Команда</a></li>
+			<li><a>Всі експерти</a>   </li>
+			<li><a>Web design</a></li>
+			<li class="is-active"><a>Front-end</a></li>
+			<li><a>Back-end</a></li>
+			<li><a>тестувальник</a></li>
+			<li><a>Команда</a></li>
 		</ul>
-		<select class="js-drop-select">
-			<option value="веб-дизайнер">веб-дизайнер</option>
-			<option value="Back-enddeveloper">Back-enddeveloper</option>
-			<option value="Front-end  developer">Front-end  developer</option>
+
+		<select class="js-drop-select " id="tabs__content2">
+			<option value="Web-design" >Web design</option>
+			<option value="Back-End-developer" >Back-end developer</option>
+			<option value="Front-End-developer" >Front-end  developer</option>
 			<option value="Команда">Команда</option>
-			<option value="тестувальник">тестувальник</option>
+			<option value="Тестувальник">тестувальник</option>
 		</select>
-	</div>
+
 	<div class="items-wrap">
-		<div class="l-center">
+		<div class="tabs__content"></div>
+		<div class="l-center tabs__content" id="cn_веб-дизайнер">
+			<h2 class="h2">Всі експерти</h2>
+			<div class="item ">
+				<div class="item__media">
+					<img src="img/akella.jpg" alt="">
+				</div>
+				<div class="item__main">
+					<div class="item__title">Lorem ipsum </div>
+					<ul class="item__meta">
+						<li><a href="#">Yuriy "akella" Artyukh</a></li>
+						<li><a href="#">cssing.org.ua</a></li>
+					</ul>
+					<div class="item__info">Досвідчений розробник, представник українського крила «Web Standards Group», учасник таких проектів як kremlin.ru, groupon.ru. Організатор UAWEB 2008 та інших конференційі семінарів, співвласник навчального центру для айті-спеціалістів Smartme.com.ua.</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item__media">
+					<img src="img/man3.png" alt="">
+				</div>
+				<div class="item__main">
+					<div class="item__title">Інгвар Степанян</div>
+					<div class="item__info">Веб-розробник, реверс-інженер, спікер та організатор українських і міжнародних конференцій. Наразі займає позицію старшого JavaScript-консультанта в Universal Mind. Спеціалізується на низькорівневій обробці даних, вірить, що JavaScript може бути використаний не лише для занудних звичних UI-анімацій, але і для кросплатформної реалізації абсолютно будь-яких рішень, починаючи від консольних утиліт та повноцінних браузерних застосунків і закінчуючи обробкою мультимедіа та додатками з використанням доповненої реальності.</div>
+				</div>
+			</div>
+		</div>
+		<div class="l-center tabs__content" id="cn_Web-design">
+			<h2 class="h2">web design</h2>
+			<div class="item">
+				<div class="item__media">
+					<img src="img/akella.jpg" alt="">
+				</div>
+				<div class="item__main">
+					<div class="item__title">Юрій Артюх</div>
+					<ul class="item__meta">
+						<li><a href="#">Yuriy "akella" Artyukh</a></li>
+						<li><a href="#">cssing.org.ua</a></li>
+					</ul>
+					<div class="item__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione minus nisi nihil officiis recusandae. Odio maxime illo repellat, alias earum veniam temporibus, officiis ullam a, recusandae quos necessitatibus mollitia consequatur..</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item__media">
+					<img src="img/man3.png" alt="">
+				</div>
+				<div class="item__main">
+					<div class="item__title">Інгвар Степанян</div>
+					<div class="item__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi architecto facere, in dolores modi nisi. Quos quibusdam neque, necessitatibus, sint modi maxime atque ex, et provident sequi natus cumque! Id!</div>
+				</div>
+			</div>
+		</div>
+		<div class="l-center tabs__content is-active" id="cn_Front-End-developer">
 			<h2 class="h2">front-end</h2>
 			<div class="item">
 				<div class="item__media">
@@ -133,6 +185,82 @@
 				</div>
 			</div>
 		</div>
+		<div class="l-center tabs__content" id="cn_Back-End-developer">
+			<h2 class="h2">back-end</h2>
+			<div class="item">
+				<div class="item__media">
+					<img src="img/akella.jpg" alt="">
+				</div>
+				<div class="item__main">
+					<div class="item__title">Юрій Артюх</div>
+					<ul class="item__meta">
+						<li><a href="#">Yuriy "akella" Artyukh</a></li>
+						<li><a href="#">cssing.org.ua</a></li>
+					</ul>
+					<div class="item__info">Досвідчений розробник, представник українського крила «Web Standards Group», учасник таких проектів як kremlin.ru, groupon.ru. Організатор UAWEB 2008 та інших конференційі семінарів, співвласник навчального центру для айті-спеціалістів Smartme.com.ua.</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item__media">
+					<img src="img/man3.png" alt="">
+				</div>
+				<div class="item__main">
+					<div class="item__title">Інгвар Степанян</div>
+					<div class="item__info">Веб-розробник, реверс-інженер, спікер та організатор українських і міжнародних конференцій. Наразі займає позицію старшого JavaScript-консультанта в Universal Mind. Спеціалізується на низькорівневій обробці даних, вірить, що JavaScript може бути використаний не лише для занудних звичних UI-анімацій, але і для кросплатформної реалізації абсолютно будь-яких рішень, починаючи від консольних утиліт та повноцінних браузерних застосунків і закінчуючи обробкою мультимедіа та додатками з використанням доповненої реальності.</div>
+				</div>
+			</div>
+		</div>
+		<div class="l-center tabs__content" id="cn_Тестувальник">
+			<h2 class="h2">Тестувальник</h2>
+			<div class="item">
+				<div class="item__media">
+					<img src="img/akella.jpg" alt="">
+				</div>
+				<div class="item__main">
+					<div class="item__title">Юрій Артюх</div>
+					<ul class="item__meta">
+						<li><a href="#">Yuriy "akella" Artyukh</a></li>
+						<li><a href="#">cssing.org.ua</a></li>
+					</ul>
+					<div class="item__info">Досвідчений розробник, представник українського крила «Web Standards Group», учасник таких проектів як kremlin.ru, groupon.ru. Організатор UAWEB 2008 та інших конференційі семінарів, співвласник навчального центру для айті-спеціалістів Smartme.com.ua.</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item__media">
+					<img src="img/man3.png" alt="">
+				</div>
+				<div class="item__main">
+					<div class="item__title">Інгвар Степанян</div>
+					<div class="item__info">Веб-розробник, реверс-інженер, спікер та організатор українських і міжнародних конференцій. Наразі займає позицію старшого JavaScript-консультанта в Universal Mind. Спеціалізується на низькорівневій обробці даних, вірить, що JavaScript може бути використаний не лише для занудних звичних UI-анімацій, але і для кросплатформної реалізації абсолютно будь-яких рішень, починаючи від консольних утиліт та повноцінних браузерних застосунків і закінчуючи обробкою мультимедіа та додатками з використанням доповненої реальності.</div>
+				</div>
+			</div>
+		</div>
+		<div class="l-center tabs__content" id="cn_Команда">
+			<h2 class="h2">команда</h2>
+			<div class="item">
+				<div class="item__media">
+					<img src="img/akella.jpg" alt="">
+				</div>
+				<div class="item__main">
+					<div class="item__title">Юрій Артюх</div>
+					<ul class="item__meta">
+						<li><a href="#">Yuriy "akella" Artyukh</a></li>
+						<li><a href="#">cssing.org.ua</a></li>
+					</ul>
+					<div class="item__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aliquid sunt temporibus numquam exercitationem ipsam consequuntur aperiam laborum, hic, sed repellat praesentium vero cupiditate repellendus minima optio nulla, amet eveniet eum perferendis inventore rerum. Sed, provident commodi odio reiciendis cumque, dolorem quibusdam, voluptas nemo soluta et tempora assumenda! Consequuntur unde architecto repellat commodi, quidem dolorum facilis quasi non dolor molestiae vitae quas odit. Provident delectus, dolore exercitationem tempore cum labore.</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item__media">
+					<img src="img/man3.png" alt="">
+				</div>
+				<div class="item__main">
+					<div class="item__title">Інгвар Степанян</div>
+					<div class="item__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta iure vero labore sed recusandae perferendis iste quam suscipit asperiores quo ab, beatae perspiciatis aut numquam mollitia rem nobis aliquam voluptas. In repudiandae labore amet fuga architecto qui eos nulla, quam sed soluta error exercitationem non, accusamus aliquam illum minima asperiores dolores, cupiditate quasi placeat aliquid, maiores? Aperiam eius eaque culpa modi quia maiores, adipisci obcaecati voluptate qui dolor, reprehenderit possimus. Debitis pariatur magnam, distinctio exercitationem quaerat nulla nobis, ratione veniam cum culpa at et expedita reiciendis dolorem! Culpa dolor quo id enim, neque quas nesciunt nobis, eius libero iusto ea.</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	</div>
 	<div class="yep">
 		<div class="h2">Як стати нашим експертом?</div>

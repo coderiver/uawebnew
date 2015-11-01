@@ -382,4 +382,30 @@ head.ready(function() {
 
 	});
 
+
+//tabs
+$('ul.tabs__caption').each(function() {
+    $(this).find('li').each(function(i) {
+      $(this).click(function(){
+        $(this).addClass('is-active').siblings().removeClass('is-active')
+          .closest('div.tabs').find('div.tabs__content').removeClass('is-active').eq(i).addClass('is-active');
+      });
+    });
+});
+
+$('#tabs__content2').change(function() {
+	var id=this.value;
+	$("tabs__content").removeClass('is-active');
+	$("#cn_"+id).addClass('is-active').siblings().removeClass('is-active');
+});
+
+
+
+
+
+
+
+
+
+
 });

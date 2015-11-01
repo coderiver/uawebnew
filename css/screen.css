@@ -696,13 +696,17 @@ div.m-news:hover:after { height: 0; }
 .sort li.is-active a { color: #ccc; }
 .sort li.is-active a:before, .sort li.is-active a:after { width: 100%; }
 .sort a, .sort span { display: block; height: 40px; line-height: 40px; letter-spacing: 1px; }
-.sort a { color: #09c5fb; position: relative; text-decoration: none; }
+.sort a { color: #09c5fb; position: relative; text-decoration: none; cursor: pointer; }
 .sort a:before, .sort a:after { content: ""; position: absolute; width: 0; background: #09c5fb; height: 1px; -moz-transition: width 0.3s; -o-transition: width 0.3s; -webkit-transition: width 0.3s; transition: width 0.3s; }
 .sort a:before { top: 0; left: 0; }
 .sort a:after { bottom: 0; right: 0; }
 .sort a:hover:before, .sort a:hover:after { width: 100%; }
 
 .items-wrap { margin-bottom: 50px; border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2; padding: 32px 0 0; }
+
+.tabs__content { display: none; }
+
+.is-active { display: block; }
 
 .item { margin: 25px 0 55px; letter-spacing: 0.2px; *zoom: 1; }
 .item:after { content: " "; display: table; clear: both; }
