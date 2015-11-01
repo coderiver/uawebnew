@@ -835,6 +835,7 @@ div.m-news:hover:after { height: 0; }
 .calendar__month { width: 220px; font-size: 11px; }
 @media only screen and (max-width: 768px) { .calendar__month { width: 180px; } }
 .calendar__head li, .calendar__body li { float: left; width: 14.27083%; }
+.calendar__head { margin-bottom: 70px; }
 .calendar__head li { height: 70px; line-height: 70px; }
 @media only screen and (max-width: 768px) { .calendar__head li { height: 30px; line-height: 30px; } }
 .calendar__head li:before { display: none; content: attr(data-day); }
@@ -947,7 +948,7 @@ div.m-news:hover:after { height: 0; }
 .soc-enter__fb { background: #3c5a96; }
 .soc-enter__fb:after { background: #2d4472; }
 .soc-enter__vk { background: #5c80a4; }
-.soc-enter__vk:after { background: #496684; }
+.soc-enter__vk:after { background: #496784; }
 .soc-enter__ln { background: #1877a6; }
 .soc-enter__ln:after { background: #125779; }
 .soc-enter__gp { background: #4688f1; }
