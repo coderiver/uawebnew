@@ -4,7 +4,7 @@ head.ready(function() {
 		$(this).siblings().removeClass('is-active');
 		$(this).addClass('is-active');
 		eventstoshow = $(this).children('a').data('show');
-		ShowEvents(toshow);
+		ShowEvents(eventstoshow);
 		return false;
 	});
 
@@ -27,7 +27,6 @@ head.ready(function() {
 		events.each(function(index, el) {
 			$('#d'+$(this).data('date')).addClass('is-active');
 		});
-		
 	}
 
 
