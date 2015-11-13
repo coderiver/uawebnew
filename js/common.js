@@ -28,6 +28,7 @@ head.ready(function() {
 			$('#d'+$(this).data('date')).addClass('is-active');
 		});
 	}
+	ShowEvents('all');
 
 
 	$(document).on("click", function () {
