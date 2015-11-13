@@ -135,21 +135,21 @@
 	<div class="l-center">
 		<div class="calendar-wrap">
 			<div class="h2">Календар подій</div>
-
+			<script></script>
 			<div class="drop drop_sort js-drop">
 				<span class="drop__title js-drop-text">Всі</span>
-				<ul class="sort">
+				<ul class="sort js-dates">
 					<li><span>Показувати</span></li>
-					<li class="is-active"><a href="#">Всі</a></li>
-					<li><a href>Хакатони</a></li>
-					<li><a href="#">Майстер класи</a></li>
-					<li><a href="#">Чемпіонат</a></li>
+					<li class="is-active"><a data-show="all" href="#">Всі</a></li>
+					<li><a data-show="hack" href="#">Хакатони</a></li>
+					<li><a data-show="workshop" href="#">Майстер класи</a></li>
+					<li><a data-show="champ" href="#">Чемпіонат</a></li>
 				</ul>
-				<select class="js-drop-select">
-					<option value="Всі">Всі</option>
-					<option value="Хакатони">Хакатони</option>
-					<option value="Майстер класи">Майстер класи</option>
-					<option value="Чемпіонат">Чемпіонат</option>
+				<select class="js-drop-select-events">
+					<option value="all">Всі</option>
+					<option value="hack">Хакатони</option>
+					<option value="workshop">Майстер класи</option>
+					<option value="champ">Чемпіонат</option>
 				</select>
 			</div>
 			<div class="calendar">
@@ -181,7 +181,7 @@
 							<li class="is-inactive">31</li>
 							<li>01</li>
 							<li>02</li>
-							<li class="is-active"><a href="#">03</a></li>
+							<li id="d10-10-10"><a href="#">03</a></li>
 							<li>04</li>
 							<li>05</li>
 							<li>06</li>
@@ -194,15 +194,15 @@
 							<li>13</li>
 							<li>14</li>
 							<li>15</li>
-							<li class="is-active"><a href="#">16</a></li>
-							<li class="is-active"><a href="#">17</a></li>
+							<li id="d10-10-11"><a href="#">16</a></li>
+							<li id="d10-10-12"><a href="#">17</a></li>
 							<li>18</li>
 							<li>19</li>
 							<li>20</li>
 							<li>21</li>
 							<li>22</li>
 							<li>23</li>
-							<li class="is-active"><a href="#">24</a></li>
+							<li id="d10-10-13"><a href="#">24</a></li>
 							<li>25</li>
 							<li>26</li>
 							<li>27</li>
@@ -294,63 +294,27 @@
 			</div>
 		</div>
 		<div class="h2">Обрані події</div>
-		<div class="events-wrap js-event-slider">
+		<div class="events-wrap">
 			<div class="event__item">
-				<a class="event" href="#">
+				<a class="event event_champ" data-date="10-10-10" href="#">
 					<div class="event__meta">03 лютого</div>
 					<div class="event__text">Тестова документація в класичних та 	Agile проектах, Мар'ян Цар</div>
 				</a>
-				<a class="event" href="#">
+				<a class="event event_hack" data-date="10-10-11" href="#">
 					<div class="event__meta">03 лютого</div>
 					<div class="event__text">Тестова документація в класичних та 	Agile проектах, Мар'ян Цар</div>
 				</a>
-				<a class="event" href="#">
+				<a class="event event_workshop" data-date="10-10-12" href="#">
 					<div class="event__meta">03 лютого</div>
 					<div class="event__text">Тестова документація в класичних та 	Agile проектах, Мар'ян Цар</div>
 				</a>
-				<a class="event" href="#">
+				<a class="event" href="#" data-date="10-10-13">
 					<div class="event__meta">03 лютого</div>
 					<div class="event__text">Тестова документація в класичних та 	Agile проектах, Мар'ян Цар</div>
 				</a>
 			</div>
 
-			<div class="event__item">
-				<a class="event" href="#">
-					<div class="event__meta">04 лютого</div>
-					<div class="event__text">Тестова документація в класичних та 	Agile проектах, Мар'ян Цар</div>
-				</a>
-				<a class="event" href="#">
-					<div class="event__meta">05 лютого</div>
-					<div class="event__text">Тестова документація в класичних та 	Agile проектах, Мар'ян Цар</div>
-				</a>
-				<a class="event" href="#">
-					<div class="event__meta">03 лютого</div>
-					<div class="event__text">Тестова документація в класичних та 	Agile проектах, Мар'ян Цар</div>
-				</a>
-				<a class="event" href="#">
-					<div class="event__meta">07 лютого</div>
-					<div class="event__text">Тестова документація в класичних та 	Agile проектах, Мар'ян Цар</div>
-				</a>
-			</div>
-
-			<div class="event__item">
-				<a class="event" href="#">
-					<div class="event__meta">11 лютого</div>
-					<div class="event__text">Тестова документація в класичних та 	Agile проектах, Мар'ян Цар</div>
-				</a>
-				<a class="event" href="#">
-					<div class="event__meta">03 лютого</div>
-					<div class="event__text">Тестова документація в класичних та 	Agile проектах, Мар'ян Цар</div>
-				</a>
-				<a class="event" href="#">
-					<div class="event__meta">15 лютого</div>
-					<div class="event__text">Тестова документація в класичних та 	Agile проектах, Мар'ян Цар</div>
-				</a>
-				<a class="event" href="#">
-					<div class="event__meta">17 лютого</div>
-					<div class="event__text">Тестова документація в класичних та 	Agile проектах, Мар'ян Цар</div>
-				</a>
-			</div>
+	
 		</div>
 	</div>
 	<section class="share">

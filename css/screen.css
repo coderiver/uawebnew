@@ -911,7 +911,7 @@ div.m-news:hover:after { height: 0; }
 .drop__title:before { right: 0; margin-top: -7px; width: 15px; height: 15px; background: #000; border-radius: 50%; }
 .drop__title:after { right: 4px; margin-top: -2px; background: url('../img/icons-s8cc9b96664.png') 0 0 no-repeat; width: 7px; height: 5px; }
 .drop__list { display: none; position: absolute; top: 100%; left: 0; right: 0; }
-.drop select { display: none; position: absolute; top: 0; right: 0; left: 0; height: 50px; width: 100%; opacity: 0; cursor: pointer; }
+.drop select { display: none; position: absolute; top: 0; right: 0; left: 0; height: 50px; width: 100%; opacity: 0; cursor: pointer; -webkit-appearance: none; }
 @media only screen and (max-width: 768px) { .drop select { display: block; } }
 @media only screen and (max-width: 768px) { .drop .categories { display: none; } }
 

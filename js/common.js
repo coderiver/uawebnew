@@ -1,5 +1,36 @@
 head.ready(function() {
 
+	$('.js-dates li').click(function(event) {
+		$(this).siblings().removeClass('is-active');
+		$(this).addClass('is-active');
+		eventstoshow = $(this).children('a').data('show');
+		ShowEvents(toshow);
+		return false;
+	});
+
+	$('.js-drop-select-events').change(function(event) {
+		newtext = $(this).find("option:selected").text();
+		$(this).parent().find('.js-drop-text').text(newtext);
+		ShowEvents($(this).val());
+	});
+
+	function ShowEvents(type){
+		$('.event').hide()
+		$('.calendar__body li').removeClass('is-active');
+		if(type=='all'){
+			events = $('.event');
+		}
+		else{
+			events = $('.event_'+type);
+		}
+		events.show();
+		events.each(function(index, el) {
+			$('#d'+$(this).data('date')).addClass('is-active');
+		});
+		
+	}
+
+
 	$(document).on("click", function () {
 		$(".js-nav-toggle").removeClass("is-active");
 		$(".js-nav").removeClass("is-visible");
