@@ -1,6 +1,6 @@
 head.ready(function() {
 
-	$('.js-dates li').click(function(event) {
+	$('.js-dates li:not(:first-child)').click(function(event) {
 		$(this).siblings().removeClass('is-active');
 		$(this).addClass('is-active');
 		eventstoshow = $(this).children('a').data('show');
